@@ -10,22 +10,15 @@ using System.Windows.Forms;
 
 namespace Railway_Management_System
 {
-    public partial class Form1 : Form
+    public partial class Employee_Login : Form
     {
-        public Form1()
+    Form Myparent;
+        public Employee_Login(Form p)
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Employee_Click(object sender, EventArgs e)
-        {
-            Employee_Login EL = new Employee_Login(this);
-            EL.Show();
+            Myparent = p;
+            this.Location = Myparent.Location;
+            Myparent.Hide();
         }
 
         private void Close_Click(object sender, EventArgs e)
@@ -33,18 +26,12 @@ namespace Railway_Management_System
             Application.Exit();
         }
 
-        private void Passenger_Click(object sender, EventArgs e)
-        {
-            Passenger_Login PL = new Passenger_Login(this);
-            PL.Show();
-        }
-
         private void Restore_down_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Normal;
         }
 
-        private void Minimize_click(object sender, EventArgs e)
+        private void Minimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
