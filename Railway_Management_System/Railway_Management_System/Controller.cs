@@ -51,5 +51,11 @@ namespace Railway_Management_System
             string StoredProcedureName = StoredProcedures.SelectAllSuppliers;
             return dbMan.ExecuteReader(StoredProcedureName, null);
         }
+
+        public DataTable GetAllSpareParts()
+        {
+            string StoredProcedureName = StoredProcedures.SelectAllSpareParts;
+            return dbMan.ExecuteReader(StoredProcedureName, null);
+        }
     }
 }

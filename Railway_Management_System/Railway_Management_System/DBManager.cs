@@ -5,12 +5,13 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace Railway_Management_System
 {
     public class DBManager
     {
-        static string DB_Connection_String = @"Data Source=DESKTOP-INV2J7Q\SQLEXPRESS;Initial Catalog=RAILWAY;Integrated Security=True";
+        static string DB_Connection_String = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
         SqlConnection myConnection;
 
         public DBManager()

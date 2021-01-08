@@ -12,9 +12,11 @@ namespace Railway_Management_System
 {
     public partial class Employee_Form : Form
     {
+        Controller controller;
         public Employee_Form()
         {
             InitializeComponent();
+            controller = new Controller();
         }
 
         private void sparePartsButton_Click(object sender, EventArgs e)
@@ -24,6 +26,10 @@ namespace Railway_Management_System
 
             if (scheduleGroupBox.Visible == true)
                 scheduleGroupBox.Visible = false;
+
+            sparePartDataGridView.DataSource = controller.GetAllSpareParts();
+            sparePartDataGridView.Refresh();
+            
         }
 
         private void decrementButton_Click(object sender, EventArgs e)

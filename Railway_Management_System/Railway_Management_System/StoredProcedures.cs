@@ -13,6 +13,7 @@ namespace Railway_Management_System
         public static string SelectAllTrains = "VIEW_TRAINS";
         public static string SelectAllStations = "VIEW_STATIONS";
         public static string SelectAllSuppliers = "VIEW_SUPPLIERS";
+        public static string SelectAllSpareParts = "VIEW_SPARE_PARTS";
 
     }
 }
