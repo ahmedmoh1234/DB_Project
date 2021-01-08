@@ -28,7 +28,7 @@ CREATE TABLE EMPLOYEE
   Phone_Number INT NOT NULL,
   Salary INT NOT NULL,
   DOB DATE NOT NULL,
-  Manager_SSN INT NOT NULL,
+  Manager_SSN INT,
   FOREIGN KEY (Manager_SSN) REFERENCES EMPLOYEE (E_SSN),
   PRIMARY KEY (E_SSN),
   UNIQUE (Phone_Number)
@@ -55,7 +55,7 @@ CREATE TABLE STATION
   UNIQUE (Station_Number)
 );
 
-ALTER TABLE EMPLOYEE ADD Station_Number INT NOT NULL,
+ALTER TABLE EMPLOYEE ADD Station_Number INT,
 FOREIGN KEY (Station_Number) REFERENCES STATION (Station_Number);
 
 CREATE TABLE TRIP
@@ -158,3 +158,19 @@ CREATE TABLE LOGIN_EMPLOYEE
   FOREIGN KEY (E_SSN) REFERENCES EMPLOYEE (E_SSN),
   PRIMARY KEY (Username)
 );
+
+---------------------ADDING ROWS INTO THE DB-------------
+
+INSERT INTO EMPLOYEE(Fname,Minit,Lname,E_SSN,Sex,Phone_Number,Salary,DOB,Manager_SSN)
+VALUES
+('Ahmed','M','Ismail',12345678,'M',01123456789,30000,'2000-02-22',NULL),
+('Moaz','M','ElSherbiny',619619619,'M',0114789542,30000,'2000-10-03',12345678),
+('Mostafa','A','Ahmed',88888888,'M',01158795123,30000,'1998-12-12',12345678),
+('Nader','Y','Adib',420420420,'M',01285003523,30000,'2000-05-15',NULL);
+
+INSERT INTO STATION(Station_Number,Station_Name,Manager_SSN,Manager_Start_Date,Location)
+VALUES
+(205,'Misr Station',420420420,'2015-07-04','Ramsis'),
+(301,'Menya',88888888,'2018-09-14','Menya'),
+(488,'Mansoura',619619619,'2017-06-03','Dakahleya');
+
