@@ -5,14 +5,12 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
-using System.Configuration;
 
 namespace Railway_Management_System
 {
     public class DBManager
     {
-
-        static string DB_Connection_String = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+        static string DB_Connection_String = @"Data Source=DESKTOP-INV2J7Q\SQLEXPRESS;Initial Catalog=RAILWAY;Integrated Security=True";
         SqlConnection myConnection;
 
         public DBManager()
@@ -30,12 +28,21 @@ namespace Railway_Management_System
             }
         }
 
-        public int ExecuteNonQuery(string query)
+        public int ExecuteNonQuery(string storedProcedureName, Dictionary<string, object> parameters)
         {
             try
             {
-                SqlCommand myCommand = new SqlCommand(query, myConnection);
+                SqlCommand myCommand = new SqlCommand(storedProcedureName, myConnection);
+
+                myCommand.CommandType = CommandType.StoredProcedure;
+
+                foreach (KeyValuePair<string, object> Param in parameters)
+                {
+                    myCommand.Parameters.Add(new SqlParameter(Param.Key, Param.Value));
+                }
+
                 return myCommand.ExecuteNonQuery();
+
             }
             catch (Exception ex)
             {
@@ -44,11 +51,22 @@ namespace Railway_Management_System
             }
         }
 
-        public DataTable ExecuteReader(string query)
+        public DataTable ExecuteReader(string storedProcedureName, Dictionary<string, object> parameters)
         {
             try
             {
-                SqlCommand myCommand = new SqlCommand(query, myConnection);
+                SqlCommand myCommand = new SqlCommand(storedProcedureName, myConnection);
+
+                myCommand.CommandType = CommandType.StoredProcedure;
+
+                if (parameters != null)
+                {
+                    foreach (KeyValuePair<string, object> Param in parameters)
+                    {
+                        myCommand.Parameters.Add(new SqlParameter(Param.Key, Param.Value));
+                    }
+                }
+
                 SqlDataReader reader = myCommand.ExecuteReader();
                 if (reader.HasRows)
                 {
@@ -59,10 +77,10 @@ namespace Railway_Management_System
                 }
                 else
                 {
-                    if (!reader.IsClosed)
-                        reader.Close();
+                    reader.Close();
                     return null;
                 }
+
             }
             catch (Exception ex)
             {
@@ -71,17 +89,29 @@ namespace Railway_Management_System
             }
         }
 
-        public object ExecuteScalar(string query)
+        public object ExecuteScalar(string storedProcedureName, Dictionary<string, object> parameters)
         {
             try
             {
-                SqlCommand myCommand = new SqlCommand(query, myConnection);
+                SqlCommand myCommand = new SqlCommand(storedProcedureName, myConnection);
+
+                myCommand.CommandType = CommandType.StoredProcedure;
+
+                if (parameters != null)
+                {
+                    foreach (KeyValuePair<string, object> Param in parameters)
+                    {
+                        myCommand.Parameters.Add(new SqlParameter(Param.Key, Param.Value));
+                    }
+                }
+
                 return myCommand.ExecuteScalar();
+
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                return 0;
+                return null;
             }
         }
 
@@ -96,8 +126,6 @@ namespace Railway_Management_System
                 Console.WriteLine(e.Message);
             }
         }
-
-
     }
 }
-;
+

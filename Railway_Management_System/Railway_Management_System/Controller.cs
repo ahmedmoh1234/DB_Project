@@ -21,5 +21,11 @@ namespace Railway_Management_System
             dbMan.CloseConnection();
         }
 
+        public DataTable GetAllEmployees()
+        {
+            string StoredProcedureName = StoredProcedures.SelectAllEmployees;
+            return dbMan.ExecuteReader(StoredProcedureName, null);
+          
+        }
     }
 }
