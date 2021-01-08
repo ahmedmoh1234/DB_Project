@@ -100,8 +100,22 @@
             this.Add_Supplier_Button = new System.Windows.Forms.Button();
             this.SuppliersDG = new System.Windows.Forms.DataGridView();
             this.Spare_Parts_GroupBox = new System.Windows.Forms.GroupBox();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.RequestsDG = new System.Windows.Forms.DataGridView();
             this.Statistical_Models_GroupBox = new System.Windows.Forms.GroupBox();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.EndDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.StartDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.IncomeTimePeriodLabel = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.GetIncomeTimePeriodButton = new System.Windows.Forms.Button();
+            this.label34 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.Salary_Label = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
             this.StationNameComboBox2 = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.Number_of_emps_working_station_label = new System.Windows.Forms.Label();
@@ -126,17 +140,9 @@
             this.PassengersSSNTextBox = new System.Windows.Forms.TextBox();
             this.No_of_trips_passenger_made_Label = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.Salary_Label = new System.Windows.Forms.Label();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.GetIncomeTimePeriodButton = new System.Windows.Forms.Button();
-            this.label34 = new System.Windows.Forms.Label();
-            this.IncomeTimePeriodLabel = new System.Windows.Forms.Label();
-            this.StartDatePicker = new System.Windows.Forms.DateTimePicker();
-            this.EndDatePicker = new System.Windows.Forms.DateTimePicker();
-            this.label30 = new System.Windows.Forms.Label();
+            this.Accept_Request_Button = new System.Windows.Forms.Button();
+            this.Reject_Request_Button = new System.Windows.Forms.Button();
+            this.Request_ID_TextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.TripsDG)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -150,13 +156,16 @@
             this.SuppliersGroupBox.SuspendLayout();
             this.Add_Remove_Suppliers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SuppliersDG)).BeginInit();
+            this.Spare_Parts_GroupBox.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RequestsDG)).BeginInit();
             this.Statistical_Models_GroupBox.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.groupBox9.SuspendLayout();
             this.SuspendLayout();
             // 
             // tripsButton
@@ -911,12 +920,46 @@
             // 
             // Spare_Parts_GroupBox
             // 
+            this.Spare_Parts_GroupBox.Controls.Add(this.groupBox10);
+            this.Spare_Parts_GroupBox.Controls.Add(this.RequestsDG);
             this.Spare_Parts_GroupBox.Location = new System.Drawing.Point(164, 12);
             this.Spare_Parts_GroupBox.Name = "Spare_Parts_GroupBox";
             this.Spare_Parts_GroupBox.Size = new System.Drawing.Size(864, 531);
             this.Spare_Parts_GroupBox.TabIndex = 9;
             this.Spare_Parts_GroupBox.TabStop = false;
             this.Spare_Parts_GroupBox.Text = "Spare Parts";
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.Request_ID_TextBox);
+            this.groupBox10.Controls.Add(this.Reject_Request_Button);
+            this.groupBox10.Controls.Add(this.Accept_Request_Button);
+            this.groupBox10.Controls.Add(this.label31);
+            this.groupBox10.Location = new System.Drawing.Point(192, 274);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(426, 218);
+            this.groupBox10.TabIndex = 1;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Accept/Reject";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(29, 57);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(78, 17);
+            this.label31.TabIndex = 0;
+            this.label31.Text = "Request ID";
+            // 
+            // RequestsDG
+            // 
+            this.RequestsDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.RequestsDG.Location = new System.Drawing.Point(8, 37);
+            this.RequestsDG.Name = "RequestsDG";
+            this.RequestsDG.RowHeadersWidth = 51;
+            this.RequestsDG.RowTemplate.Height = 24;
+            this.RequestsDG.Size = new System.Drawing.Size(844, 201);
+            this.RequestsDG.TabIndex = 0;
             // 
             // Statistical_Models_GroupBox
             // 
@@ -933,6 +976,85 @@
             this.Statistical_Models_GroupBox.TabStop = false;
             this.Statistical_Models_GroupBox.Text = "Statistical Models";
             // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.label30);
+            this.groupBox9.Controls.Add(this.EndDatePicker);
+            this.groupBox9.Controls.Add(this.StartDatePicker);
+            this.groupBox9.Controls.Add(this.IncomeTimePeriodLabel);
+            this.groupBox9.Controls.Add(this.label32);
+            this.groupBox9.Controls.Add(this.GetIncomeTimePeriodButton);
+            this.groupBox9.Controls.Add(this.label34);
+            this.groupBox9.Location = new System.Drawing.Point(374, 357);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(448, 126);
+            this.groupBox9.TabIndex = 6;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Total Income in a Time Period";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(234, 37);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(67, 17);
+            this.label30.TabIndex = 9;
+            this.label30.Text = "End Date";
+            // 
+            // EndDatePicker
+            // 
+            this.EndDatePicker.Location = new System.Drawing.Point(316, 36);
+            this.EndDatePicker.Name = "EndDatePicker";
+            this.EndDatePicker.Size = new System.Drawing.Size(108, 22);
+            this.EndDatePicker.TabIndex = 8;
+            // 
+            // StartDatePicker
+            // 
+            this.StartDatePicker.Location = new System.Drawing.Point(95, 36);
+            this.StartDatePicker.Name = "StartDatePicker";
+            this.StartDatePicker.Size = new System.Drawing.Size(115, 22);
+            this.StartDatePicker.TabIndex = 7;
+            // 
+            // IncomeTimePeriodLabel
+            // 
+            this.IncomeTimePeriodLabel.AutoSize = true;
+            this.IncomeTimePeriodLabel.Location = new System.Drawing.Point(368, 87);
+            this.IncomeTimePeriodLabel.Name = "IncomeTimePeriodLabel";
+            this.IncomeTimePeriodLabel.Size = new System.Drawing.Size(16, 17);
+            this.IncomeTimePeriodLabel.TabIndex = 6;
+            this.IncomeTimePeriodLabel.Text = "0";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(199, 91);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(0, 17);
+            this.label32.TabIndex = 5;
+            // 
+            // GetIncomeTimePeriodButton
+            // 
+            this.GetIncomeTimePeriodButton.BackColor = System.Drawing.Color.Navy;
+            this.GetIncomeTimePeriodButton.FlatAppearance.BorderSize = 0;
+            this.GetIncomeTimePeriodButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.GetIncomeTimePeriodButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GetIncomeTimePeriodButton.ForeColor = System.Drawing.Color.White;
+            this.GetIncomeTimePeriodButton.Location = new System.Drawing.Point(64, 75);
+            this.GetIncomeTimePeriodButton.Name = "GetIncomeTimePeriodButton";
+            this.GetIncomeTimePeriodButton.Size = new System.Drawing.Size(146, 35);
+            this.GetIncomeTimePeriodButton.TabIndex = 3;
+            this.GetIncomeTimePeriodButton.Text = "Get Income";
+            this.GetIncomeTimePeriodButton.UseVisualStyleBackColor = false;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(17, 36);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(72, 17);
+            this.label34.TabIndex = 0;
+            this.label34.Text = "Start Date";
+            // 
             // groupBox8
             // 
             this.groupBox8.Controls.Add(this.Salary_Label);
@@ -948,6 +1070,33 @@
             this.groupBox8.TabIndex = 5;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Number of Employees working in a Station and their average Salary";
+            // 
+            // Salary_Label
+            // 
+            this.Salary_Label.AutoSize = true;
+            this.Salary_Label.Location = new System.Drawing.Point(407, 91);
+            this.Salary_Label.Name = "Salary_Label";
+            this.Salary_Label.Size = new System.Drawing.Size(16, 17);
+            this.Salary_Label.TabIndex = 7;
+            this.Salary_Label.Text = "0";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(327, 91);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(56, 17);
+            this.label24.TabIndex = 6;
+            this.label24.Text = "Salary :";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(219, 91);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(53, 17);
+            this.label29.TabIndex = 5;
+            this.label29.Text = "Count :";
             // 
             // StationNameComboBox2
             // 
@@ -1197,111 +1346,40 @@
             this.label23.TabIndex = 0;
             this.label23.Text = "Passenger\'s SSN";
             // 
-            // label29
+            // Accept_Request_Button
             // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(219, 91);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(53, 17);
-            this.label29.TabIndex = 5;
-            this.label29.Text = "Count :";
+            this.Accept_Request_Button.BackColor = System.Drawing.Color.Navy;
+            this.Accept_Request_Button.FlatAppearance.BorderSize = 0;
+            this.Accept_Request_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.Accept_Request_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Accept_Request_Button.ForeColor = System.Drawing.Color.White;
+            this.Accept_Request_Button.Location = new System.Drawing.Point(32, 146);
+            this.Accept_Request_Button.Name = "Accept_Request_Button";
+            this.Accept_Request_Button.Size = new System.Drawing.Size(136, 51);
+            this.Accept_Request_Button.TabIndex = 5;
+            this.Accept_Request_Button.Text = "Accept";
+            this.Accept_Request_Button.UseVisualStyleBackColor = false;
             // 
-            // label24
+            // Reject_Request_Button
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(327, 91);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(56, 17);
-            this.label24.TabIndex = 6;
-            this.label24.Text = "Salary :";
+            this.Reject_Request_Button.BackColor = System.Drawing.Color.Navy;
+            this.Reject_Request_Button.FlatAppearance.BorderSize = 0;
+            this.Reject_Request_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.Reject_Request_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Reject_Request_Button.ForeColor = System.Drawing.Color.White;
+            this.Reject_Request_Button.Location = new System.Drawing.Point(230, 146);
+            this.Reject_Request_Button.Name = "Reject_Request_Button";
+            this.Reject_Request_Button.Size = new System.Drawing.Size(136, 52);
+            this.Reject_Request_Button.TabIndex = 6;
+            this.Reject_Request_Button.Text = "Reject";
+            this.Reject_Request_Button.UseVisualStyleBackColor = false;
             // 
-            // Salary_Label
+            // Request_ID_TextBox
             // 
-            this.Salary_Label.AutoSize = true;
-            this.Salary_Label.Location = new System.Drawing.Point(407, 91);
-            this.Salary_Label.Name = "Salary_Label";
-            this.Salary_Label.Size = new System.Drawing.Size(16, 17);
-            this.Salary_Label.TabIndex = 7;
-            this.Salary_Label.Text = "0";
-            // 
-            // groupBox9
-            // 
-            this.groupBox9.Controls.Add(this.label30);
-            this.groupBox9.Controls.Add(this.EndDatePicker);
-            this.groupBox9.Controls.Add(this.StartDatePicker);
-            this.groupBox9.Controls.Add(this.IncomeTimePeriodLabel);
-            this.groupBox9.Controls.Add(this.label32);
-            this.groupBox9.Controls.Add(this.GetIncomeTimePeriodButton);
-            this.groupBox9.Controls.Add(this.label34);
-            this.groupBox9.Location = new System.Drawing.Point(374, 357);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(448, 126);
-            this.groupBox9.TabIndex = 6;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Total Income in a Time Period";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(199, 91);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(0, 17);
-            this.label32.TabIndex = 5;
-            // 
-            // GetIncomeTimePeriodButton
-            // 
-            this.GetIncomeTimePeriodButton.BackColor = System.Drawing.Color.Navy;
-            this.GetIncomeTimePeriodButton.FlatAppearance.BorderSize = 0;
-            this.GetIncomeTimePeriodButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.GetIncomeTimePeriodButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GetIncomeTimePeriodButton.ForeColor = System.Drawing.Color.White;
-            this.GetIncomeTimePeriodButton.Location = new System.Drawing.Point(64, 75);
-            this.GetIncomeTimePeriodButton.Name = "GetIncomeTimePeriodButton";
-            this.GetIncomeTimePeriodButton.Size = new System.Drawing.Size(146, 35);
-            this.GetIncomeTimePeriodButton.TabIndex = 3;
-            this.GetIncomeTimePeriodButton.Text = "Get Income";
-            this.GetIncomeTimePeriodButton.UseVisualStyleBackColor = false;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(17, 36);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(72, 17);
-            this.label34.TabIndex = 0;
-            this.label34.Text = "Start Date";
-            // 
-            // IncomeTimePeriodLabel
-            // 
-            this.IncomeTimePeriodLabel.AutoSize = true;
-            this.IncomeTimePeriodLabel.Location = new System.Drawing.Point(368, 87);
-            this.IncomeTimePeriodLabel.Name = "IncomeTimePeriodLabel";
-            this.IncomeTimePeriodLabel.Size = new System.Drawing.Size(16, 17);
-            this.IncomeTimePeriodLabel.TabIndex = 6;
-            this.IncomeTimePeriodLabel.Text = "0";
-            // 
-            // StartDatePicker
-            // 
-            this.StartDatePicker.Location = new System.Drawing.Point(95, 36);
-            this.StartDatePicker.Name = "StartDatePicker";
-            this.StartDatePicker.Size = new System.Drawing.Size(115, 22);
-            this.StartDatePicker.TabIndex = 7;
-            // 
-            // EndDatePicker
-            // 
-            this.EndDatePicker.Location = new System.Drawing.Point(316, 36);
-            this.EndDatePicker.Name = "EndDatePicker";
-            this.EndDatePicker.Size = new System.Drawing.Size(108, 22);
-            this.EndDatePicker.TabIndex = 8;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(234, 37);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(67, 17);
-            this.label30.TabIndex = 9;
-            this.label30.Text = "End Date";
+            this.Request_ID_TextBox.Location = new System.Drawing.Point(153, 54);
+            this.Request_ID_TextBox.Name = "Request_ID_TextBox";
+            this.Request_ID_TextBox.Size = new System.Drawing.Size(100, 22);
+            this.Request_ID_TextBox.TabIndex = 7;
             // 
             // Manager_Form
             // 
@@ -1314,12 +1392,12 @@
             this.Controls.Add(this.trainsButton);
             this.Controls.Add(this.employeesButton);
             this.Controls.Add(this.tripsButton);
-            this.Controls.Add(this.Statistical_Models_GroupBox);
             this.Controls.Add(this.Spare_Parts_GroupBox);
             this.Controls.Add(this.SuppliersGroupBox);
             this.Controls.Add(this.EmployeesGroupBox);
             this.Controls.Add(this.TripsGroupBox);
             this.Controls.Add(this.TrainsGroupBox);
+            this.Controls.Add(this.Statistical_Models_GroupBox);
             this.Name = "Manager_Form";
             this.Text = "Manager_Form";
             ((System.ComponentModel.ISupportInitialize)(this.TripsDG)).EndInit();
@@ -1340,7 +1418,13 @@
             this.Add_Remove_Suppliers.ResumeLayout(false);
             this.Add_Remove_Suppliers.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SuppliersDG)).EndInit();
+            this.Spare_Parts_GroupBox.ResumeLayout(false);
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RequestsDG)).EndInit();
             this.Statistical_Models_GroupBox.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.groupBox7.ResumeLayout(false);
@@ -1351,8 +1435,6 @@
             this.groupBox5.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1468,5 +1550,11 @@
         private System.Windows.Forms.DateTimePicker EndDatePicker;
         private System.Windows.Forms.DateTimePicker StartDatePicker;
         private System.Windows.Forms.Label IncomeTimePeriodLabel;
+        private System.Windows.Forms.DataGridView RequestsDG;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Button Accept_Request_Button;
+        private System.Windows.Forms.TextBox Request_ID_TextBox;
+        private System.Windows.Forms.Button Reject_Request_Button;
     }
 }
