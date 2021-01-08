@@ -57,5 +57,15 @@ namespace Railway_Management_System
             string StoredProcedureName = StoredProcedures.SelectAllSpareParts;
             return dbMan.ExecuteReader(StoredProcedureName, null);
         }
+
+        public void ChangeMaintenanceDay(int Train_Number, DateTime Date)
+        {
+            string StoredProcedureName = StoredProcedures.ChangeMaintenanceDay;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Train_Number", Train_Number);
+            Parameters.Add("@New_Date", Date);
+            dbMan.ExecuteNonQuery(StoredProcedureName,Parameters);
+
+        }
     }
 }

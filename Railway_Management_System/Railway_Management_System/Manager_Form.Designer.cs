@@ -101,6 +101,9 @@
             this.SuppliersDG = new System.Windows.Forms.DataGridView();
             this.Spare_Parts_GroupBox = new System.Windows.Forms.GroupBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.Request_ID_TextBox = new System.Windows.Forms.TextBox();
+            this.Reject_Request_Button = new System.Windows.Forms.Button();
+            this.Accept_Request_Button = new System.Windows.Forms.Button();
             this.label31 = new System.Windows.Forms.Label();
             this.RequestsDG = new System.Windows.Forms.DataGridView();
             this.Statistical_Models_GroupBox = new System.Windows.Forms.GroupBox();
@@ -140,9 +143,8 @@
             this.PassengersSSNTextBox = new System.Windows.Forms.TextBox();
             this.No_of_trips_passenger_made_Label = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.Accept_Request_Button = new System.Windows.Forms.Button();
-            this.Reject_Request_Button = new System.Windows.Forms.Button();
-            this.Request_ID_TextBox = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.TrainNumberTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.TripsDG)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -790,6 +792,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.TrainNumberTextBox);
+            this.groupBox3.Controls.Add(this.label33);
             this.groupBox3.Controls.Add(this.New_Maintenance_Date);
             this.groupBox3.Controls.Add(this.label21);
             this.groupBox3.Controls.Add(this.Change_Date_Button);
@@ -802,7 +806,7 @@
             // 
             // New_Maintenance_Date
             // 
-            this.New_Maintenance_Date.Location = new System.Drawing.Point(191, 84);
+            this.New_Maintenance_Date.Location = new System.Drawing.Point(224, 87);
             this.New_Maintenance_Date.Name = "New_Maintenance_Date";
             this.New_Maintenance_Date.Size = new System.Drawing.Size(200, 22);
             this.New_Maintenance_Date.TabIndex = 7;
@@ -829,6 +833,7 @@
             this.Change_Date_Button.TabIndex = 5;
             this.Change_Date_Button.Text = "Change Date";
             this.Change_Date_Button.UseVisualStyleBackColor = false;
+            this.Change_Date_Button.Click += new System.EventHandler(this.Change_Date_Button_Click);
             // 
             // TrainsDG
             // 
@@ -941,6 +946,41 @@
             this.groupBox10.TabIndex = 1;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Accept/Reject";
+            // 
+            // Request_ID_TextBox
+            // 
+            this.Request_ID_TextBox.Location = new System.Drawing.Point(153, 54);
+            this.Request_ID_TextBox.Name = "Request_ID_TextBox";
+            this.Request_ID_TextBox.Size = new System.Drawing.Size(100, 22);
+            this.Request_ID_TextBox.TabIndex = 7;
+            // 
+            // Reject_Request_Button
+            // 
+            this.Reject_Request_Button.BackColor = System.Drawing.Color.Navy;
+            this.Reject_Request_Button.FlatAppearance.BorderSize = 0;
+            this.Reject_Request_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.Reject_Request_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Reject_Request_Button.ForeColor = System.Drawing.Color.White;
+            this.Reject_Request_Button.Location = new System.Drawing.Point(230, 146);
+            this.Reject_Request_Button.Name = "Reject_Request_Button";
+            this.Reject_Request_Button.Size = new System.Drawing.Size(136, 52);
+            this.Reject_Request_Button.TabIndex = 6;
+            this.Reject_Request_Button.Text = "Reject";
+            this.Reject_Request_Button.UseVisualStyleBackColor = false;
+            // 
+            // Accept_Request_Button
+            // 
+            this.Accept_Request_Button.BackColor = System.Drawing.Color.Navy;
+            this.Accept_Request_Button.FlatAppearance.BorderSize = 0;
+            this.Accept_Request_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.Accept_Request_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Accept_Request_Button.ForeColor = System.Drawing.Color.White;
+            this.Accept_Request_Button.Location = new System.Drawing.Point(32, 146);
+            this.Accept_Request_Button.Name = "Accept_Request_Button";
+            this.Accept_Request_Button.Size = new System.Drawing.Size(136, 51);
+            this.Accept_Request_Button.TabIndex = 5;
+            this.Accept_Request_Button.Text = "Accept";
+            this.Accept_Request_Button.UseVisualStyleBackColor = false;
             // 
             // label31
             // 
@@ -1346,40 +1386,21 @@
             this.label23.TabIndex = 0;
             this.label23.Text = "Passenger\'s SSN";
             // 
-            // Accept_Request_Button
+            // label33
             // 
-            this.Accept_Request_Button.BackColor = System.Drawing.Color.Navy;
-            this.Accept_Request_Button.FlatAppearance.BorderSize = 0;
-            this.Accept_Request_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.Accept_Request_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Accept_Request_Button.ForeColor = System.Drawing.Color.White;
-            this.Accept_Request_Button.Location = new System.Drawing.Point(32, 146);
-            this.Accept_Request_Button.Name = "Accept_Request_Button";
-            this.Accept_Request_Button.Size = new System.Drawing.Size(136, 51);
-            this.Accept_Request_Button.TabIndex = 5;
-            this.Accept_Request_Button.Text = "Accept";
-            this.Accept_Request_Button.UseVisualStyleBackColor = false;
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(102, 55);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(95, 17);
+            this.label33.TabIndex = 8;
+            this.label33.Text = "Train Number";
             // 
-            // Reject_Request_Button
+            // TrainNumberTextBox
             // 
-            this.Reject_Request_Button.BackColor = System.Drawing.Color.Navy;
-            this.Reject_Request_Button.FlatAppearance.BorderSize = 0;
-            this.Reject_Request_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.Reject_Request_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Reject_Request_Button.ForeColor = System.Drawing.Color.White;
-            this.Reject_Request_Button.Location = new System.Drawing.Point(230, 146);
-            this.Reject_Request_Button.Name = "Reject_Request_Button";
-            this.Reject_Request_Button.Size = new System.Drawing.Size(136, 52);
-            this.Reject_Request_Button.TabIndex = 6;
-            this.Reject_Request_Button.Text = "Reject";
-            this.Reject_Request_Button.UseVisualStyleBackColor = false;
-            // 
-            // Request_ID_TextBox
-            // 
-            this.Request_ID_TextBox.Location = new System.Drawing.Point(153, 54);
-            this.Request_ID_TextBox.Name = "Request_ID_TextBox";
-            this.Request_ID_TextBox.Size = new System.Drawing.Size(100, 22);
-            this.Request_ID_TextBox.TabIndex = 7;
+            this.TrainNumberTextBox.Location = new System.Drawing.Point(224, 47);
+            this.TrainNumberTextBox.Name = "TrainNumberTextBox";
+            this.TrainNumberTextBox.Size = new System.Drawing.Size(100, 22);
+            this.TrainNumberTextBox.TabIndex = 9;
             // 
             // Manager_Form
             // 
@@ -1556,5 +1577,7 @@
         private System.Windows.Forms.Button Accept_Request_Button;
         private System.Windows.Forms.TextBox Request_ID_TextBox;
         private System.Windows.Forms.Button Reject_Request_Button;
+        private System.Windows.Forms.TextBox TrainNumberTextBox;
+        private System.Windows.Forms.Label label33;
     }
 }

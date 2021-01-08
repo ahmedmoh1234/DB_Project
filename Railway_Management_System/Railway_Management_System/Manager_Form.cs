@@ -96,6 +96,8 @@ namespace Railway_Management_System
             SuppliersGroupBox.Visible = false;
             Spare_Parts_GroupBox.Visible = true;
             Statistical_Models_GroupBox.Visible = false;
+
+            //ADD REQUESTS IN DATA GRID VIEW            
         }
 
         private void statistical_modelsButton_Click(object sender, EventArgs e)
@@ -110,6 +112,11 @@ namespace Railway_Management_System
             DataTable DT = controllerObj.GetAllStations();
             StationNameComboBox2.DataSource = DT;
             StationNameComboBox2.DisplayMember = "Station_Name";
+
+        }
+
+        private void Change_Date_Button_Click(object sender, EventArgs e)
+        {
 
         }
     }
