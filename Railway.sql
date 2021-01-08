@@ -77,7 +77,7 @@ CREATE TABLE SUPPLIER
   Supplier_ID INT NOT NULL,
   Supplier_Address VARCHAR(50) NOT NULL,
   Supplier_Name VARCHAR(50) NOT NULL,
-  Phone_Number INT NOT NULL,
+  Phone_Number BIGINT NOT NULL,
   PRIMARY KEY (Supplier_ID),
   UNIQUE (Phone_Number)
 );
@@ -173,4 +173,21 @@ VALUES
 (205,'Misr Station',420420420,'2015-07-04','Ramsis'),
 (301,'Menya',88888888,'2018-09-14','Menya'),
 (488,'Mansoura',619619619,'2017-06-03','Dakahleya');
+
+
+INSERT INTO SUPPLIER(Supplier_ID, Supplier_Address, Supplier_Name, Phone_Number)
+VALUES
+(1,'Beijing, China','CRRC',8611111111111),
+(2,'Saint Petersburg, Russia','Kirov Plant', 70000000),
+(3,'Munich, Germany','Siemens Mobility',4930901820);
+
+INSERT INTO SPARE_PART(Part_Number,Price,Supplier_ID)
+VALUES
+(10,1000000,1),		--Engine
+(20,1000,1),		--Wheel
+(21,2000,2),		--Brakes
+(22,20000,2),		--Brake system
+(23,5000,3),		--Bearings
+(30,20000,3);		--Gears
+
 
