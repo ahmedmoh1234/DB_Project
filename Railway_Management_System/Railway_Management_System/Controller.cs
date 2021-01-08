@@ -27,5 +27,29 @@ namespace Railway_Management_System
             return dbMan.ExecuteReader(StoredProcedureName, null);
           
         }
+
+        public DataTable GetAllTrips()
+        {
+            string StoredProcedureName = StoredProcedures.SelectAllTrips;
+            return dbMan.ExecuteReader(StoredProcedureName, null);
+        }
+
+        public DataTable GetAllTrains()
+        {
+            string StoredProcedureName = StoredProcedures.SelectAllTrains;
+            return dbMan.ExecuteReader(StoredProcedureName, null);
+        }
+
+        public DataTable GetAllStations()
+        {
+            string StoredProcedureName = StoredProcedures.SelectAllStations;
+            return dbMan.ExecuteReader(StoredProcedureName, null);
+        }
+
+        public DataTable GetAllSuppliers()
+        {
+            string StoredProcedureName = StoredProcedures.SelectAllSuppliers;
+            return dbMan.ExecuteReader(StoredProcedureName, null);
+        }
     }
 }

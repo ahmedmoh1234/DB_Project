@@ -37,7 +37,7 @@
             this.TripsDG = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.AddButton = new System.Windows.Forms.Button();
-            this.TrainNumberTextBox = new System.Windows.Forms.TextBox();
+            this.TrainNumberTextBox1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.BusinessTicketPriceTextBox = new System.Windows.Forms.TextBox();
             this.EconomicTicketPriceTextBox = new System.Windows.Forms.TextBox();
@@ -47,9 +47,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.trip_number_TextBox = new System.Windows.Forms.TextBox();
+            this.trip_number_to_add__TextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.trip_number_to_remove_TextBox = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.remove_tripButton = new System.Windows.Forms.Button();
             this.TripsGroupBox = new System.Windows.Forms.GroupBox();
             this.EmployeesGroupBox = new System.Windows.Forms.GroupBox();
@@ -85,6 +87,56 @@
             this.label7 = new System.Windows.Forms.Label();
             this.HireButton = new System.Windows.Forms.Button();
             this.TrainsGroupBox = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.New_Maintenance_Date = new System.Windows.Forms.DateTimePicker();
+            this.label21 = new System.Windows.Forms.Label();
+            this.Change_Date_Button = new System.Windows.Forms.Button();
+            this.TrainsDG = new System.Windows.Forms.DataGridView();
+            this.SuppliersGroupBox = new System.Windows.Forms.GroupBox();
+            this.Add_Remove_Suppliers = new System.Windows.Forms.GroupBox();
+            this.Supplier_Number_TextBox = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.Remove_Supplier_Button = new System.Windows.Forms.Button();
+            this.Add_Supplier_Button = new System.Windows.Forms.Button();
+            this.SuppliersDG = new System.Windows.Forms.DataGridView();
+            this.Spare_Parts_GroupBox = new System.Windows.Forms.GroupBox();
+            this.Statistical_Models_GroupBox = new System.Windows.Forms.GroupBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.StationNameComboBox2 = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.Number_of_emps_working_station_label = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.AvgNoPass_Trip_Number_TextBox = new System.Windows.Forms.TextBox();
+            this.Avg_Number_Pass_Label = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.GetIncomefromTripButton = new System.Windows.Forms.Button();
+            this.GetIncomeFromTripTextBox = new System.Windows.Forms.TextBox();
+            this.IncomeFromTripLabel = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.GeetTrainsCountButton = new System.Windows.Forms.Button();
+            this.TrainNumberTextBox2 = new System.Windows.Forms.TextBox();
+            this.Number_of_trips_Train_made_label = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.GetPassCountButton = new System.Windows.Forms.Button();
+            this.PassengersSSNTextBox = new System.Windows.Forms.TextBox();
+            this.No_of_trips_passenger_made_Label = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.Salary_Label = new System.Windows.Forms.Label();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.GetIncomeTimePeriodButton = new System.Windows.Forms.Button();
+            this.label34 = new System.Windows.Forms.Label();
+            this.IncomeTimePeriodLabel = new System.Windows.Forms.Label();
+            this.StartDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.EndDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.label30 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.TripsDG)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -92,6 +144,19 @@
             this.EmployeesGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeesDG)).BeginInit();
             this.HireGroupBox.SuspendLayout();
+            this.TrainsGroupBox.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TrainsDG)).BeginInit();
+            this.SuppliersGroupBox.SuspendLayout();
+            this.Add_Remove_Suppliers.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SuppliersDG)).BeginInit();
+            this.Statistical_Models_GroupBox.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.SuspendLayout();
             // 
             // tripsButton
@@ -152,6 +217,7 @@
             this.suppliersButton.TabIndex = 3;
             this.suppliersButton.Text = "Suppliers";
             this.suppliersButton.UseVisualStyleBackColor = false;
+            this.suppliersButton.Click += new System.EventHandler(this.suppliersButton_Click);
             // 
             // spare_partsButton
             // 
@@ -166,6 +232,7 @@
             this.spare_partsButton.TabIndex = 4;
             this.spare_partsButton.Text = "Spare Parts";
             this.spare_partsButton.UseVisualStyleBackColor = false;
+            this.spare_partsButton.Click += new System.EventHandler(this.spare_partsButton_Click);
             // 
             // statistical_modelsButton
             // 
@@ -180,6 +247,7 @@
             this.statistical_modelsButton.TabIndex = 5;
             this.statistical_modelsButton.Text = "Statistical Models";
             this.statistical_modelsButton.UseVisualStyleBackColor = false;
+            this.statistical_modelsButton.Click += new System.EventHandler(this.statistical_modelsButton_Click);
             // 
             // TripsDG
             // 
@@ -194,7 +262,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.AddButton);
-            this.groupBox1.Controls.Add(this.TrainNumberTextBox);
+            this.groupBox1.Controls.Add(this.TrainNumberTextBox1);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.BusinessTicketPriceTextBox);
             this.groupBox1.Controls.Add(this.EconomicTicketPriceTextBox);
@@ -204,7 +272,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.dateTimePicker2);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.trip_number_TextBox);
+            this.groupBox1.Controls.Add(this.trip_number_to_add__TextBox);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(26, 252);
             this.groupBox1.Name = "groupBox1";
@@ -227,12 +295,12 @@
             this.AddButton.Text = "Add";
             this.AddButton.UseVisualStyleBackColor = false;
             // 
-            // TrainNumberTextBox
+            // TrainNumberTextBox1
             // 
-            this.TrainNumberTextBox.Location = new System.Drawing.Point(182, 206);
-            this.TrainNumberTextBox.Name = "TrainNumberTextBox";
-            this.TrainNumberTextBox.Size = new System.Drawing.Size(100, 22);
-            this.TrainNumberTextBox.TabIndex = 11;
+            this.TrainNumberTextBox1.Location = new System.Drawing.Point(182, 206);
+            this.TrainNumberTextBox1.Name = "TrainNumberTextBox1";
+            this.TrainNumberTextBox1.Size = new System.Drawing.Size(100, 22);
+            this.TrainNumberTextBox1.TabIndex = 11;
             // 
             // label6
             // 
@@ -307,12 +375,12 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker1.TabIndex = 2;
             // 
-            // trip_number_TextBox
+            // trip_number_to_add__TextBox
             // 
-            this.trip_number_TextBox.Location = new System.Drawing.Point(182, 48);
-            this.trip_number_TextBox.Name = "trip_number_TextBox";
-            this.trip_number_TextBox.Size = new System.Drawing.Size(100, 22);
-            this.trip_number_TextBox.TabIndex = 1;
+            this.trip_number_to_add__TextBox.Location = new System.Drawing.Point(182, 48);
+            this.trip_number_to_add__TextBox.Name = "trip_number_to_add__TextBox";
+            this.trip_number_to_add__TextBox.Size = new System.Drawing.Size(100, 22);
+            this.trip_number_to_add__TextBox.TabIndex = 1;
             // 
             // label1
             // 
@@ -325,6 +393,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.trip_number_to_remove_TextBox);
+            this.groupBox2.Controls.Add(this.label20);
             this.groupBox2.Controls.Add(this.remove_tripButton);
             this.groupBox2.Location = new System.Drawing.Point(647, 252);
             this.groupBox2.Name = "groupBox2";
@@ -332,6 +402,22 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Remove a Trip";
+            // 
+            // trip_number_to_remove_TextBox
+            // 
+            this.trip_number_to_remove_TextBox.Location = new System.Drawing.Point(99, 71);
+            this.trip_number_to_remove_TextBox.Name = "trip_number_to_remove_TextBox";
+            this.trip_number_to_remove_TextBox.Size = new System.Drawing.Size(100, 22);
+            this.trip_number_to_remove_TextBox.TabIndex = 5;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(6, 72);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(87, 17);
+            this.label20.TabIndex = 4;
+            this.label20.Text = "Trip Number";
             // 
             // remove_tripButton
             // 
@@ -684,12 +770,538 @@
             // 
             // TrainsGroupBox
             // 
+            this.TrainsGroupBox.Controls.Add(this.groupBox3);
+            this.TrainsGroupBox.Controls.Add(this.TrainsDG);
             this.TrainsGroupBox.Location = new System.Drawing.Point(164, 12);
             this.TrainsGroupBox.Name = "TrainsGroupBox";
             this.TrainsGroupBox.Size = new System.Drawing.Size(858, 531);
             this.TrainsGroupBox.TabIndex = 7;
             this.TrainsGroupBox.TabStop = false;
             this.TrainsGroupBox.Text = "Trains";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.New_Maintenance_Date);
+            this.groupBox3.Controls.Add(this.label21);
+            this.groupBox3.Controls.Add(this.Change_Date_Button);
+            this.groupBox3.Location = new System.Drawing.Point(171, 273);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(476, 225);
+            this.groupBox3.TabIndex = 1;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Maintenance Day";
+            // 
+            // New_Maintenance_Date
+            // 
+            this.New_Maintenance_Date.Location = new System.Drawing.Point(191, 84);
+            this.New_Maintenance_Date.Name = "New_Maintenance_Date";
+            this.New_Maintenance_Date.Size = new System.Drawing.Size(200, 22);
+            this.New_Maintenance_Date.TabIndex = 7;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(102, 84);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(69, 17);
+            this.label21.TabIndex = 6;
+            this.label21.Text = "New Date";
+            // 
+            // Change_Date_Button
+            // 
+            this.Change_Date_Button.BackColor = System.Drawing.Color.Navy;
+            this.Change_Date_Button.FlatAppearance.BorderSize = 0;
+            this.Change_Date_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.Change_Date_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Change_Date_Button.ForeColor = System.Drawing.Color.White;
+            this.Change_Date_Button.Location = new System.Drawing.Point(139, 144);
+            this.Change_Date_Button.Name = "Change_Date_Button";
+            this.Change_Date_Button.Size = new System.Drawing.Size(191, 54);
+            this.Change_Date_Button.TabIndex = 5;
+            this.Change_Date_Button.Text = "Change Date";
+            this.Change_Date_Button.UseVisualStyleBackColor = false;
+            // 
+            // TrainsDG
+            // 
+            this.TrainsDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TrainsDG.Location = new System.Drawing.Point(8, 37);
+            this.TrainsDG.Name = "TrainsDG";
+            this.TrainsDG.RowHeadersWidth = 51;
+            this.TrainsDG.RowTemplate.Height = 24;
+            this.TrainsDG.Size = new System.Drawing.Size(844, 201);
+            this.TrainsDG.TabIndex = 0;
+            // 
+            // SuppliersGroupBox
+            // 
+            this.SuppliersGroupBox.Controls.Add(this.Add_Remove_Suppliers);
+            this.SuppliersGroupBox.Controls.Add(this.SuppliersDG);
+            this.SuppliersGroupBox.Location = new System.Drawing.Point(164, 12);
+            this.SuppliersGroupBox.Name = "SuppliersGroupBox";
+            this.SuppliersGroupBox.Size = new System.Drawing.Size(864, 531);
+            this.SuppliersGroupBox.TabIndex = 8;
+            this.SuppliersGroupBox.TabStop = false;
+            this.SuppliersGroupBox.Text = "Suppliers";
+            // 
+            // Add_Remove_Suppliers
+            // 
+            this.Add_Remove_Suppliers.Controls.Add(this.Supplier_Number_TextBox);
+            this.Add_Remove_Suppliers.Controls.Add(this.label22);
+            this.Add_Remove_Suppliers.Controls.Add(this.Remove_Supplier_Button);
+            this.Add_Remove_Suppliers.Controls.Add(this.Add_Supplier_Button);
+            this.Add_Remove_Suppliers.Location = new System.Drawing.Point(165, 281);
+            this.Add_Remove_Suppliers.Name = "Add_Remove_Suppliers";
+            this.Add_Remove_Suppliers.Size = new System.Drawing.Size(459, 217);
+            this.Add_Remove_Suppliers.TabIndex = 1;
+            this.Add_Remove_Suppliers.TabStop = false;
+            this.Add_Remove_Suppliers.Text = "Add/Remove";
+            // 
+            // Supplier_Number_TextBox
+            // 
+            this.Supplier_Number_TextBox.Location = new System.Drawing.Point(183, 57);
+            this.Supplier_Number_TextBox.Name = "Supplier_Number_TextBox";
+            this.Supplier_Number_TextBox.Size = new System.Drawing.Size(100, 22);
+            this.Supplier_Number_TextBox.TabIndex = 8;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(42, 59);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(114, 17);
+            this.label22.TabIndex = 7;
+            this.label22.Text = "Supplier Number";
+            // 
+            // Remove_Supplier_Button
+            // 
+            this.Remove_Supplier_Button.BackColor = System.Drawing.Color.Navy;
+            this.Remove_Supplier_Button.FlatAppearance.BorderSize = 0;
+            this.Remove_Supplier_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.Remove_Supplier_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Remove_Supplier_Button.ForeColor = System.Drawing.Color.White;
+            this.Remove_Supplier_Button.Location = new System.Drawing.Point(244, 148);
+            this.Remove_Supplier_Button.Name = "Remove_Supplier_Button";
+            this.Remove_Supplier_Button.Size = new System.Drawing.Size(161, 46);
+            this.Remove_Supplier_Button.TabIndex = 6;
+            this.Remove_Supplier_Button.Text = "Remove";
+            this.Remove_Supplier_Button.UseVisualStyleBackColor = false;
+            // 
+            // Add_Supplier_Button
+            // 
+            this.Add_Supplier_Button.BackColor = System.Drawing.Color.Navy;
+            this.Add_Supplier_Button.FlatAppearance.BorderSize = 0;
+            this.Add_Supplier_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.Add_Supplier_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Add_Supplier_Button.ForeColor = System.Drawing.Color.White;
+            this.Add_Supplier_Button.Location = new System.Drawing.Point(42, 148);
+            this.Add_Supplier_Button.Name = "Add_Supplier_Button";
+            this.Add_Supplier_Button.Size = new System.Drawing.Size(161, 46);
+            this.Add_Supplier_Button.TabIndex = 5;
+            this.Add_Supplier_Button.Text = "Add";
+            this.Add_Supplier_Button.UseVisualStyleBackColor = false;
+            // 
+            // SuppliersDG
+            // 
+            this.SuppliersDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SuppliersDG.Location = new System.Drawing.Point(8, 37);
+            this.SuppliersDG.Name = "SuppliersDG";
+            this.SuppliersDG.RowHeadersWidth = 51;
+            this.SuppliersDG.RowTemplate.Height = 24;
+            this.SuppliersDG.Size = new System.Drawing.Size(844, 201);
+            this.SuppliersDG.TabIndex = 0;
+            // 
+            // Spare_Parts_GroupBox
+            // 
+            this.Spare_Parts_GroupBox.Location = new System.Drawing.Point(164, 12);
+            this.Spare_Parts_GroupBox.Name = "Spare_Parts_GroupBox";
+            this.Spare_Parts_GroupBox.Size = new System.Drawing.Size(864, 531);
+            this.Spare_Parts_GroupBox.TabIndex = 9;
+            this.Spare_Parts_GroupBox.TabStop = false;
+            this.Spare_Parts_GroupBox.Text = "Spare Parts";
+            // 
+            // Statistical_Models_GroupBox
+            // 
+            this.Statistical_Models_GroupBox.Controls.Add(this.groupBox9);
+            this.Statistical_Models_GroupBox.Controls.Add(this.groupBox8);
+            this.Statistical_Models_GroupBox.Controls.Add(this.groupBox7);
+            this.Statistical_Models_GroupBox.Controls.Add(this.groupBox6);
+            this.Statistical_Models_GroupBox.Controls.Add(this.groupBox5);
+            this.Statistical_Models_GroupBox.Controls.Add(this.groupBox4);
+            this.Statistical_Models_GroupBox.Location = new System.Drawing.Point(164, 12);
+            this.Statistical_Models_GroupBox.Name = "Statistical_Models_GroupBox";
+            this.Statistical_Models_GroupBox.Size = new System.Drawing.Size(864, 531);
+            this.Statistical_Models_GroupBox.TabIndex = 10;
+            this.Statistical_Models_GroupBox.TabStop = false;
+            this.Statistical_Models_GroupBox.Text = "Statistical Models";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.Salary_Label);
+            this.groupBox8.Controls.Add(this.label24);
+            this.groupBox8.Controls.Add(this.label29);
+            this.groupBox8.Controls.Add(this.StationNameComboBox2);
+            this.groupBox8.Controls.Add(this.button2);
+            this.groupBox8.Controls.Add(this.Number_of_emps_working_station_label);
+            this.groupBox8.Controls.Add(this.label28);
+            this.groupBox8.Location = new System.Drawing.Point(375, 197);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(448, 135);
+            this.groupBox8.TabIndex = 5;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Number of Employees working in a Station and their average Salary";
+            // 
+            // StationNameComboBox2
+            // 
+            this.StationNameComboBox2.FormattingEnabled = true;
+            this.StationNameComboBox2.Location = new System.Drawing.Point(131, 36);
+            this.StationNameComboBox2.Name = "StationNameComboBox2";
+            this.StationNameComboBox2.Size = new System.Drawing.Size(121, 24);
+            this.StationNameComboBox2.TabIndex = 4;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Navy;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(64, 77);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(146, 45);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Get Count and Salary";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // Number_of_emps_working_station_label
+            // 
+            this.Number_of_emps_working_station_label.AutoSize = true;
+            this.Number_of_emps_working_station_label.Location = new System.Drawing.Point(278, 91);
+            this.Number_of_emps_working_station_label.Name = "Number_of_emps_working_station_label";
+            this.Number_of_emps_working_station_label.Size = new System.Drawing.Size(16, 17);
+            this.Number_of_emps_working_station_label.TabIndex = 1;
+            this.Number_of_emps_working_station_label.Text = "0";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(17, 36);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(93, 17);
+            this.label28.TabIndex = 0;
+            this.label28.Text = "Station Name";
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.button1);
+            this.groupBox7.Controls.Add(this.AvgNoPass_Trip_Number_TextBox);
+            this.groupBox7.Controls.Add(this.Avg_Number_Pass_Label);
+            this.groupBox7.Controls.Add(this.label27);
+            this.groupBox7.Location = new System.Drawing.Point(371, 48);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(448, 126);
+            this.groupBox7.TabIndex = 4;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Average Number of Passenger in a certain Trip";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Navy;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(64, 75);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(146, 35);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Get Count";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // AvgNoPass_Trip_Number_TextBox
+            // 
+            this.AvgNoPass_Trip_Number_TextBox.Location = new System.Drawing.Point(154, 36);
+            this.AvgNoPass_Trip_Number_TextBox.Name = "AvgNoPass_Trip_Number_TextBox";
+            this.AvgNoPass_Trip_Number_TextBox.Size = new System.Drawing.Size(100, 22);
+            this.AvgNoPass_Trip_Number_TextBox.TabIndex = 2;
+            // 
+            // Avg_Number_Pass_Label
+            // 
+            this.Avg_Number_Pass_Label.AutoSize = true;
+            this.Avg_Number_Pass_Label.Location = new System.Drawing.Point(266, 87);
+            this.Avg_Number_Pass_Label.Name = "Avg_Number_Pass_Label";
+            this.Avg_Number_Pass_Label.Size = new System.Drawing.Size(16, 17);
+            this.Avg_Number_Pass_Label.TabIndex = 1;
+            this.Avg_Number_Pass_Label.Text = "0";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(17, 36);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(87, 17);
+            this.label27.TabIndex = 0;
+            this.label27.Text = "Trip Number";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.GetIncomefromTripButton);
+            this.groupBox6.Controls.Add(this.GetIncomeFromTripTextBox);
+            this.groupBox6.Controls.Add(this.IncomeFromTripLabel);
+            this.groupBox6.Controls.Add(this.label26);
+            this.groupBox6.Location = new System.Drawing.Point(38, 354);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(310, 126);
+            this.groupBox6.TabIndex = 3;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Total Income from a certain Trip";
+            // 
+            // GetIncomefromTripButton
+            // 
+            this.GetIncomefromTripButton.BackColor = System.Drawing.Color.Navy;
+            this.GetIncomefromTripButton.FlatAppearance.BorderSize = 0;
+            this.GetIncomefromTripButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.GetIncomefromTripButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GetIncomefromTripButton.ForeColor = System.Drawing.Color.White;
+            this.GetIncomefromTripButton.Location = new System.Drawing.Point(64, 75);
+            this.GetIncomefromTripButton.Name = "GetIncomefromTripButton";
+            this.GetIncomefromTripButton.Size = new System.Drawing.Size(146, 35);
+            this.GetIncomefromTripButton.TabIndex = 3;
+            this.GetIncomefromTripButton.Text = "Get Income";
+            this.GetIncomefromTripButton.UseVisualStyleBackColor = false;
+            // 
+            // GetIncomeFromTripTextBox
+            // 
+            this.GetIncomeFromTripTextBox.Location = new System.Drawing.Point(154, 36);
+            this.GetIncomeFromTripTextBox.Name = "GetIncomeFromTripTextBox";
+            this.GetIncomeFromTripTextBox.Size = new System.Drawing.Size(100, 22);
+            this.GetIncomeFromTripTextBox.TabIndex = 2;
+            // 
+            // IncomeFromTripLabel
+            // 
+            this.IncomeFromTripLabel.AutoSize = true;
+            this.IncomeFromTripLabel.Location = new System.Drawing.Point(266, 87);
+            this.IncomeFromTripLabel.Name = "IncomeFromTripLabel";
+            this.IncomeFromTripLabel.Size = new System.Drawing.Size(16, 17);
+            this.IncomeFromTripLabel.TabIndex = 1;
+            this.IncomeFromTripLabel.Text = "0";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(17, 36);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(87, 17);
+            this.label26.TabIndex = 0;
+            this.label26.Text = "Trip Number";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.GeetTrainsCountButton);
+            this.groupBox5.Controls.Add(this.TrainNumberTextBox2);
+            this.groupBox5.Controls.Add(this.Number_of_trips_Train_made_label);
+            this.groupBox5.Controls.Add(this.label25);
+            this.groupBox5.Location = new System.Drawing.Point(38, 206);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(310, 126);
+            this.groupBox5.TabIndex = 2;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Number of Trips a Train has made";
+            // 
+            // GeetTrainsCountButton
+            // 
+            this.GeetTrainsCountButton.BackColor = System.Drawing.Color.Navy;
+            this.GeetTrainsCountButton.FlatAppearance.BorderSize = 0;
+            this.GeetTrainsCountButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.GeetTrainsCountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GeetTrainsCountButton.ForeColor = System.Drawing.Color.White;
+            this.GeetTrainsCountButton.Location = new System.Drawing.Point(64, 75);
+            this.GeetTrainsCountButton.Name = "GeetTrainsCountButton";
+            this.GeetTrainsCountButton.Size = new System.Drawing.Size(146, 35);
+            this.GeetTrainsCountButton.TabIndex = 3;
+            this.GeetTrainsCountButton.Text = "Get Count";
+            this.GeetTrainsCountButton.UseVisualStyleBackColor = false;
+            // 
+            // TrainNumberTextBox2
+            // 
+            this.TrainNumberTextBox2.Location = new System.Drawing.Point(154, 36);
+            this.TrainNumberTextBox2.Name = "TrainNumberTextBox2";
+            this.TrainNumberTextBox2.Size = new System.Drawing.Size(100, 22);
+            this.TrainNumberTextBox2.TabIndex = 2;
+            // 
+            // Number_of_trips_Train_made_label
+            // 
+            this.Number_of_trips_Train_made_label.AutoSize = true;
+            this.Number_of_trips_Train_made_label.Location = new System.Drawing.Point(266, 87);
+            this.Number_of_trips_Train_made_label.Name = "Number_of_trips_Train_made_label";
+            this.Number_of_trips_Train_made_label.Size = new System.Drawing.Size(16, 17);
+            this.Number_of_trips_Train_made_label.TabIndex = 1;
+            this.Number_of_trips_Train_made_label.Text = "0";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(17, 36);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(95, 17);
+            this.label25.TabIndex = 0;
+            this.label25.Text = "Train Number";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.GetPassCountButton);
+            this.groupBox4.Controls.Add(this.PassengersSSNTextBox);
+            this.groupBox4.Controls.Add(this.No_of_trips_passenger_made_Label);
+            this.groupBox4.Controls.Add(this.label23);
+            this.groupBox4.Location = new System.Drawing.Point(32, 48);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(310, 126);
+            this.groupBox4.TabIndex = 1;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Number of Trips a Passenger has made";
+            // 
+            // GetPassCountButton
+            // 
+            this.GetPassCountButton.BackColor = System.Drawing.Color.Navy;
+            this.GetPassCountButton.FlatAppearance.BorderSize = 0;
+            this.GetPassCountButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.GetPassCountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GetPassCountButton.ForeColor = System.Drawing.Color.White;
+            this.GetPassCountButton.Location = new System.Drawing.Point(64, 75);
+            this.GetPassCountButton.Name = "GetPassCountButton";
+            this.GetPassCountButton.Size = new System.Drawing.Size(146, 35);
+            this.GetPassCountButton.TabIndex = 3;
+            this.GetPassCountButton.Text = "Get Count";
+            this.GetPassCountButton.UseVisualStyleBackColor = false;
+            // 
+            // PassengersSSNTextBox
+            // 
+            this.PassengersSSNTextBox.Location = new System.Drawing.Point(154, 36);
+            this.PassengersSSNTextBox.Name = "PassengersSSNTextBox";
+            this.PassengersSSNTextBox.Size = new System.Drawing.Size(100, 22);
+            this.PassengersSSNTextBox.TabIndex = 2;
+            // 
+            // No_of_trips_passenger_made_Label
+            // 
+            this.No_of_trips_passenger_made_Label.AutoSize = true;
+            this.No_of_trips_passenger_made_Label.Location = new System.Drawing.Point(266, 87);
+            this.No_of_trips_passenger_made_Label.Name = "No_of_trips_passenger_made_Label";
+            this.No_of_trips_passenger_made_Label.Size = new System.Drawing.Size(16, 17);
+            this.No_of_trips_passenger_made_Label.TabIndex = 1;
+            this.No_of_trips_passenger_made_Label.Text = "0";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(17, 36);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(118, 17);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "Passenger\'s SSN";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(219, 91);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(53, 17);
+            this.label29.TabIndex = 5;
+            this.label29.Text = "Count :";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(327, 91);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(56, 17);
+            this.label24.TabIndex = 6;
+            this.label24.Text = "Salary :";
+            // 
+            // Salary_Label
+            // 
+            this.Salary_Label.AutoSize = true;
+            this.Salary_Label.Location = new System.Drawing.Point(407, 91);
+            this.Salary_Label.Name = "Salary_Label";
+            this.Salary_Label.Size = new System.Drawing.Size(16, 17);
+            this.Salary_Label.TabIndex = 7;
+            this.Salary_Label.Text = "0";
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.label30);
+            this.groupBox9.Controls.Add(this.EndDatePicker);
+            this.groupBox9.Controls.Add(this.StartDatePicker);
+            this.groupBox9.Controls.Add(this.IncomeTimePeriodLabel);
+            this.groupBox9.Controls.Add(this.label32);
+            this.groupBox9.Controls.Add(this.GetIncomeTimePeriodButton);
+            this.groupBox9.Controls.Add(this.label34);
+            this.groupBox9.Location = new System.Drawing.Point(374, 357);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(448, 126);
+            this.groupBox9.TabIndex = 6;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Total Income in a Time Period";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(199, 91);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(0, 17);
+            this.label32.TabIndex = 5;
+            // 
+            // GetIncomeTimePeriodButton
+            // 
+            this.GetIncomeTimePeriodButton.BackColor = System.Drawing.Color.Navy;
+            this.GetIncomeTimePeriodButton.FlatAppearance.BorderSize = 0;
+            this.GetIncomeTimePeriodButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.GetIncomeTimePeriodButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GetIncomeTimePeriodButton.ForeColor = System.Drawing.Color.White;
+            this.GetIncomeTimePeriodButton.Location = new System.Drawing.Point(64, 75);
+            this.GetIncomeTimePeriodButton.Name = "GetIncomeTimePeriodButton";
+            this.GetIncomeTimePeriodButton.Size = new System.Drawing.Size(146, 35);
+            this.GetIncomeTimePeriodButton.TabIndex = 3;
+            this.GetIncomeTimePeriodButton.Text = "Get Income";
+            this.GetIncomeTimePeriodButton.UseVisualStyleBackColor = false;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(17, 36);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(72, 17);
+            this.label34.TabIndex = 0;
+            this.label34.Text = "Start Date";
+            // 
+            // IncomeTimePeriodLabel
+            // 
+            this.IncomeTimePeriodLabel.AutoSize = true;
+            this.IncomeTimePeriodLabel.Location = new System.Drawing.Point(368, 87);
+            this.IncomeTimePeriodLabel.Name = "IncomeTimePeriodLabel";
+            this.IncomeTimePeriodLabel.Size = new System.Drawing.Size(16, 17);
+            this.IncomeTimePeriodLabel.TabIndex = 6;
+            this.IncomeTimePeriodLabel.Text = "0";
+            // 
+            // StartDatePicker
+            // 
+            this.StartDatePicker.Location = new System.Drawing.Point(95, 36);
+            this.StartDatePicker.Name = "StartDatePicker";
+            this.StartDatePicker.Size = new System.Drawing.Size(115, 22);
+            this.StartDatePicker.TabIndex = 7;
+            // 
+            // EndDatePicker
+            // 
+            this.EndDatePicker.Location = new System.Drawing.Point(316, 36);
+            this.EndDatePicker.Name = "EndDatePicker";
+            this.EndDatePicker.Size = new System.Drawing.Size(108, 22);
+            this.EndDatePicker.TabIndex = 8;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(234, 37);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(67, 17);
+            this.label30.TabIndex = 9;
+            this.label30.Text = "End Date";
             // 
             // Manager_Form
             // 
@@ -702,6 +1314,9 @@
             this.Controls.Add(this.trainsButton);
             this.Controls.Add(this.employeesButton);
             this.Controls.Add(this.tripsButton);
+            this.Controls.Add(this.Statistical_Models_GroupBox);
+            this.Controls.Add(this.Spare_Parts_GroupBox);
+            this.Controls.Add(this.SuppliersGroupBox);
             this.Controls.Add(this.EmployeesGroupBox);
             this.Controls.Add(this.TripsGroupBox);
             this.Controls.Add(this.TrainsGroupBox);
@@ -711,11 +1326,33 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.TripsGroupBox.ResumeLayout(false);
             this.EmployeesGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.employeesDG)).EndInit();
             this.HireGroupBox.ResumeLayout(false);
             this.HireGroupBox.PerformLayout();
+            this.TrainsGroupBox.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TrainsDG)).EndInit();
+            this.SuppliersGroupBox.ResumeLayout(false);
+            this.Add_Remove_Suppliers.ResumeLayout(false);
+            this.Add_Remove_Suppliers.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SuppliersDG)).EndInit();
+            this.Statistical_Models_GroupBox.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -730,7 +1367,7 @@
         private System.Windows.Forms.Button statistical_modelsButton;
         private System.Windows.Forms.DataGridView TripsDG;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox TrainNumberTextBox;
+        private System.Windows.Forms.TextBox TrainNumberTextBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox BusinessTicketPriceTextBox;
         private System.Windows.Forms.TextBox EconomicTicketPriceTextBox;
@@ -740,7 +1377,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox trip_number_TextBox;
+        private System.Windows.Forms.TextBox trip_number_to_add__TextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button remove_tripButton;
@@ -779,5 +1416,57 @@
         private System.Windows.Forms.ComboBox StationComboBox;
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.GroupBox TrainsGroupBox;
+        private System.Windows.Forms.DataGridView TrainsDG;
+        private System.Windows.Forms.TextBox trip_number_to_remove_TextBox;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Button Change_Date_Button;
+        private System.Windows.Forms.DateTimePicker New_Maintenance_Date;
+        private System.Windows.Forms.GroupBox SuppliersGroupBox;
+        private System.Windows.Forms.DataGridView SuppliersDG;
+        private System.Windows.Forms.GroupBox Add_Remove_Suppliers;
+        private System.Windows.Forms.Button Remove_Supplier_Button;
+        private System.Windows.Forms.Button Add_Supplier_Button;
+        private System.Windows.Forms.TextBox Supplier_Number_TextBox;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.GroupBox Spare_Parts_GroupBox;
+        private System.Windows.Forms.GroupBox Statistical_Models_GroupBox;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label No_of_trips_passenger_made_Label;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Button GetPassCountButton;
+        private System.Windows.Forms.TextBox PassengersSSNTextBox;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Button GeetTrainsCountButton;
+        private System.Windows.Forms.TextBox TrainNumberTextBox2;
+        private System.Windows.Forms.Label Number_of_trips_Train_made_label;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Button GetIncomefromTripButton;
+        private System.Windows.Forms.TextBox GetIncomeFromTripTextBox;
+        private System.Windows.Forms.Label IncomeFromTripLabel;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.ComboBox StationNameComboBox2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label Number_of_emps_working_station_label;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox AvgNoPass_Trip_Number_TextBox;
+        private System.Windows.Forms.Label Avg_Number_Pass_Label;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label Salary_Label;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Button GetIncomeTimePeriodButton;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.DateTimePicker EndDatePicker;
+        private System.Windows.Forms.DateTimePicker StartDatePicker;
+        private System.Windows.Forms.Label IncomeTimePeriodLabel;
     }
 }
