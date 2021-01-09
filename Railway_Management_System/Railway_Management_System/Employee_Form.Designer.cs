@@ -46,6 +46,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.changeDateButton = new System.Windows.Forms.Button();
             this.scheduleGroupBox = new System.Windows.Forms.GroupBox();
+            this.orderPartNoLabel = new System.Windows.Forms.Label();
             this.sparePartsGroupBox.SuspendLayout();
             this.orderGroupBox.SuspendLayout();
             this.decGroupBox.SuspendLayout();
@@ -100,6 +101,7 @@
             // 
             // orderGroupBox
             // 
+            this.orderGroupBox.Controls.Add(this.orderPartNoLabel);
             this.orderGroupBox.Controls.Add(this.orderAmountLabel);
             this.orderGroupBox.Controls.Add(this.orderAmountTextBox);
             this.orderGroupBox.Controls.Add(this.orderButton);
@@ -191,6 +193,7 @@
             this.sparePartDataGridView.RowHeadersWidth = 51;
             this.sparePartDataGridView.Size = new System.Drawing.Size(659, 163);
             this.sparePartDataGridView.TabIndex = 7;
+            this.sparePartDataGridView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.sparePartDataGridView_RowHeaderMouseClick);
             // 
             // scheduleDataGridView
             // 
@@ -255,6 +258,15 @@
             this.scheduleGroupBox.Text = "Schedule";
             this.scheduleGroupBox.Visible = false;
             // 
+            // orderPartNoLabel
+            // 
+            this.orderPartNoLabel.AutoSize = true;
+            this.orderPartNoLabel.Location = new System.Drawing.Point(59, 25);
+            this.orderPartNoLabel.Name = "orderPartNoLabel";
+            this.orderPartNoLabel.Size = new System.Drawing.Size(129, 13);
+            this.orderPartNoLabel.TabIndex = 13;
+            this.orderPartNoLabel.Text = "Please select a spare part";
+            // 
             // Employee_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -300,5 +312,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button changeDateButton;
         private System.Windows.Forms.GroupBox scheduleGroupBox;
+        private System.Windows.Forms.Label orderPartNoLabel;
     }
 }

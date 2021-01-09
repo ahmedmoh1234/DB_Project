@@ -119,5 +119,16 @@ namespace Railway_Management_System
         {
 
         }
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            //depDateTimePicker.Value.
+
+            DateTime dt = new DateTime(2020,0,0,0,0,0);
+            dt = dt.AddHours(5d);
+            dt.AddMinutes(30d);
+            //label35.Text = dt.Hour.ToString();
+
+        }
     }
 }

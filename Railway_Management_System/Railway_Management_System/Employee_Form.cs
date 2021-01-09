@@ -54,5 +54,10 @@ namespace Railway_Management_System
             if (scheduleGroupBox.Visible == false)
                 scheduleGroupBox.Visible = true;
         }
+
+        private void sparePartDataGridView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
+        }
     }
 }
