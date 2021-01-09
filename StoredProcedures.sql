@@ -49,3 +49,24 @@ UPDATE TRAIN SET Maintenance_Day = @New_Date
 WHERE Train_Number = @Train_Number
 END
 GO
+
+CREATE PROCEDURE ADD_TRIP @Trip_Num INT , @Deprt_Time DATETIME, @Arr_Time DATETIME
+, @Eco_Ticket_Price INT, @Buss_Ticket_Price INT, @Buss_No INT, @Eco_No INT
+, @Train_No INT
+AS
+BEGIN
+INSERT INTO TRIP (Trip_Number, Departure_Time, Arrival_Time, Economic_Ticket_Price
+, Business_Ticket_Price, Business, Economic, Train_Number)
+VALUES
+(@Trip_Num,@Deprt_Time,@Arr_Time,@Eco_Ticket_Price, @Buss_Ticket_Price, @Buss_No,@Eco_No
+,@Train_No)
+END
+GO
+
+CREATE PROCEDURE REMOVE_TRIP @Trip_Num INT 
+AS
+BEGIN
+DELETE FROM TRIP 
+WHERE Trip_Number = @Trip_Num
+END
+GO
