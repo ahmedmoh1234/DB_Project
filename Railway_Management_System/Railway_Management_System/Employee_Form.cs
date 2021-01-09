@@ -59,6 +59,8 @@ namespace Railway_Management_System
         {
             orderPartNoLabel.Text = "Part Number : ";
             orderPartNoLabel.Text += sparePartDataGridView.SelectedRows[0].Cells[0].Value.ToString();
+
+            orderPartNoLabel.Left = sparePartsGroupBox.Width / 2 - orderPartNoLabel.Width / 2;
         }
     }
 }
