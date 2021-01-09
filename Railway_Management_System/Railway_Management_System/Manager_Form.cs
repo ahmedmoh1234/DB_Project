@@ -17,7 +17,7 @@ namespace Railway_Management_System
         {
             InitializeComponent();
             controllerObj = new Controller();
-            
+
             TripsGroupBox.Visible = false;
             EmployeesGroupBox.Visible = false;
             TrainsGroupBox.Visible = false;
@@ -86,7 +86,7 @@ namespace Railway_Management_System
 
         }
 
-        
+
 
         private void spare_partsButton_Click(object sender, EventArgs e)
         {
@@ -124,10 +124,64 @@ namespace Railway_Management_System
         {
             //depDateTimePicker.Value.
 
-            DateTime dt = new DateTime(2020,0,0,0,0,0);
+            DateTime dt = new DateTime(2020, 0, 0, 0, 0, 0);
             dt = dt.AddHours(5d);
             dt.AddMinutes(30d);
             //label35.Text = dt.Hour.ToString();
+
+        }
+
+        private void HireButton_Click(object sender, EventArgs e)
+        {
+
+            if (FirstNameTextBox.Text == "" || MinitTextBox.Text == "" || LnameTextBox.Text == "" || SSNTextBox.Text == "" || DOBTextBox.Text == "" || PhoneNumberTextBox.Text == "" || SalaryTextBox.Text == "" || UsernameTextBox.Text == "" || PasswordTextBox.Text == "")
+            {
+                MessageBox.Show("The insertion of a new Employee failed (Field cannot be empty)");
+                return;
+            }
+            if (!(SexComboBox.Text == "M" || SexComboBox.Text == "m" || SexComboBox.Text == "F" || SexComboBox.Text == "f"))
+            {
+                MessageBox.Show("The insertion of a new Employee failed (Sex is neither M or F)");
+                return;
+            }
+
+            int SSN;
+            if (!Int32.TryParse(SSNTextBox.Text, out SSN))
+            {
+                MessageBox.Show("Invalid SSN");
+                return;
+            }
+            if (SSN < 0)
+            {
+                MessageBox.Show("Invalid SSN");
+                return;
+
+            }
+            int Salary;
+            if (!Int32.TryParse(SalaryTextBox.Text, out Salary))
+            {
+                MessageBox.Show("Invalid Salary");
+                return;
+            }
+            if (Salary < 0)
+            {
+                MessageBox.Show("Invalid Salary");
+                return;
+
+            }
+
+
+            int result = controllerObj.InsertEmployee(FirstNameTextBox.Text, MinitTextBox.Text, LnameTextBox.Text, SSNTextBox.Text, SexComboBox.Text, DOBTextBox.Text, PhoneNumberTextBox.Text, PositioComboBox.Text, ManagersSSNTextBox.Text, StationComboBox.Text, SalaryTextBox.Text, UsernameTextBox.Text, PasswordTextBox.Text);
+
+            ;
+            if (result == 0)
+            {
+                MessageBox.Show("The insertion of a new Employee failed");
+            }
+            else
+            {
+                MessageBox.Show("The row is inserted successfully!");
+            }
 
         }
     }

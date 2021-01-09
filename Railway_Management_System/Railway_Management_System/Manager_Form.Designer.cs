@@ -60,8 +60,8 @@
             this.StationComboBox = new System.Windows.Forms.ComboBox();
             this.PositioComboBox = new System.Windows.Forms.ComboBox();
             this.SexComboBox = new System.Windows.Forms.ComboBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.PasswordTextBox = new System.Windows.Forms.TextBox();
+            this.UsernameTextBox = new System.Windows.Forms.TextBox();
             this.SalaryTextBox = new System.Windows.Forms.TextBox();
             this.ManagersSSNTextBox = new System.Windows.Forms.TextBox();
             this.PhoneNumberTextBox = new System.Windows.Forms.TextBox();
@@ -510,8 +510,8 @@
             this.HireGroupBox.Controls.Add(this.StationComboBox);
             this.HireGroupBox.Controls.Add(this.PositioComboBox);
             this.HireGroupBox.Controls.Add(this.SexComboBox);
-            this.HireGroupBox.Controls.Add(this.textBox8);
-            this.HireGroupBox.Controls.Add(this.textBox7);
+            this.HireGroupBox.Controls.Add(this.PasswordTextBox);
+            this.HireGroupBox.Controls.Add(this.UsernameTextBox);
             this.HireGroupBox.Controls.Add(this.SalaryTextBox);
             this.HireGroupBox.Controls.Add(this.ManagersSSNTextBox);
             this.HireGroupBox.Controls.Add(this.PhoneNumberTextBox);
@@ -581,21 +581,21 @@
             this.SexComboBox.Size = new System.Drawing.Size(121, 24);
             this.SexComboBox.TabIndex = 35;
             // 
-            // textBox8
+            // PasswordTextBox
             // 
-            this.textBox8.Location = new System.Drawing.Point(691, 137);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 22);
-            this.textBox8.TabIndex = 34;
+            this.PasswordTextBox.Location = new System.Drawing.Point(691, 137);
+            this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.Size = new System.Drawing.Size(100, 22);
+            this.PasswordTextBox.TabIndex = 34;
             // 
-            // textBox7
+            // UsernameTextBox
             // 
-            this.textBox7.Location = new System.Drawing.Point(691, 102);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 22);
-            this.textBox7.TabIndex = 33;
+            this.UsernameTextBox.Location = new System.Drawing.Point(691, 102);
+            this.UsernameTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.UsernameTextBox.Name = "UsernameTextBox";
+            this.UsernameTextBox.Size = new System.Drawing.Size(100, 22);
+            this.UsernameTextBox.TabIndex = 33;
             // 
             // SalaryTextBox
             // 
@@ -703,7 +703,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(604, 126);
+            this.label18.Location = new System.Drawing.Point(600, 140);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(69, 17);
             this.label18.TabIndex = 18;
@@ -712,7 +712,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(604, 95);
+            this.label17.Location = new System.Drawing.Point(600, 107);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(73, 17);
             this.label17.TabIndex = 17;
@@ -822,6 +822,7 @@
             this.HireButton.TabIndex = 6;
             this.HireButton.Text = "Hire";
             this.HireButton.UseVisualStyleBackColor = false;
+            this.HireButton.Click += new System.EventHandler(this.HireButton_Click);
             // 
             // TrainsGroupBox
             // 
@@ -1508,12 +1509,12 @@
             this.Controls.Add(this.trainsButton);
             this.Controls.Add(this.employeesButton);
             this.Controls.Add(this.tripsButton);
+            this.Controls.Add(this.EmployeesGroupBox);
+            this.Controls.Add(this.TripsGroupBox);
             this.Controls.Add(this.TrainsGroupBox);
             this.Controls.Add(this.Statistical_Models_GroupBox);
             this.Controls.Add(this.Spare_Parts_GroupBox);
             this.Controls.Add(this.SuppliersGroupBox);
-            this.Controls.Add(this.EmployeesGroupBox);
-            this.Controls.Add(this.TripsGroupBox);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Manager_Form";
             this.Text = "Manager_Form";
@@ -1604,8 +1605,8 @@
         private System.Windows.Forms.Button UpdateButton;
         private System.Windows.Forms.TextBox FirstNameTextBox;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox PasswordTextBox;
+        private System.Windows.Forms.TextBox UsernameTextBox;
         private System.Windows.Forms.TextBox SalaryTextBox;
         private System.Windows.Forms.TextBox ManagersSSNTextBox;
         private System.Windows.Forms.TextBox PhoneNumberTextBox;

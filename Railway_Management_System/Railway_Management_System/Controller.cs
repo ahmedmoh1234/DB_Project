@@ -67,5 +67,11 @@ namespace Railway_Management_System
             dbMan.ExecuteNonQuery(StoredProcedureName,Parameters);
 
         }
+
+        public int InsertEmployee(string Fname, string Minit, string Lname, string SSN, string Sex, string DOB, string PhoneNumber, string Position, string ManagersSSn, string Station, string Salary, string Username, string Password)
+        {
+
+            return 0;
+        }
     }
 }
