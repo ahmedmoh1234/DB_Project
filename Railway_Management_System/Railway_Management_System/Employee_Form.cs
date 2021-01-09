@@ -13,6 +13,7 @@ namespace Railway_Management_System
     public partial class Employee_Form : Form
     {
         Controller controller;
+        private int _partNo;
         public Employee_Form()
         {
             InitializeComponent();
@@ -57,10 +58,14 @@ namespace Railway_Management_System
 
         private void sparePartDataGridView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            orderPartNoLabel.Text = "Part Number : ";
-            orderPartNoLabel.Text += sparePartDataGridView.SelectedRows[0].Cells[0].Value.ToString();
+            //changing part no to be ordered or decremented
+            _partNo = Int32.Parse(sparePartDataGridView.SelectedRows[0].Cells[0].Value.ToString());
 
-            orderPartNoLabel.Left = sparePartsGroupBox.Width / 2 - orderPartNoLabel.Width / 2;
+            //Changing label text
+            orderPartNoLabel.Text = "Part Number : ";
+            orderPartNoLabel.Text += _partNo.ToString();
+            //Adjusting label position
+            orderPartNoLabel.Left = ((orderGroupBox.Width / 2) - (orderPartNoLabel.Width / 2));
         }
     }
 }
