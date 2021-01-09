@@ -164,10 +164,10 @@ CREATE TABLE LOGIN_EMPLOYEE
 
 INSERT INTO EMPLOYEE(Fname,Minit,Lname,E_SSN,Sex,Phone_Number,Salary,DOB,Manager_SSN,Position)
 VALUES
-('Ahmed','M','Ismail',12345678,'M',01123456789,30000,'2000-02-22',NULL,Manager),
-('Moaz','M','ElSherbiny',619619619,'M',0114789542,30000,'2000-10-03',12345678,Manager),
-('Mostafa','A','Ahmed',88888888,'M',01158795123,30000,'1998-12-12',12345678,Manager),
-('Nader','Y','Adib',420420420,'M',01285003523,30000,'2000-05-15',NULL,Manager);
+('Ahmed','M','Ismail',12345678,'M',01123456789,30000,'2000-02-22',NULL,'Manager'),
+('Moaz','M','ElSherbiny',619619619,'M',0114789542,30000,'2000-10-03',12345678,'Manager'),
+('Mostafa','A','Ahmed',88888888,'M',01158795123,30000,'1998-12-12',12345678,'Manager'),
+('Nader','Y','Adib',420420420,'M',01285003523,30000,'2000-05-15',NULL,'Manager');
 
 INSERT INTO STATION(Station_Number,Station_Name,Manager_SSN,Manager_Start_Date,Location)
 VALUES
