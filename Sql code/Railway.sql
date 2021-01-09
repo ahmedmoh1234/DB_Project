@@ -177,28 +177,9 @@ VALUES
 
 INSERT INTO SUPPLIER(Supplier_ID, Supplier_Address, Supplier_Name, Phone_Number)
 VALUES
---(1,'Beijing, China','CRRC',8611111111111),
---(2,'Saint Petersburg, Russia','Kirov Plant', 70000000),
---(3,'Munich, Germany','Siemens Mobility',4930901820),
-(4,'Berlin, Germany','Bombardier Transportation',4980967820),
-(5,'Brossard, Quebec, Canada','Railpower Technologies',16045555555),
-(6,'Aarhus, Denmark','Frichs',4553232341),
-(7,'Tampere, Finland','Lokomo',358501234567),
-(8,'Levallois-Perret, France','Alstom',33109758351),
-(9,'Crespin, France','ANF Industrie',33108410251),
-(10,'Paris, France','Corpet-Louvet',33187902551),
-(11,'Westphalia, Germany','Windhoff',4930875430),
-(12,'Werdohl, Germany','Vossloh',4932315830),
-(13,'Uttar Pradesh, India','Banaras Locomotive Works',912212345678),
-(14,'Tamil Nadu, India','Golden Rock Railway Workshop',912875685678),
-(15,'Mumbai, India','Tata Motors',912813290678),
-(16,'Pistoia, Italy','Hitachi Rail Italy',393789438645),
-(17,'Napoli, Italy','Trasporti',390823379111),
-(18,'Tokyo, Japan','Mitsubishi Heavy Industries',810876986789),
-(19,'Tokyo, Japan','Toshiba',810123456789),
-(20,'Pennsylvania, United States','GE Transportation',15555551234);
-
-
+(1,'Beijing, China','CRRC',8611111111111),
+(2,'Saint Petersburg, Russia','Kirov Plant', 70000000),
+(3,'Munich, Germany','Siemens Mobility',4930901820);
 
 INSERT INTO SPARE_PART(Part_Number,Price,Supplier_ID)
 VALUES
