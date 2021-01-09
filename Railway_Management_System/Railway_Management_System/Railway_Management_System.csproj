@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2CF868D7-43A9-40EE-B120-998665E6D202}</ProjectGuid>
+    <ProjectGuid>{603B78B5-B7A2-4F78-A7C7-8DB4A268FAF0}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Railway_Management_System</RootNamespace>

@@ -14,10 +14,16 @@ namespace Railway_Management_System
     {
         Controller controller;
         private int _partNo;
+        private int _empStationNo;
         public Employee_Form()
         {
             InitializeComponent();
             controller = new Controller();
+        }
+
+        public void SetEmployeeStation(int empSatationNo)
+        {
+            _empStationNo = empSatationNo;
         }
 
         private void sparePartsButton_Click(object sender, EventArgs e)
@@ -66,6 +72,11 @@ namespace Railway_Management_System
             orderPartNoLabel.Text += _partNo.ToString();
             //Adjusting label position
             orderPartNoLabel.Left = ((orderGroupBox.Width / 2) - (orderPartNoLabel.Width / 2));
+        }
+
+        private void orderButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

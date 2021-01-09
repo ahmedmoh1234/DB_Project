@@ -32,6 +32,7 @@
             this.scheduleButton = new System.Windows.Forms.Button();
             this.sparePartsGroupBox = new System.Windows.Forms.GroupBox();
             this.orderGroupBox = new System.Windows.Forms.GroupBox();
+            this.orderPartNoLabel = new System.Windows.Forms.Label();
             this.orderAmountLabel = new System.Windows.Forms.Label();
             this.orderAmountTextBox = new System.Windows.Forms.TextBox();
             this.orderButton = new System.Windows.Forms.Button();
@@ -46,7 +47,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.changeDateButton = new System.Windows.Forms.Button();
             this.scheduleGroupBox = new System.Windows.Forms.GroupBox();
-            this.orderPartNoLabel = new System.Windows.Forms.Label();
             this.sparePartsGroupBox.SuspendLayout();
             this.orderGroupBox.SuspendLayout();
             this.decGroupBox.SuspendLayout();
@@ -112,6 +112,15 @@
             this.orderGroupBox.TabStop = false;
             this.orderGroupBox.Text = "Order";
             // 
+            // orderPartNoLabel
+            // 
+            this.orderPartNoLabel.AutoSize = true;
+            this.orderPartNoLabel.Location = new System.Drawing.Point(59, 25);
+            this.orderPartNoLabel.Name = "orderPartNoLabel";
+            this.orderPartNoLabel.Size = new System.Drawing.Size(129, 13);
+            this.orderPartNoLabel.TabIndex = 13;
+            this.orderPartNoLabel.Text = "Please select a spare part";
+            // 
             // orderAmountLabel
             // 
             this.orderAmountLabel.AutoSize = true;
@@ -141,6 +150,7 @@
             this.orderButton.TabIndex = 8;
             this.orderButton.Text = "Order Spare Parts";
             this.orderButton.UseVisualStyleBackColor = false;
+            this.orderButton.Click += new System.EventHandler(this.orderButton_Click);
             // 
             // decGroupBox
             // 
@@ -257,15 +267,6 @@
             this.scheduleGroupBox.TabStop = false;
             this.scheduleGroupBox.Text = "Schedule";
             this.scheduleGroupBox.Visible = false;
-            // 
-            // orderPartNoLabel
-            // 
-            this.orderPartNoLabel.AutoSize = true;
-            this.orderPartNoLabel.Location = new System.Drawing.Point(59, 25);
-            this.orderPartNoLabel.Name = "orderPartNoLabel";
-            this.orderPartNoLabel.Size = new System.Drawing.Size(129, 13);
-            this.orderPartNoLabel.TabIndex = 13;
-            this.orderPartNoLabel.Text = "Please select a spare part";
             // 
             // Employee_Form
             // 
