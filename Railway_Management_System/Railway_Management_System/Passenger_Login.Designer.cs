@@ -34,12 +34,22 @@
             this.Restore_down = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Sign_Up_label = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Sign_In = new System.Windows.Forms.Button();
             this.Password_Login = new System.Windows.Forms.TextBox();
             this.Username_Login = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Error_phone_Number = new System.Windows.Forms.Label();
+            this.X_Phone_Number = new System.Windows.Forms.PictureBox();
+            this.Phone_Number_Text = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.Error_Password = new System.Windows.Forms.Label();
+            this.Error_Username = new System.Windows.Forms.Label();
+            this.Error_SSN = new System.Windows.Forms.Label();
+            this.Error_Lname = new System.Windows.Forms.Label();
+            this.Error_Minit = new System.Windows.Forms.Label();
+            this.Error_Fname = new System.Windows.Forms.Label();
             this.X_Password = new System.Windows.Forms.PictureBox();
             this.X_Minit = new System.Windows.Forms.PictureBox();
             this.X_Lname = new System.Windows.Forms.PictureBox();
@@ -64,26 +74,16 @@
             this.Username_Signup_Text = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.Error_Fname = new System.Windows.Forms.Label();
-            this.Error_Minit = new System.Windows.Forms.Label();
-            this.Error_Lname = new System.Windows.Forms.Label();
-            this.Error_SSN = new System.Windows.Forms.Label();
-            this.Error_Username = new System.Windows.Forms.Label();
-            this.Error_Password = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.Phone_Number_Text = new System.Windows.Forms.TextBox();
-            this.X_Phone_Number = new System.Windows.Forms.PictureBox();
-            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Restore_down)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.X_Phone_Number)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.X_Password)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.X_Minit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.X_Lname)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.X_SSN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.X_UserName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.X_Fname)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.X_Phone_Number)).BeginInit();
             this.SuspendLayout();
             // 
             // Close
@@ -133,16 +133,16 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.Sign_Up_label);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.Sign_In);
             this.groupBox1.Controls.Add(this.Password_Login);
             this.groupBox1.Controls.Add(this.Username_Login);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.groupBox1.Location = new System.Drawing.Point(12, 32);
+            this.groupBox1.Location = new System.Drawing.Point(1, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(348, 425);
+            this.groupBox1.Size = new System.Drawing.Size(348, 436);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Passenger Login";
@@ -158,17 +158,18 @@
             this.Sign_Up_label.Text = "Dont have an account? SIGN UP";
             this.Sign_Up_label.Click += new System.EventHandler(this.Sign_Up_label_Click);
             // 
-            // button1
+            // Sign_In
             // 
-            this.button1.BackColor = System.Drawing.Color.Navy;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(82, 321);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(172, 49);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Sign In";
-            this.button1.UseVisualStyleBackColor = false;
+            this.Sign_In.BackColor = System.Drawing.Color.Navy;
+            this.Sign_In.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Sign_In.ForeColor = System.Drawing.Color.White;
+            this.Sign_In.Location = new System.Drawing.Point(82, 321);
+            this.Sign_In.Name = "Sign_In";
+            this.Sign_In.Size = new System.Drawing.Size(172, 49);
+            this.Sign_In.TabIndex = 7;
+            this.Sign_In.Text = "Sign In";
+            this.Sign_In.UseVisualStyleBackColor = false;
+            this.Sign_In.Click += new System.EventHandler(this.Sign_In_Click);
             // 
             // Password_Login
             // 
@@ -210,7 +211,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.Error_phone_Number);
             this.groupBox2.Controls.Add(this.X_Phone_Number);
             this.groupBox2.Controls.Add(this.Phone_Number_Text);
             this.groupBox2.Controls.Add(this.label11);
@@ -246,13 +247,128 @@
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.groupBox2.Location = new System.Drawing.Point(282, 12);
+            this.groupBox2.Location = new System.Drawing.Point(403, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(862, 578);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Passenger SIGNUP";
             this.groupBox2.Visible = false;
+            // 
+            // Error_phone_Number
+            // 
+            this.Error_phone_Number.AutoSize = true;
+            this.Error_phone_Number.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Error_phone_Number.ForeColor = System.Drawing.Color.Red;
+            this.Error_phone_Number.Location = new System.Drawing.Point(529, 267);
+            this.Error_phone_Number.Name = "Error_phone_Number";
+            this.Error_phone_Number.Size = new System.Drawing.Size(322, 19);
+            this.Error_phone_Number.TabIndex = 36;
+            this.Error_phone_Number.Text = "Phone number must consist of 11Digits";
+            this.Error_phone_Number.Visible = false;
+            // 
+            // X_Phone_Number
+            // 
+            this.X_Phone_Number.Image = ((System.Drawing.Image)(resources.GetObject("X_Phone_Number.Image")));
+            this.X_Phone_Number.Location = new System.Drawing.Point(482, 260);
+            this.X_Phone_Number.Name = "X_Phone_Number";
+            this.X_Phone_Number.Size = new System.Drawing.Size(41, 32);
+            this.X_Phone_Number.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.X_Phone_Number.TabIndex = 35;
+            this.X_Phone_Number.TabStop = false;
+            this.X_Phone_Number.Visible = false;
+            // 
+            // Phone_Number_Text
+            // 
+            this.Phone_Number_Text.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Phone_Number_Text.Location = new System.Drawing.Point(197, 258);
+            this.Phone_Number_Text.Name = "Phone_Number_Text";
+            this.Phone_Number_Text.Size = new System.Drawing.Size(262, 32);
+            this.Phone_Number_Text.TabIndex = 34;
+            this.Phone_Number_Text.TextChanged += new System.EventHandler(this.Phone_Number_Text_TextChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Navy;
+            this.label11.Location = new System.Drawing.Point(40, 263);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(155, 23);
+            this.label11.TabIndex = 33;
+            this.label11.Text = "Phone Number";
+            // 
+            // Error_Password
+            // 
+            this.Error_Password.AutoSize = true;
+            this.Error_Password.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Error_Password.ForeColor = System.Drawing.Color.Red;
+            this.Error_Password.Location = new System.Drawing.Point(529, 353);
+            this.Error_Password.Name = "Error_Password";
+            this.Error_Password.Size = new System.Drawing.Size(313, 19);
+            this.Error_Password.TabIndex = 32;
+            this.Error_Password.Text = "Password must be at least 7char long";
+            this.Error_Password.Visible = false;
+            // 
+            // Error_Username
+            // 
+            this.Error_Username.AutoSize = true;
+            this.Error_Username.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Error_Username.ForeColor = System.Drawing.Color.Red;
+            this.Error_Username.Location = new System.Drawing.Point(529, 309);
+            this.Error_Username.Name = "Error_Username";
+            this.Error_Username.Size = new System.Drawing.Size(322, 19);
+            this.Error_Username.TabIndex = 31;
+            this.Error_Username.Text = "Username must be at least 5 char long";
+            this.Error_Username.Visible = false;
+            // 
+            // Error_SSN
+            // 
+            this.Error_SSN.AutoSize = true;
+            this.Error_SSN.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Error_SSN.ForeColor = System.Drawing.Color.Red;
+            this.Error_SSN.Location = new System.Drawing.Point(529, 220);
+            this.Error_SSN.Name = "Error_SSN";
+            this.Error_SSN.Size = new System.Drawing.Size(237, 19);
+            this.Error_SSN.TabIndex = 30;
+            this.Error_SSN.Text = "SSN must consist of 14 digits";
+            this.Error_SSN.Visible = false;
+            // 
+            // Error_Lname
+            // 
+            this.Error_Lname.AutoSize = true;
+            this.Error_Lname.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Error_Lname.ForeColor = System.Drawing.Color.Red;
+            this.Error_Lname.Location = new System.Drawing.Point(529, 171);
+            this.Error_Lname.Name = "Error_Lname";
+            this.Error_Lname.Size = new System.Drawing.Size(210, 19);
+            this.Error_Lname.TabIndex = 29;
+            this.Error_Lname.Text = "Lname cannot be empty";
+            this.Error_Lname.Visible = false;
+            // 
+            // Error_Minit
+            // 
+            this.Error_Minit.AutoSize = true;
+            this.Error_Minit.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Error_Minit.ForeColor = System.Drawing.Color.Red;
+            this.Error_Minit.Location = new System.Drawing.Point(529, 121);
+            this.Error_Minit.Name = "Error_Minit";
+            this.Error_Minit.Size = new System.Drawing.Size(173, 19);
+            this.Error_Minit.TabIndex = 28;
+            this.Error_Minit.Text = "Minit must be 1 char";
+            this.Error_Minit.Visible = false;
+            // 
+            // Error_Fname
+            // 
+            this.Error_Fname.AutoSize = true;
+            this.Error_Fname.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Error_Fname.ForeColor = System.Drawing.Color.Red;
+            this.Error_Fname.Location = new System.Drawing.Point(529, 72);
+            this.Error_Fname.Name = "Error_Fname";
+            this.Error_Fname.Size = new System.Drawing.Size(211, 19);
+            this.Error_Fname.TabIndex = 27;
+            this.Error_Fname.Text = "Fname cannot be empty";
+            this.Error_Fname.Visible = false;
             // 
             // X_Password
             // 
@@ -323,6 +439,7 @@
             // Back_To_login
             // 
             this.Back_To_login.AutoSize = true;
+            this.Back_To_login.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Back_To_login.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Back_To_login.Location = new System.Drawing.Point(425, 529);
             this.Back_To_login.Name = "Back_To_login";
@@ -464,6 +581,7 @@
             this.Sign_Up.TabIndex = 7;
             this.Sign_Up.Text = "Sign_Up";
             this.Sign_Up.UseVisualStyleBackColor = false;
+            this.Sign_Up.Click += new System.EventHandler(this.Sign_Up_Click);
             // 
             // Password_SignUp_Text
             // 
@@ -505,120 +623,6 @@
             this.label5.TabIndex = 2;
             this.label5.Text = "Username";
             // 
-            // Error_Fname
-            // 
-            this.Error_Fname.AutoSize = true;
-            this.Error_Fname.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Error_Fname.ForeColor = System.Drawing.Color.Red;
-            this.Error_Fname.Location = new System.Drawing.Point(529, 72);
-            this.Error_Fname.Name = "Error_Fname";
-            this.Error_Fname.Size = new System.Drawing.Size(211, 19);
-            this.Error_Fname.TabIndex = 27;
-            this.Error_Fname.Text = "Fname cannot be empty";
-            this.Error_Fname.Visible = false;
-            // 
-            // Error_Minit
-            // 
-            this.Error_Minit.AutoSize = true;
-            this.Error_Minit.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Error_Minit.ForeColor = System.Drawing.Color.Red;
-            this.Error_Minit.Location = new System.Drawing.Point(529, 121);
-            this.Error_Minit.Name = "Error_Minit";
-            this.Error_Minit.Size = new System.Drawing.Size(173, 19);
-            this.Error_Minit.TabIndex = 28;
-            this.Error_Minit.Text = "Minit must be 1 char";
-            this.Error_Minit.Visible = false;
-            // 
-            // Error_Lname
-            // 
-            this.Error_Lname.AutoSize = true;
-            this.Error_Lname.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Error_Lname.ForeColor = System.Drawing.Color.Red;
-            this.Error_Lname.Location = new System.Drawing.Point(529, 171);
-            this.Error_Lname.Name = "Error_Lname";
-            this.Error_Lname.Size = new System.Drawing.Size(210, 19);
-            this.Error_Lname.TabIndex = 29;
-            this.Error_Lname.Text = "Lname cannot be empty";
-            this.Error_Lname.Visible = false;
-            // 
-            // Error_SSN
-            // 
-            this.Error_SSN.AutoSize = true;
-            this.Error_SSN.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Error_SSN.ForeColor = System.Drawing.Color.Red;
-            this.Error_SSN.Location = new System.Drawing.Point(529, 220);
-            this.Error_SSN.Name = "Error_SSN";
-            this.Error_SSN.Size = new System.Drawing.Size(237, 19);
-            this.Error_SSN.TabIndex = 30;
-            this.Error_SSN.Text = "SSN must consist of 14 digits";
-            this.Error_SSN.Visible = false;
-            // 
-            // Error_Username
-            // 
-            this.Error_Username.AutoSize = true;
-            this.Error_Username.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Error_Username.ForeColor = System.Drawing.Color.Red;
-            this.Error_Username.Location = new System.Drawing.Point(529, 309);
-            this.Error_Username.Name = "Error_Username";
-            this.Error_Username.Size = new System.Drawing.Size(322, 19);
-            this.Error_Username.TabIndex = 31;
-            this.Error_Username.Text = "Username must be at least 5 char long";
-            this.Error_Username.Visible = false;
-            // 
-            // Error_Password
-            // 
-            this.Error_Password.AutoSize = true;
-            this.Error_Password.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Error_Password.ForeColor = System.Drawing.Color.Red;
-            this.Error_Password.Location = new System.Drawing.Point(529, 353);
-            this.Error_Password.Name = "Error_Password";
-            this.Error_Password.Size = new System.Drawing.Size(313, 19);
-            this.Error_Password.TabIndex = 32;
-            this.Error_Password.Text = "Password must be at least 7char long";
-            this.Error_Password.Visible = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Navy;
-            this.label11.Location = new System.Drawing.Point(40, 263);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(155, 23);
-            this.label11.TabIndex = 33;
-            this.label11.Text = "Phone Number";
-            // 
-            // Phone_Number_Text
-            // 
-            this.Phone_Number_Text.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Phone_Number_Text.Location = new System.Drawing.Point(197, 258);
-            this.Phone_Number_Text.Name = "Phone_Number_Text";
-            this.Phone_Number_Text.Size = new System.Drawing.Size(262, 32);
-            this.Phone_Number_Text.TabIndex = 34;
-            // 
-            // X_Phone_Number
-            // 
-            this.X_Phone_Number.Image = ((System.Drawing.Image)(resources.GetObject("X_Phone_Number.Image")));
-            this.X_Phone_Number.Location = new System.Drawing.Point(482, 260);
-            this.X_Phone_Number.Name = "X_Phone_Number";
-            this.X_Phone_Number.Size = new System.Drawing.Size(41, 32);
-            this.X_Phone_Number.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.X_Phone_Number.TabIndex = 35;
-            this.X_Phone_Number.TabStop = false;
-            this.X_Phone_Number.Visible = false;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Red;
-            this.label12.Location = new System.Drawing.Point(529, 267);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(322, 19);
-            this.label12.TabIndex = 36;
-            this.label12.Text = "Phone number must consist of 11Digits";
-            this.label12.Visible = false;
-            // 
             // Passenger_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -639,13 +643,13 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.X_Phone_Number)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.X_Password)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.X_Minit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.X_Lname)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.X_SSN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.X_UserName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.X_Fname)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.X_Phone_Number)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -657,7 +661,7 @@
         private System.Windows.Forms.PictureBox Restore_down;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label Sign_Up_label;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Sign_In;
         private System.Windows.Forms.TextBox Password_Login;
         private System.Windows.Forms.TextBox Username_Login;
         private System.Windows.Forms.Label label4;
@@ -693,7 +697,7 @@
         private System.Windows.Forms.Label Error_Lname;
         private System.Windows.Forms.Label Error_Minit;
         private System.Windows.Forms.Label Error_Fname;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label Error_phone_Number;
         private System.Windows.Forms.PictureBox X_Phone_Number;
         private System.Windows.Forms.TextBox Phone_Number_Text;
         private System.Windows.Forms.Label label11;

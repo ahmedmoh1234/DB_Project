@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employee_Login));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Sign_In = new System.Windows.Forms.Button();
+            this.Password_Text = new System.Windows.Forms.TextBox();
+            this.Username_Text = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Close = new System.Windows.Forms.Button();
@@ -44,9 +44,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.Sign_In);
+            this.groupBox1.Controls.Add(this.Password_Text);
+            this.groupBox1.Controls.Add(this.Username_Text);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -58,33 +58,34 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Employee Login";
             // 
-            // button1
+            // Sign_In
             // 
-            this.button1.BackColor = System.Drawing.Color.Navy;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(82, 321);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(172, 49);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Sign In";
-            this.button1.UseVisualStyleBackColor = false;
+            this.Sign_In.BackColor = System.Drawing.Color.Navy;
+            this.Sign_In.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Sign_In.ForeColor = System.Drawing.Color.White;
+            this.Sign_In.Location = new System.Drawing.Point(82, 321);
+            this.Sign_In.Name = "Sign_In";
+            this.Sign_In.Size = new System.Drawing.Size(172, 49);
+            this.Sign_In.TabIndex = 7;
+            this.Sign_In.Text = "Sign In";
+            this.Sign_In.UseVisualStyleBackColor = false;
+            this.Sign_In.Click += new System.EventHandler(this.Sign_In_Click);
             // 
-            // textBox2
+            // Password_Text
             // 
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(45, 236);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(262, 36);
-            this.textBox2.TabIndex = 6;
+            this.Password_Text.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Password_Text.Location = new System.Drawing.Point(45, 236);
+            this.Password_Text.Name = "Password_Text";
+            this.Password_Text.Size = new System.Drawing.Size(262, 36);
+            this.Password_Text.TabIndex = 6;
             // 
-            // textBox1
+            // Username_Text
             // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(45, 118);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(262, 36);
-            this.textBox1.TabIndex = 5;
+            this.Username_Text.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Username_Text.Location = new System.Drawing.Point(45, 118);
+            this.Username_Text.Name = "Username_Text";
+            this.Username_Text.Size = new System.Drawing.Size(262, 36);
+            this.Username_Text.TabIndex = 5;
             // 
             // label4
             // 
@@ -104,9 +105,9 @@
             this.label2.ForeColor = System.Drawing.Color.Navy;
             this.label2.Location = new System.Drawing.Point(40, 67);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 28);
+            this.label2.Size = new System.Drawing.Size(129, 28);
             this.label2.TabIndex = 2;
-            this.label2.Text = "ID";
+            this.label2.Text = "Username";
             // 
             // Close
             // 
@@ -176,9 +177,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button Sign_In;
+        private System.Windows.Forms.TextBox Password_Text;
+        private System.Windows.Forms.TextBox Username_Text;
         private System.Windows.Forms.Button Close;
         private System.Windows.Forms.Button Minimize;
         private System.Windows.Forms.PictureBox Restore_down;

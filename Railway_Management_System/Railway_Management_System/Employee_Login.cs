@@ -12,10 +12,14 @@ namespace Railway_Management_System
 {
     public partial class Employee_Login : Form
     {
-    Form Myparent;
+        Form Myparent;
+        Controller ControllerObj;
+        string Username;
+        long SSN;
         public Employee_Login(Form p)
         {
             InitializeComponent();
+            ControllerObj = new Controller();
             Myparent = p;
             this.Location = Myparent.Location;
             this.WindowState = Myparent.WindowState;
@@ -38,6 +42,34 @@ namespace Railway_Management_System
         private void Minimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void Sign_In_Click(object sender, EventArgs e)
+        {
+            if (Username_Text.Text == "")
+            {
+                MessageBox.Show("You must enter a Username");
+                return;
+            }
+            if (Password_Text.Text == "")
+            {
+                MessageBox.Show("You must enter a Password");
+                return;
+            }
+            int result = ControllerObj.Sign_in_Employee(Username_Text.Text, Password_Text.Text);
+                if (result==0)
+            {
+                MessageBox.Show("Username or Password is incorrect");
+                return;
+            }
+            else
+            {
+                Username = Username_Text.Text;
+                //Redirect to employee
+                //temporary
+                MessageBox.Show("Signed In successfully");
+            }
+
         }
     }
 }

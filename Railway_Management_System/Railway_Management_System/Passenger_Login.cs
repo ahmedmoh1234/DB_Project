@@ -13,9 +13,13 @@ namespace Railway_Management_System
     public partial class Passenger_Login : Form
     {
         Form Myparent;
+        Controller ControllerObj;
+        string Username;
+        long SSN;
         public Passenger_Login(Form p)
         {
             InitializeComponent();
+            ControllerObj = new Controller();
             Myparent = p;
             this.Location = Myparent.Location;
             this.WindowState = Myparent.WindowState;
@@ -115,7 +119,7 @@ namespace Railway_Management_System
 
         private void Username_Signup_Text_TextChanged(object sender, EventArgs e)
         {
-            if (Username_Signup_Text.TextLength < 5 )
+            if (Username_Signup_Text.TextLength < 5)
             {
                 X_UserName.Visible = true;
                 Error_Username.Visible = true;
@@ -142,5 +146,113 @@ namespace Railway_Management_System
 
             }
         }
+
+        private void Phone_Number_Text_TextChanged(object sender, EventArgs e)
+        {
+            StringBuilder err = new StringBuilder();
+            Object obj = ValidationClass.isPositiveInteger(Phone_Number_Text.Text, err);
+            if (Phone_Number_Text.TextLength != 11 || obj == null)
+            {
+                X_Phone_Number.Visible = true;
+                Error_phone_Number.Visible = true;
+            }
+            else
+            {
+                X_Phone_Number.Visible = false;
+                Error_phone_Number.Visible = false;
+
+            }
+        }
+
+        private void Sign_In_Click(object sender, EventArgs e)
+        {
+            if (Username_Login.Text == "")
+            {
+                MessageBox.Show("You must enter a Username");
+                return;
+            }
+            if (Password_Login.Text == "")
+            {
+                MessageBox.Show("You must enter a Password");
+                return;
+            }
+            int result = ControllerObj.Sign_in_Passenger(Username_Login.Text, Password_Login.Text);
+            if (result==0)
+            {
+                MessageBox.Show("Username or Password is incorrect");
+                return;
+            }
+            else
+            {
+                Username = Username_Login.Text;
+                //redirect to passenger
+                //Temporary
+                MessageBox.Show("You signed in");
+            }
+
+        }
+
+        private void Sign_Up_Click(object sender, EventArgs e)
+        {
+            if (X_Fname.Visible == true)
+            {
+                MessageBox.Show("Please enter valid Fname");
+                return;
+            }
+            if (X_Minit.Visible == true)
+            {
+                MessageBox.Show("Please enter valid Minit");
+                return;
+            }
+            if (X_Lname.Visible == true)
+            {
+                MessageBox.Show("Please enter valid Lname");
+                return;
+            }
+            if (X_SSN.Visible == true)
+            {
+                MessageBox.Show("Please enter valid SSN");
+                return;
+            }
+            if (X_Phone_Number.Visible == true)
+            {
+                MessageBox.Show("Please enter valid Phone NUmber");
+                return;
+            }
+            if (X_UserName.Visible == true)
+            {
+                MessageBox.Show("Please enter valid Username");
+                return;
+            }
+            if (X_Password.Visible == true)
+            {
+                MessageBox.Show("Please enter valid Password");
+                return;
+            }
+            string str_Bdate = dateTimePicker1.Value.ToString("yyyy/MM/dd");
+            int result = ControllerObj.SignUp_Passenger(Fname_Text.Text, Minit_Text.Text, Lname_Text.Text, SSN_Text.Text, Phone_Number_Text.Text, Username_Signup_Text.Text, Password_SignUp_Text.Text, comboBox1.Text, str_Bdate);
+            if(result==-2)
+            {
+                MessageBox.Show("SSN already exists");
+                return;
+            }
+            if (result == -1)
+            {
+                MessageBox.Show("Username already exists");
+                return;
+            }
+            if (result == 0)
+            {
+                MessageBox.Show("SignUp was unsuccessful");
+                return;
+            }
+            Username = Username_Signup_Text.Text;
+            SSN = Convert.ToInt32(SSN_Text.Text);
+            // redirect to passenger
+            //Temporary
+            MessageBox.Show("You signed up");
+        }
+
+   
     }
 }
