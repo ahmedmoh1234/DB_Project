@@ -61,8 +61,8 @@ FOREIGN KEY (Station_Number) REFERENCES STATION (Station_Number);
 CREATE TABLE TRIP
 (
   Trip_Number INT NOT NULL,
-  Departure_Time TIME NOT NULL,
-  Arrival_Time TIME NOT NULL,
+  Departure_Time DATETIME NOT NULL,
+  Arrival_Time DATETIME NOT NULL,
   Economic_Ticket_Price INT NOT NULL,
   Business_Ticket_Price INT NOT NULL,
   Business INT NOT NULL,
