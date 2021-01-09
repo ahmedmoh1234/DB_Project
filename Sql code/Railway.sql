@@ -168,11 +168,32 @@ VALUES
 ('Mostafa','A','Ahmed',88888888,'M',01158795123,30000,'1998-12-12',12345678),
 ('Nader','Y','Adib',420420420,'M',01285003523,30000,'2000-05-15',NULL);
 
-INSERT INTO STATION(Station_Number,Station_Name,Manager_SSN,Manager_Start_Date,Location)
+INSERT INTO STATION (Station_Number,Station_Name,Manager_SSN,Manager_Start_Date,Location)
 VALUES
-(205,'Misr Station',420420420,'2015-07-04','Ramsis'),
-(301,'Menya',88888888,'2018-09-14','Menya'),
-(488,'Mansoura',619619619,'2017-06-03','Dakahleya');
+(1,'Burg Al Arab',420420420,'2015-07-04','Alexandria'),
+(2,'Port-Said',420420420,'2014-03-05','Port-Said'),
+(3,'Aswan',420420420,'2014-03-01','Aswan'),
+(4,'Luxor',619619619,'2013-06-11','Luxor'),
+(5,'New Capital',420420420,'2014-02-01','New Capital'),
+(6,'Mansoura',88888888,'2017-06-03','Dakahleya'),
+(7,'Menya',88888888,'2018-09-14','Menya'),
+(8,'Misr Station',420420420,'2015-07-04','Ramsis'),
+(9,'Marsa Matrouh',88888888,'2016-05-01','Marsa Matrouh'),
+(10,'Saloum',88888888,'2017-12-15','Saloum'),
+(11,'Alyoub',88888888,'2018-09-14','Aluoubeya'),
+(12,'Assiout',88888888,'2015-01-02','Assiout'),
+(13,'Zagazig',88888888,'2014-07-08','Sharkeya'),
+(14,'Fayoum',88888888,'2013-02-05','Fayoum'),
+(15,'El Mahala Al Kobra',88888888,'2011-04-25','Gharbeya'),
+(16,'Ismailia',88888888,'2012-04-05','Ismailia'),
+(17,'Kafr El Sheikh',88888888,'2014-05-11','Kafr El Sheikh'),
+(18,'Tanta',88888888,'2017-08-05','Gharbeya'),
+(19,'Sohag',88888888,'2019-08-04','Sohag'),
+(20,'Qena',88888888,'2012-05-04','Qena'),
+(21,'Banha',88888888,'2017-09-08','Alyoubeya'),
+(22,'Beni Suef',88888888,'2016-06-06','Beni Suef'),
+(23,'Suez',88888888,'2015-01-04','Suez');
+
 
 
 INSERT INTO SUPPLIER(Supplier_ID, Supplier_Address, Supplier_Name, Phone_Number)
@@ -210,3 +231,25 @@ VALUES
 (30,20000,3);		--Gears
 
 
+INSERT INTO TRAIN (Train_Number,Economic_Class,Business_Class,Maintenance_Day)
+VALUES
+(1,50,20,'2021-05-05'),
+(2,70,20,'2022-07-05'),
+(3,60,10,'2023-08-15'),
+(4,50,20,'2022-05-05'),
+(5,50,10,'2024-01-04'),
+(6,60,10,'2023-06-09'),
+(7,50,10,'2021-01-04'),
+(8,60,30,'2025-04-05'),
+(9,50,30,'2025-05-05'),
+(10,70,30,'2024-05-05'),
+(11,60,20,'2023-07-05'),
+(12,60,20,'2021-08-05'),
+(13,50,10,'2022-05-04'),
+(14,70,20,'2023-05-09'),
+(15,50,10,'2024-05-14'),
+(16,60,10,'2026-12-05'),
+(17,50,10,'2025-05-05'),
+(18,70,20,'2021-05-05'),
+(19,50,20,'2023-07-08'),
+(20,70,10,'2024-04-05');
