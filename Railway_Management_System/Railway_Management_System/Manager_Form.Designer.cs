@@ -145,7 +145,6 @@
             this.PassengersSSNTextBox = new System.Windows.Forms.TextBox();
             this.No_of_trips_passenger_made_Label = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.TripsDG)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -179,7 +178,7 @@
             this.tripsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tripsButton.ForeColor = System.Drawing.Color.White;
             this.tripsButton.Location = new System.Drawing.Point(0, 0);
-            this.tripsButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tripsButton.Margin = new System.Windows.Forms.Padding(2);
             this.tripsButton.Name = "tripsButton";
             this.tripsButton.Size = new System.Drawing.Size(112, 76);
             this.tripsButton.TabIndex = 0;
@@ -195,7 +194,7 @@
             this.employeesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.employeesButton.ForeColor = System.Drawing.Color.White;
             this.employeesButton.Location = new System.Drawing.Point(0, 76);
-            this.employeesButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.employeesButton.Margin = new System.Windows.Forms.Padding(2);
             this.employeesButton.Name = "employeesButton";
             this.employeesButton.Size = new System.Drawing.Size(112, 76);
             this.employeesButton.TabIndex = 1;
@@ -211,7 +210,7 @@
             this.trainsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.trainsButton.ForeColor = System.Drawing.Color.White;
             this.trainsButton.Location = new System.Drawing.Point(0, 151);
-            this.trainsButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.trainsButton.Margin = new System.Windows.Forms.Padding(2);
             this.trainsButton.Name = "trainsButton";
             this.trainsButton.Size = new System.Drawing.Size(112, 76);
             this.trainsButton.TabIndex = 2;
@@ -227,7 +226,7 @@
             this.suppliersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.suppliersButton.ForeColor = System.Drawing.Color.White;
             this.suppliersButton.Location = new System.Drawing.Point(0, 227);
-            this.suppliersButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.suppliersButton.Margin = new System.Windows.Forms.Padding(2);
             this.suppliersButton.Name = "suppliersButton";
             this.suppliersButton.Size = new System.Drawing.Size(112, 76);
             this.suppliersButton.TabIndex = 3;
@@ -243,7 +242,7 @@
             this.spare_partsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.spare_partsButton.ForeColor = System.Drawing.Color.White;
             this.spare_partsButton.Location = new System.Drawing.Point(0, 302);
-            this.spare_partsButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.spare_partsButton.Margin = new System.Windows.Forms.Padding(2);
             this.spare_partsButton.Name = "spare_partsButton";
             this.spare_partsButton.Size = new System.Drawing.Size(112, 76);
             this.spare_partsButton.TabIndex = 4;
@@ -259,7 +258,7 @@
             this.statistical_modelsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.statistical_modelsButton.ForeColor = System.Drawing.Color.White;
             this.statistical_modelsButton.Location = new System.Drawing.Point(0, 378);
-            this.statistical_modelsButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.statistical_modelsButton.Margin = new System.Windows.Forms.Padding(2);
             this.statistical_modelsButton.Name = "statistical_modelsButton";
             this.statistical_modelsButton.Size = new System.Drawing.Size(112, 76);
             this.statistical_modelsButton.TabIndex = 5;
@@ -271,7 +270,7 @@
             // 
             this.TripsDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TripsDG.Location = new System.Drawing.Point(6, 30);
-            this.TripsDG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TripsDG.Margin = new System.Windows.Forms.Padding(2);
             this.TripsDG.Name = "TripsDG";
             this.TripsDG.RowHeadersWidth = 51;
             this.TripsDG.RowTemplate.Height = 24;
@@ -280,7 +279,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label35);
             this.groupBox1.Controls.Add(this.AddButton);
             this.groupBox1.Controls.Add(this.TrainNumberTextBox1);
             this.groupBox1.Controls.Add(this.label6);
@@ -295,9 +293,9 @@
             this.groupBox1.Controls.Add(this.trip_number_to_add__TextBox);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(20, 205);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(444, 205);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
@@ -311,7 +309,7 @@
             this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddButton.ForeColor = System.Drawing.Color.White;
             this.AddButton.Location = new System.Drawing.Point(307, 145);
-            this.AddButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AddButton.Margin = new System.Windows.Forms.Padding(2);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(104, 45);
             this.AddButton.TabIndex = 12;
@@ -322,7 +320,7 @@
             // TrainNumberTextBox1
             // 
             this.TrainNumberTextBox1.Location = new System.Drawing.Point(136, 167);
-            this.TrainNumberTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TrainNumberTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.TrainNumberTextBox1.Name = "TrainNumberTextBox1";
             this.TrainNumberTextBox1.Size = new System.Drawing.Size(76, 20);
             this.TrainNumberTextBox1.TabIndex = 11;
@@ -340,7 +338,7 @@
             // BusinessTicketPriceTextBox
             // 
             this.BusinessTicketPriceTextBox.Location = new System.Drawing.Point(136, 145);
-            this.BusinessTicketPriceTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BusinessTicketPriceTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.BusinessTicketPriceTextBox.Name = "BusinessTicketPriceTextBox";
             this.BusinessTicketPriceTextBox.Size = new System.Drawing.Size(76, 20);
             this.BusinessTicketPriceTextBox.TabIndex = 9;
@@ -348,7 +346,7 @@
             // EconomicTicketPriceTextBox
             // 
             this.EconomicTicketPriceTextBox.Location = new System.Drawing.Point(136, 122);
-            this.EconomicTicketPriceTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EconomicTicketPriceTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.EconomicTicketPriceTextBox.Name = "EconomicTicketPriceTextBox";
             this.EconomicTicketPriceTextBox.Size = new System.Drawing.Size(76, 20);
             this.EconomicTicketPriceTextBox.TabIndex = 8;
@@ -396,7 +394,7 @@
             // arrDateTimePicker
             // 
             this.arrDateTimePicker.Location = new System.Drawing.Point(136, 99);
-            this.arrDateTimePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.arrDateTimePicker.Margin = new System.Windows.Forms.Padding(2);
             this.arrDateTimePicker.Name = "arrDateTimePicker";
             this.arrDateTimePicker.Size = new System.Drawing.Size(151, 20);
             this.arrDateTimePicker.TabIndex = 3;
@@ -404,7 +402,7 @@
             // depDateTimePicker
             // 
             this.depDateTimePicker.Location = new System.Drawing.Point(136, 72);
-            this.depDateTimePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.depDateTimePicker.Margin = new System.Windows.Forms.Padding(2);
             this.depDateTimePicker.Name = "depDateTimePicker";
             this.depDateTimePicker.Size = new System.Drawing.Size(151, 20);
             this.depDateTimePicker.TabIndex = 2;
@@ -412,7 +410,7 @@
             // trip_number_to_add__TextBox
             // 
             this.trip_number_to_add__TextBox.Location = new System.Drawing.Point(136, 39);
-            this.trip_number_to_add__TextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.trip_number_to_add__TextBox.Margin = new System.Windows.Forms.Padding(2);
             this.trip_number_to_add__TextBox.Name = "trip_number_to_add__TextBox";
             this.trip_number_to_add__TextBox.Size = new System.Drawing.Size(76, 20);
             this.trip_number_to_add__TextBox.TabIndex = 1;
@@ -433,9 +431,9 @@
             this.groupBox2.Controls.Add(this.label20);
             this.groupBox2.Controls.Add(this.remove_tripButton);
             this.groupBox2.Location = new System.Drawing.Point(485, 205);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(154, 205);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
@@ -444,7 +442,7 @@
             // trip_number_to_remove_TextBox
             // 
             this.trip_number_to_remove_TextBox.Location = new System.Drawing.Point(74, 58);
-            this.trip_number_to_remove_TextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.trip_number_to_remove_TextBox.Margin = new System.Windows.Forms.Padding(2);
             this.trip_number_to_remove_TextBox.Name = "trip_number_to_remove_TextBox";
             this.trip_number_to_remove_TextBox.Size = new System.Drawing.Size(76, 20);
             this.trip_number_to_remove_TextBox.TabIndex = 5;
@@ -467,7 +465,7 @@
             this.remove_tripButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.remove_tripButton.ForeColor = System.Drawing.Color.White;
             this.remove_tripButton.Location = new System.Drawing.Point(22, 145);
-            this.remove_tripButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.remove_tripButton.Margin = new System.Windows.Forms.Padding(2);
             this.remove_tripButton.Name = "remove_tripButton";
             this.remove_tripButton.Size = new System.Drawing.Size(104, 45);
             this.remove_tripButton.TabIndex = 3;
@@ -481,9 +479,9 @@
             this.TripsGroupBox.Controls.Add(this.TripsDG);
             this.TripsGroupBox.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.TripsGroupBox.Location = new System.Drawing.Point(128, 10);
-            this.TripsGroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TripsGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.TripsGroupBox.Name = "TripsGroupBox";
-            this.TripsGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TripsGroupBox.Padding = new System.Windows.Forms.Padding(2);
             this.TripsGroupBox.Size = new System.Drawing.Size(644, 431);
             this.TripsGroupBox.TabIndex = 6;
             this.TripsGroupBox.TabStop = false;
@@ -495,9 +493,9 @@
             this.EmployeesGroupBox.Controls.Add(this.employeesDG);
             this.EmployeesGroupBox.Controls.Add(this.HireGroupBox);
             this.EmployeesGroupBox.Location = new System.Drawing.Point(123, 10);
-            this.EmployeesGroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EmployeesGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.EmployeesGroupBox.Name = "EmployeesGroupBox";
-            this.EmployeesGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EmployeesGroupBox.Padding = new System.Windows.Forms.Padding(2);
             this.EmployeesGroupBox.Size = new System.Drawing.Size(648, 431);
             this.EmployeesGroupBox.TabIndex = 3;
             this.EmployeesGroupBox.TabStop = false;
@@ -507,7 +505,7 @@
             // 
             this.employeesDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.employeesDG.Location = new System.Drawing.Point(6, 30);
-            this.employeesDG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.employeesDG.Margin = new System.Windows.Forms.Padding(2);
             this.employeesDG.Name = "employeesDG";
             this.employeesDG.RowHeadersWidth = 51;
             this.employeesDG.RowTemplate.Height = 24;
@@ -546,9 +544,9 @@
             this.HireGroupBox.Controls.Add(this.label7);
             this.HireGroupBox.Controls.Add(this.HireButton);
             this.HireGroupBox.Location = new System.Drawing.Point(6, 205);
-            this.HireGroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.HireGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.HireGroupBox.Name = "HireGroupBox";
-            this.HireGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.HireGroupBox.Padding = new System.Windows.Forms.Padding(2);
             this.HireGroupBox.Size = new System.Drawing.Size(620, 222);
             this.HireGroupBox.TabIndex = 1;
             this.HireGroupBox.TabStop = false;
@@ -561,7 +559,7 @@
             "Mainteance",
             "Manager"});
             this.StationComboBox.Location = new System.Drawing.Point(518, 29);
-            this.StationComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.StationComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.StationComboBox.Name = "StationComboBox";
             this.StationComboBox.Size = new System.Drawing.Size(92, 21);
             this.StationComboBox.TabIndex = 37;
@@ -573,7 +571,7 @@
             "Mainteance",
             "Manager"});
             this.PositioComboBox.Location = new System.Drawing.Point(338, 81);
-            this.PositioComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PositioComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.PositioComboBox.Name = "PositioComboBox";
             this.PositioComboBox.Size = new System.Drawing.Size(92, 21);
             this.PositioComboBox.TabIndex = 36;
@@ -585,7 +583,7 @@
             "M",
             "F"});
             this.SexComboBox.Location = new System.Drawing.Point(107, 127);
-            this.SexComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SexComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.SexComboBox.Name = "SexComboBox";
             this.SexComboBox.Size = new System.Drawing.Size(92, 21);
             this.SexComboBox.TabIndex = 35;
@@ -593,7 +591,7 @@
             // textBox8
             // 
             this.textBox8.Location = new System.Drawing.Point(518, 111);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(2);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(76, 20);
             this.textBox8.TabIndex = 34;
@@ -601,7 +599,7 @@
             // textBox7
             // 
             this.textBox7.Location = new System.Drawing.Point(518, 83);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(76, 20);
             this.textBox7.TabIndex = 33;
@@ -609,7 +607,7 @@
             // SalaryTextBox
             // 
             this.SalaryTextBox.Location = new System.Drawing.Point(518, 58);
-            this.SalaryTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SalaryTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.SalaryTextBox.Name = "SalaryTextBox";
             this.SalaryTextBox.Size = new System.Drawing.Size(76, 20);
             this.SalaryTextBox.TabIndex = 32;
@@ -617,7 +615,7 @@
             // ManagersSSNTextBox
             // 
             this.ManagersSSNTextBox.Location = new System.Drawing.Point(338, 106);
-            this.ManagersSSNTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ManagersSSNTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.ManagersSSNTextBox.Name = "ManagersSSNTextBox";
             this.ManagersSSNTextBox.Size = new System.Drawing.Size(76, 20);
             this.ManagersSSNTextBox.TabIndex = 30;
@@ -625,7 +623,7 @@
             // PhoneNumberTextBox
             // 
             this.PhoneNumberTextBox.Location = new System.Drawing.Point(338, 58);
-            this.PhoneNumberTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PhoneNumberTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.PhoneNumberTextBox.Name = "PhoneNumberTextBox";
             this.PhoneNumberTextBox.Size = new System.Drawing.Size(76, 20);
             this.PhoneNumberTextBox.TabIndex = 28;
@@ -633,7 +631,7 @@
             // DOBTextBox
             // 
             this.DOBTextBox.Location = new System.Drawing.Point(338, 33);
-            this.DOBTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DOBTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.DOBTextBox.Name = "DOBTextBox";
             this.DOBTextBox.Size = new System.Drawing.Size(76, 20);
             this.DOBTextBox.TabIndex = 27;
@@ -641,7 +639,7 @@
             // SSNTextBox
             // 
             this.SSNTextBox.Location = new System.Drawing.Point(107, 104);
-            this.SSNTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SSNTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.SSNTextBox.Name = "SSNTextBox";
             this.SSNTextBox.Size = new System.Drawing.Size(76, 20);
             this.SSNTextBox.TabIndex = 25;
@@ -649,7 +647,7 @@
             // LnameTextBox
             // 
             this.LnameTextBox.Location = new System.Drawing.Point(107, 79);
-            this.LnameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LnameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.LnameTextBox.Name = "LnameTextBox";
             this.LnameTextBox.Size = new System.Drawing.Size(76, 20);
             this.LnameTextBox.TabIndex = 24;
@@ -662,7 +660,7 @@
             this.FireButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FireButton.ForeColor = System.Drawing.Color.White;
             this.FireButton.Location = new System.Drawing.Point(424, 165);
-            this.FireButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FireButton.Margin = new System.Windows.Forms.Padding(2);
             this.FireButton.Name = "FireButton";
             this.FireButton.Size = new System.Drawing.Size(78, 40);
             this.FireButton.TabIndex = 23;
@@ -672,7 +670,7 @@
             // MinitTextBox
             // 
             this.MinitTextBox.Location = new System.Drawing.Point(107, 56);
-            this.MinitTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinitTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.MinitTextBox.Name = "MinitTextBox";
             this.MinitTextBox.Size = new System.Drawing.Size(76, 20);
             this.MinitTextBox.TabIndex = 22;
@@ -685,7 +683,7 @@
             this.UpdateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UpdateButton.ForeColor = System.Drawing.Color.White;
             this.UpdateButton.Location = new System.Drawing.Point(266, 165);
-            this.UpdateButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UpdateButton.Margin = new System.Windows.Forms.Padding(2);
             this.UpdateButton.Name = "UpdateButton";
             this.UpdateButton.Size = new System.Drawing.Size(78, 40);
             this.UpdateButton.TabIndex = 21;
@@ -695,7 +693,7 @@
             // FirstNameTextBox
             // 
             this.FirstNameTextBox.Location = new System.Drawing.Point(107, 33);
-            this.FirstNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FirstNameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.FirstNameTextBox.Name = "FirstNameTextBox";
             this.FirstNameTextBox.Size = new System.Drawing.Size(76, 20);
             this.FirstNameTextBox.TabIndex = 20;
@@ -838,7 +836,7 @@
             this.HireButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HireButton.ForeColor = System.Drawing.Color.White;
             this.HireButton.Location = new System.Drawing.Point(107, 165);
-            this.HireButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.HireButton.Margin = new System.Windows.Forms.Padding(2);
             this.HireButton.Name = "HireButton";
             this.HireButton.Size = new System.Drawing.Size(78, 40);
             this.HireButton.TabIndex = 6;
@@ -850,9 +848,9 @@
             this.TrainsGroupBox.Controls.Add(this.groupBox3);
             this.TrainsGroupBox.Controls.Add(this.TrainsDG);
             this.TrainsGroupBox.Location = new System.Drawing.Point(123, 10);
-            this.TrainsGroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TrainsGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.TrainsGroupBox.Name = "TrainsGroupBox";
-            this.TrainsGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TrainsGroupBox.Padding = new System.Windows.Forms.Padding(2);
             this.TrainsGroupBox.Size = new System.Drawing.Size(644, 431);
             this.TrainsGroupBox.TabIndex = 7;
             this.TrainsGroupBox.TabStop = false;
@@ -866,9 +864,9 @@
             this.groupBox3.Controls.Add(this.label21);
             this.groupBox3.Controls.Add(this.Change_Date_Button);
             this.groupBox3.Location = new System.Drawing.Point(128, 222);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(357, 183);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
@@ -877,7 +875,7 @@
             // TrainNumberTextBox
             // 
             this.TrainNumberTextBox.Location = new System.Drawing.Point(168, 38);
-            this.TrainNumberTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TrainNumberTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.TrainNumberTextBox.Name = "TrainNumberTextBox";
             this.TrainNumberTextBox.Size = new System.Drawing.Size(76, 20);
             this.TrainNumberTextBox.TabIndex = 9;
@@ -895,7 +893,7 @@
             // New_Maintenance_Date
             // 
             this.New_Maintenance_Date.Location = new System.Drawing.Point(168, 71);
-            this.New_Maintenance_Date.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.New_Maintenance_Date.Margin = new System.Windows.Forms.Padding(2);
             this.New_Maintenance_Date.Name = "New_Maintenance_Date";
             this.New_Maintenance_Date.Size = new System.Drawing.Size(151, 20);
             this.New_Maintenance_Date.TabIndex = 7;
@@ -918,7 +916,7 @@
             this.Change_Date_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Change_Date_Button.ForeColor = System.Drawing.Color.White;
             this.Change_Date_Button.Location = new System.Drawing.Point(104, 117);
-            this.Change_Date_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Change_Date_Button.Margin = new System.Windows.Forms.Padding(2);
             this.Change_Date_Button.Name = "Change_Date_Button";
             this.Change_Date_Button.Size = new System.Drawing.Size(143, 44);
             this.Change_Date_Button.TabIndex = 5;
@@ -930,7 +928,7 @@
             // 
             this.TrainsDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TrainsDG.Location = new System.Drawing.Point(6, 30);
-            this.TrainsDG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TrainsDG.Margin = new System.Windows.Forms.Padding(2);
             this.TrainsDG.Name = "TrainsDG";
             this.TrainsDG.RowHeadersWidth = 51;
             this.TrainsDG.RowTemplate.Height = 24;
@@ -942,9 +940,9 @@
             this.SuppliersGroupBox.Controls.Add(this.Add_Remove_Suppliers);
             this.SuppliersGroupBox.Controls.Add(this.SuppliersDG);
             this.SuppliersGroupBox.Location = new System.Drawing.Point(123, 10);
-            this.SuppliersGroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SuppliersGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.SuppliersGroupBox.Name = "SuppliersGroupBox";
-            this.SuppliersGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SuppliersGroupBox.Padding = new System.Windows.Forms.Padding(2);
             this.SuppliersGroupBox.Size = new System.Drawing.Size(648, 431);
             this.SuppliersGroupBox.TabIndex = 8;
             this.SuppliersGroupBox.TabStop = false;
@@ -957,9 +955,9 @@
             this.Add_Remove_Suppliers.Controls.Add(this.Remove_Supplier_Button);
             this.Add_Remove_Suppliers.Controls.Add(this.Add_Supplier_Button);
             this.Add_Remove_Suppliers.Location = new System.Drawing.Point(124, 228);
-            this.Add_Remove_Suppliers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Add_Remove_Suppliers.Margin = new System.Windows.Forms.Padding(2);
             this.Add_Remove_Suppliers.Name = "Add_Remove_Suppliers";
-            this.Add_Remove_Suppliers.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Add_Remove_Suppliers.Padding = new System.Windows.Forms.Padding(2);
             this.Add_Remove_Suppliers.Size = new System.Drawing.Size(344, 176);
             this.Add_Remove_Suppliers.TabIndex = 1;
             this.Add_Remove_Suppliers.TabStop = false;
@@ -968,7 +966,7 @@
             // Supplier_Number_TextBox
             // 
             this.Supplier_Number_TextBox.Location = new System.Drawing.Point(137, 46);
-            this.Supplier_Number_TextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Supplier_Number_TextBox.Margin = new System.Windows.Forms.Padding(2);
             this.Supplier_Number_TextBox.Name = "Supplier_Number_TextBox";
             this.Supplier_Number_TextBox.Size = new System.Drawing.Size(76, 20);
             this.Supplier_Number_TextBox.TabIndex = 8;
@@ -991,7 +989,7 @@
             this.Remove_Supplier_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Remove_Supplier_Button.ForeColor = System.Drawing.Color.White;
             this.Remove_Supplier_Button.Location = new System.Drawing.Point(183, 120);
-            this.Remove_Supplier_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Remove_Supplier_Button.Margin = new System.Windows.Forms.Padding(2);
             this.Remove_Supplier_Button.Name = "Remove_Supplier_Button";
             this.Remove_Supplier_Button.Size = new System.Drawing.Size(121, 37);
             this.Remove_Supplier_Button.TabIndex = 6;
@@ -1006,7 +1004,7 @@
             this.Add_Supplier_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Add_Supplier_Button.ForeColor = System.Drawing.Color.White;
             this.Add_Supplier_Button.Location = new System.Drawing.Point(32, 120);
-            this.Add_Supplier_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Add_Supplier_Button.Margin = new System.Windows.Forms.Padding(2);
             this.Add_Supplier_Button.Name = "Add_Supplier_Button";
             this.Add_Supplier_Button.Size = new System.Drawing.Size(121, 37);
             this.Add_Supplier_Button.TabIndex = 5;
@@ -1017,7 +1015,7 @@
             // 
             this.SuppliersDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.SuppliersDG.Location = new System.Drawing.Point(6, 30);
-            this.SuppliersDG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SuppliersDG.Margin = new System.Windows.Forms.Padding(2);
             this.SuppliersDG.Name = "SuppliersDG";
             this.SuppliersDG.RowHeadersWidth = 51;
             this.SuppliersDG.RowTemplate.Height = 24;
@@ -1029,9 +1027,9 @@
             this.Spare_Parts_GroupBox.Controls.Add(this.groupBox10);
             this.Spare_Parts_GroupBox.Controls.Add(this.RequestsDG);
             this.Spare_Parts_GroupBox.Location = new System.Drawing.Point(123, 10);
-            this.Spare_Parts_GroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Spare_Parts_GroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.Spare_Parts_GroupBox.Name = "Spare_Parts_GroupBox";
-            this.Spare_Parts_GroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Spare_Parts_GroupBox.Padding = new System.Windows.Forms.Padding(2);
             this.Spare_Parts_GroupBox.Size = new System.Drawing.Size(648, 431);
             this.Spare_Parts_GroupBox.TabIndex = 9;
             this.Spare_Parts_GroupBox.TabStop = false;
@@ -1044,9 +1042,9 @@
             this.groupBox10.Controls.Add(this.Accept_Request_Button);
             this.groupBox10.Controls.Add(this.label31);
             this.groupBox10.Location = new System.Drawing.Point(144, 223);
-            this.groupBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox10.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox10.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox10.Size = new System.Drawing.Size(320, 177);
             this.groupBox10.TabIndex = 1;
             this.groupBox10.TabStop = false;
@@ -1055,7 +1053,7 @@
             // Request_ID_TextBox
             // 
             this.Request_ID_TextBox.Location = new System.Drawing.Point(115, 44);
-            this.Request_ID_TextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Request_ID_TextBox.Margin = new System.Windows.Forms.Padding(2);
             this.Request_ID_TextBox.Name = "Request_ID_TextBox";
             this.Request_ID_TextBox.Size = new System.Drawing.Size(76, 20);
             this.Request_ID_TextBox.TabIndex = 7;
@@ -1068,7 +1066,7 @@
             this.Reject_Request_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Reject_Request_Button.ForeColor = System.Drawing.Color.White;
             this.Reject_Request_Button.Location = new System.Drawing.Point(172, 119);
-            this.Reject_Request_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Reject_Request_Button.Margin = new System.Windows.Forms.Padding(2);
             this.Reject_Request_Button.Name = "Reject_Request_Button";
             this.Reject_Request_Button.Size = new System.Drawing.Size(102, 42);
             this.Reject_Request_Button.TabIndex = 6;
@@ -1083,7 +1081,7 @@
             this.Accept_Request_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Accept_Request_Button.ForeColor = System.Drawing.Color.White;
             this.Accept_Request_Button.Location = new System.Drawing.Point(24, 119);
-            this.Accept_Request_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Accept_Request_Button.Margin = new System.Windows.Forms.Padding(2);
             this.Accept_Request_Button.Name = "Accept_Request_Button";
             this.Accept_Request_Button.Size = new System.Drawing.Size(102, 41);
             this.Accept_Request_Button.TabIndex = 5;
@@ -1104,7 +1102,7 @@
             // 
             this.RequestsDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.RequestsDG.Location = new System.Drawing.Point(6, 30);
-            this.RequestsDG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RequestsDG.Margin = new System.Windows.Forms.Padding(2);
             this.RequestsDG.Name = "RequestsDG";
             this.RequestsDG.RowHeadersWidth = 51;
             this.RequestsDG.RowTemplate.Height = 24;
@@ -1120,9 +1118,9 @@
             this.Statistical_Models_GroupBox.Controls.Add(this.groupBox5);
             this.Statistical_Models_GroupBox.Controls.Add(this.groupBox4);
             this.Statistical_Models_GroupBox.Location = new System.Drawing.Point(123, 10);
-            this.Statistical_Models_GroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Statistical_Models_GroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.Statistical_Models_GroupBox.Name = "Statistical_Models_GroupBox";
-            this.Statistical_Models_GroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Statistical_Models_GroupBox.Padding = new System.Windows.Forms.Padding(2);
             this.Statistical_Models_GroupBox.Size = new System.Drawing.Size(648, 431);
             this.Statistical_Models_GroupBox.TabIndex = 10;
             this.Statistical_Models_GroupBox.TabStop = false;
@@ -1138,9 +1136,9 @@
             this.groupBox9.Controls.Add(this.GetIncomeTimePeriodButton);
             this.groupBox9.Controls.Add(this.label34);
             this.groupBox9.Location = new System.Drawing.Point(280, 290);
-            this.groupBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox9.Size = new System.Drawing.Size(336, 102);
             this.groupBox9.TabIndex = 6;
             this.groupBox9.TabStop = false;
@@ -1159,7 +1157,7 @@
             // EndDatePicker
             // 
             this.EndDatePicker.Location = new System.Drawing.Point(237, 29);
-            this.EndDatePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EndDatePicker.Margin = new System.Windows.Forms.Padding(2);
             this.EndDatePicker.Name = "EndDatePicker";
             this.EndDatePicker.Size = new System.Drawing.Size(82, 20);
             this.EndDatePicker.TabIndex = 8;
@@ -1167,7 +1165,7 @@
             // StartDatePicker
             // 
             this.StartDatePicker.Location = new System.Drawing.Point(71, 29);
-            this.StartDatePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.StartDatePicker.Margin = new System.Windows.Forms.Padding(2);
             this.StartDatePicker.Name = "StartDatePicker";
             this.StartDatePicker.Size = new System.Drawing.Size(87, 20);
             this.StartDatePicker.TabIndex = 7;
@@ -1199,7 +1197,7 @@
             this.GetIncomeTimePeriodButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GetIncomeTimePeriodButton.ForeColor = System.Drawing.Color.White;
             this.GetIncomeTimePeriodButton.Location = new System.Drawing.Point(48, 61);
-            this.GetIncomeTimePeriodButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GetIncomeTimePeriodButton.Margin = new System.Windows.Forms.Padding(2);
             this.GetIncomeTimePeriodButton.Name = "GetIncomeTimePeriodButton";
             this.GetIncomeTimePeriodButton.Size = new System.Drawing.Size(110, 28);
             this.GetIncomeTimePeriodButton.TabIndex = 3;
@@ -1226,9 +1224,9 @@
             this.groupBox8.Controls.Add(this.Number_of_emps_working_station_label);
             this.groupBox8.Controls.Add(this.label28);
             this.groupBox8.Location = new System.Drawing.Point(281, 160);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox8.Size = new System.Drawing.Size(336, 110);
             this.groupBox8.TabIndex = 5;
             this.groupBox8.TabStop = false;
@@ -1268,7 +1266,7 @@
             // 
             this.StationNameComboBox2.FormattingEnabled = true;
             this.StationNameComboBox2.Location = new System.Drawing.Point(98, 29);
-            this.StationNameComboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.StationNameComboBox2.Margin = new System.Windows.Forms.Padding(2);
             this.StationNameComboBox2.Name = "StationNameComboBox2";
             this.StationNameComboBox2.Size = new System.Drawing.Size(92, 21);
             this.StationNameComboBox2.TabIndex = 4;
@@ -1281,7 +1279,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(48, 63);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(110, 37);
             this.button2.TabIndex = 3;
@@ -1315,9 +1313,9 @@
             this.groupBox7.Controls.Add(this.Avg_Number_Pass_Label);
             this.groupBox7.Controls.Add(this.label27);
             this.groupBox7.Location = new System.Drawing.Point(278, 39);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox7.Size = new System.Drawing.Size(336, 102);
             this.groupBox7.TabIndex = 4;
             this.groupBox7.TabStop = false;
@@ -1331,7 +1329,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(48, 61);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(110, 28);
             this.button1.TabIndex = 3;
@@ -1341,7 +1339,7 @@
             // AvgNoPass_Trip_Number_TextBox
             // 
             this.AvgNoPass_Trip_Number_TextBox.Location = new System.Drawing.Point(116, 29);
-            this.AvgNoPass_Trip_Number_TextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AvgNoPass_Trip_Number_TextBox.Margin = new System.Windows.Forms.Padding(2);
             this.AvgNoPass_Trip_Number_TextBox.Name = "AvgNoPass_Trip_Number_TextBox";
             this.AvgNoPass_Trip_Number_TextBox.Size = new System.Drawing.Size(76, 20);
             this.AvgNoPass_Trip_Number_TextBox.TabIndex = 2;
@@ -1373,9 +1371,9 @@
             this.groupBox6.Controls.Add(this.IncomeFromTripLabel);
             this.groupBox6.Controls.Add(this.label26);
             this.groupBox6.Location = new System.Drawing.Point(28, 288);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox6.Size = new System.Drawing.Size(232, 102);
             this.groupBox6.TabIndex = 3;
             this.groupBox6.TabStop = false;
@@ -1389,7 +1387,7 @@
             this.GetIncomefromTripButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GetIncomefromTripButton.ForeColor = System.Drawing.Color.White;
             this.GetIncomefromTripButton.Location = new System.Drawing.Point(48, 61);
-            this.GetIncomefromTripButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GetIncomefromTripButton.Margin = new System.Windows.Forms.Padding(2);
             this.GetIncomefromTripButton.Name = "GetIncomefromTripButton";
             this.GetIncomefromTripButton.Size = new System.Drawing.Size(110, 28);
             this.GetIncomefromTripButton.TabIndex = 3;
@@ -1399,7 +1397,7 @@
             // GetIncomeFromTripTextBox
             // 
             this.GetIncomeFromTripTextBox.Location = new System.Drawing.Point(116, 29);
-            this.GetIncomeFromTripTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GetIncomeFromTripTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.GetIncomeFromTripTextBox.Name = "GetIncomeFromTripTextBox";
             this.GetIncomeFromTripTextBox.Size = new System.Drawing.Size(76, 20);
             this.GetIncomeFromTripTextBox.TabIndex = 2;
@@ -1431,9 +1429,9 @@
             this.groupBox5.Controls.Add(this.Number_of_trips_Train_made_label);
             this.groupBox5.Controls.Add(this.label25);
             this.groupBox5.Location = new System.Drawing.Point(28, 167);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox5.Size = new System.Drawing.Size(232, 102);
             this.groupBox5.TabIndex = 2;
             this.groupBox5.TabStop = false;
@@ -1447,7 +1445,7 @@
             this.GeetTrainsCountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GeetTrainsCountButton.ForeColor = System.Drawing.Color.White;
             this.GeetTrainsCountButton.Location = new System.Drawing.Point(48, 61);
-            this.GeetTrainsCountButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GeetTrainsCountButton.Margin = new System.Windows.Forms.Padding(2);
             this.GeetTrainsCountButton.Name = "GeetTrainsCountButton";
             this.GeetTrainsCountButton.Size = new System.Drawing.Size(110, 28);
             this.GeetTrainsCountButton.TabIndex = 3;
@@ -1457,7 +1455,7 @@
             // TrainNumberTextBox2
             // 
             this.TrainNumberTextBox2.Location = new System.Drawing.Point(116, 29);
-            this.TrainNumberTextBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TrainNumberTextBox2.Margin = new System.Windows.Forms.Padding(2);
             this.TrainNumberTextBox2.Name = "TrainNumberTextBox2";
             this.TrainNumberTextBox2.Size = new System.Drawing.Size(76, 20);
             this.TrainNumberTextBox2.TabIndex = 2;
@@ -1489,9 +1487,9 @@
             this.groupBox4.Controls.Add(this.No_of_trips_passenger_made_Label);
             this.groupBox4.Controls.Add(this.label23);
             this.groupBox4.Location = new System.Drawing.Point(24, 39);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(232, 102);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
@@ -1505,7 +1503,7 @@
             this.GetPassCountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GetPassCountButton.ForeColor = System.Drawing.Color.White;
             this.GetPassCountButton.Location = new System.Drawing.Point(48, 61);
-            this.GetPassCountButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GetPassCountButton.Margin = new System.Windows.Forms.Padding(2);
             this.GetPassCountButton.Name = "GetPassCountButton";
             this.GetPassCountButton.Size = new System.Drawing.Size(110, 28);
             this.GetPassCountButton.TabIndex = 3;
@@ -1515,7 +1513,7 @@
             // PassengersSSNTextBox
             // 
             this.PassengersSSNTextBox.Location = new System.Drawing.Point(116, 29);
-            this.PassengersSSNTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PassengersSSNTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.PassengersSSNTextBox.Name = "PassengersSSNTextBox";
             this.PassengersSSNTextBox.Size = new System.Drawing.Size(76, 20);
             this.PassengersSSNTextBox.TabIndex = 2;
@@ -1540,15 +1538,6 @@
             this.label23.TabIndex = 0;
             this.label23.Text = "Passenger\'s SSN";
             // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(316, 91);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(41, 13);
-            this.label35.TabIndex = 13;
-            this.label35.Text = "label35";
-            // 
             // Manager_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1566,7 +1555,7 @@
             this.Controls.Add(this.Spare_Parts_GroupBox);
             this.Controls.Add(this.SuppliersGroupBox);
             this.Controls.Add(this.EmployeesGroupBox);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Manager_Form";
             this.Text = "Manager_Form";
             ((System.ComponentModel.ISupportInitialize)(this.TripsDG)).EndInit();
@@ -1727,6 +1716,5 @@
         private System.Windows.Forms.Button Reject_Request_Button;
         private System.Windows.Forms.TextBox TrainNumberTextBox;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label35;
     }
 }
