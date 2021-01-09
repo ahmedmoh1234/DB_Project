@@ -110,7 +110,6 @@ namespace Railway_Management_System
             Parameters3.Add("@Fname", Fname);
             Parameters3.Add("@Minit", Minit);
             Parameters3.Add("@Lname", Lname);
-            Parameters3.Add("@Fname", Fname);
             Parameters3.Add("@Phone_Number", Phone_Number);
             Parameters3.Add("@SSN", SSN);
             Parameters3.Add("@gender", gender);
