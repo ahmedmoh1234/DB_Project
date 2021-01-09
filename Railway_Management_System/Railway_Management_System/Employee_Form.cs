@@ -57,7 +57,8 @@ namespace Railway_Management_System
 
         private void sparePartDataGridView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            orderPartNoLabel.Text = sparePartDataGridView.SelectedRows[0].Cells[0].Value.ToString();
+            orderPartNoLabel.Text = "Part Number : ";
+            orderPartNoLabel.Text += sparePartDataGridView.SelectedRows[0].Cells[0].Value.ToString();
         }
     }
 }
