@@ -18,6 +18,7 @@ namespace Railway_Management_System
             InitializeComponent();
             Myparent = p;
             this.Location = Myparent.Location;
+            this.WindowState = Myparent.WindowState;
             Myparent.Hide();
         }
 

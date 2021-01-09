@@ -18,7 +18,7 @@ namespace Railway_Management_System
             Object returnData = null;
             try
             {
-                int x = Convert.ToInt32(input);
+                long x = Convert.ToInt64(input);
                 if (x < 0)
                 {
                     err.Append("Input " + input + " is a negative number");
