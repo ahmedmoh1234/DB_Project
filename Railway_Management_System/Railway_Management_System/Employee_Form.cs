@@ -42,6 +42,8 @@ namespace Railway_Management_System
         private void Employee_Form_Load(object sender, EventArgs e)
         {
             sparePartsGroupBox.Visible = true;
+            sparePartDataGridView.DataSource = controller.GetAllSpareParts();
+            sparePartDataGridView.Refresh();
         }
 
         private void scheduleButton_Click(object sender, EventArgs e)
