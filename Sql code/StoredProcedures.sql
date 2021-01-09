@@ -103,10 +103,27 @@ GO
 
 CREATE PROCEDURE INSERT_EMPLOYEE @Fname VARCHAR(50), @Minit VARCHAR(50), @Lname VARCHAR(50), @SSN BIGINT,
 								@Sex VARCHAR(50),@DOB VARCHAR(50), @Phone_Number BIGINT, @Salary INT,
-								@Manager_SSN BIGINT, @Position VARCHAR(50), @Station
+								@Manager_SSN BIGINT, @Station VARCHAR
 AS
 BEGIN
-INSERT INTO EMPLOYEE (Fname,Minit,Lname,E_SSN,Sex,DOB,Phone_Number,Salary,Manager_SSN,Position)
-VALUES(@Fname,@Minit,@Lname,@SSN,@Sex,@DOB,@Phone_Number,@Salary,@Manager_SSN,@Position)
+INSERT INTO EMPLOYEE (Fname,Minit,Lname,E_SSN,Sex,DOB,Phone_Number,Salary,Manager_SSN)
+VALUES(@Fname,@Minit,@Lname,@SSN,@Sex,@DOB,@Phone_Number,@Salary,@Manager_SSN)
+END
+GO
+
+CREATE PROCEDURE CHECK_EMPLOYEE_BY_SSN @SSN BIGINT
+AS
+BEGIN
+SELECT COUNT(*)
+FROM EMPLOYEE
+WHERE E_SSN=@SSN
+END
+GO
+
+CREATE PROCEDURE REMOVE_EMPLOYEE @SSN BIGINT
+AS
+BEGIN
+DELETE FROM EMPLOYEE
+WHERE E_SSN = @SSN
 END
 GO
