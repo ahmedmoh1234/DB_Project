@@ -103,7 +103,7 @@ GO
 
 
 CREATE PROCEDURE INSERT_EMPLOYEE @Fname VARCHAR(50), @Minit VARCHAR(50), @Lname VARCHAR(50), @SSN BIGINT,
-								@Sex VARCHAR(50),@DOB VARCHAR(50), @Phone_Number BIGINT, @Salary INT,
+								@Sex VARCHAR(50),@DOB DATE, @Phone_Number BIGINT, @Salary INT,
 								@Manager_SSN BIGINT, @Station VARCHAR
 AS
 BEGIN

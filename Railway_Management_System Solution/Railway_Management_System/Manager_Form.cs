@@ -172,8 +172,12 @@ namespace Railway_Management_System
             }
 
 
-            int result = controllerObj.InsertEmployee(FirstNameTextBox.Text, MinitTextBox.Text, LnameTextBox.Text, SSNTextBox.Text, SexComboBox.Text, DOB.Text, PhoneNumberTextBox.Text, ManagersSSNTextBox.Text, StationComboBox.Text, SalaryTextBox.Text, UsernameTextBox.Text, PasswordTextBox.Text);
-
+            int result = controllerObj.InsertEmployee(FirstNameTextBox.Text, MinitTextBox.Text, 
+                                        LnameTextBox.Text, Int32.Parse(SSNTextBox.Text), SexComboBox.Text, DOB.Text,
+                                        Int32.Parse(PhoneNumberTextBox.Text), Int32.Parse(ManagersSSNTextBox.Text), 
+                                        StationComboBox.Text,            //Change station
+                                        Int32.Parse(SalaryTextBox.Text),
+                                        UsernameTextBox.Text, PasswordTextBox.Text);
 
             if (result == 0)
             {

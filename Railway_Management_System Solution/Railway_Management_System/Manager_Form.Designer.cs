@@ -57,6 +57,7 @@
             this.EmployeesGroupBox = new System.Windows.Forms.GroupBox();
             this.employeesDG = new System.Windows.Forms.DataGridView();
             this.HireGroupBox = new System.Windows.Forms.GroupBox();
+            this.DOB = new System.Windows.Forms.DateTimePicker();
             this.StationComboBox = new System.Windows.Forms.ComboBox();
             this.SexComboBox = new System.Windows.Forms.ComboBox();
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
@@ -142,7 +143,6 @@
             this.PassengersSSNTextBox = new System.Windows.Forms.TextBox();
             this.No_of_trips_passenger_made_Label = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.DOB = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.TripsDG)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -541,6 +541,13 @@
             this.HireGroupBox.TabStop = false;
             this.HireGroupBox.Text = "Hire";
             // 
+            // DOB
+            // 
+            this.DOB.Location = new System.Drawing.Point(452, 42);
+            this.DOB.Name = "DOB";
+            this.DOB.Size = new System.Drawing.Size(97, 22);
+            this.DOB.TabIndex = 38;
+            // 
             // StationComboBox
             // 
             this.StationComboBox.FormattingEnabled = true;
@@ -635,6 +642,7 @@
             this.FireButton.TabIndex = 23;
             this.FireButton.Text = "Fire";
             this.FireButton.UseVisualStyleBackColor = false;
+            this.FireButton.Click += new System.EventHandler(this.FireButton_Click);
             // 
             // MinitTextBox
             // 
@@ -658,6 +666,7 @@
             this.UpdateButton.TabIndex = 21;
             this.UpdateButton.Text = "Update";
             this.UpdateButton.UseVisualStyleBackColor = false;
+            this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
             // 
             // FirstNameTextBox
             // 
@@ -789,6 +798,7 @@
             this.HireButton.TabIndex = 6;
             this.HireButton.Text = "Hire";
             this.HireButton.UseVisualStyleBackColor = false;
+            this.HireButton.Click += new System.EventHandler(this.HireButton_Click);
             // 
             // TrainsGroupBox
             // 
@@ -1463,13 +1473,6 @@
             this.label23.Size = new System.Drawing.Size(118, 17);
             this.label23.TabIndex = 0;
             this.label23.Text = "Passenger\'s SSN";
-            // 
-            // DOB
-            // 
-            this.DOB.Location = new System.Drawing.Point(452, 42);
-            this.DOB.Name = "DOB";
-            this.DOB.Size = new System.Drawing.Size(97, 22);
-            this.DOB.TabIndex = 38;
             // 
             // Manager_Form
             // 
