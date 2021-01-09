@@ -177,9 +177,9 @@ VALUES
 
 INSERT INTO SUPPLIER(Supplier_ID, Supplier_Address, Supplier_Name, Phone_Number)
 VALUES
---(1,'Beijing, China','CRRC',8611111111111),
---(2,'Saint Petersburg, Russia','Kirov Plant', 70000000),
---(3,'Munich, Germany','Siemens Mobility',4930901820),
+(1,'Beijing, China','CRRC',8611111111111),
+(2,'Saint Petersburg, Russia','Kirov Plant', 70000000),
+(3,'Munich, Germany','Siemens Mobility',4930901820),
 (4,'Berlin, Germany','Bombardier Transportation',4980967820),
 (5,'Brossard, Quebec, Canada','Railpower Technologies',16045555555),
 (6,'Aarhus, Denmark','Frichs',4553232341),
