@@ -121,7 +121,7 @@ CREATE TABLE INVENTORY
 (
   Station_Number INT NOT NULL,
   Part_Number INT NOT NULL,
-  Quantity INT NOT NULL,
+  Quantity INT,
   FOREIGN KEY (Station_Number) REFERENCES STATION( Station_Number),
   FOREIGN KEY (Part_Number) REFERENCES SPARE_PART (Part_Number),
   PRIMARY KEY (Station_Number,Part_Number)
