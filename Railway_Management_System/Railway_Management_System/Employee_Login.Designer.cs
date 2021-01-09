@@ -111,13 +111,14 @@
             // Close
             // 
             this.Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Close.FlatAppearance.BorderSize = 0;
             this.Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Close.Font = new System.Drawing.Font("Imprint MT Shadow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Close.ForeColor = System.Drawing.Color.Black;
-            this.Close.Location = new System.Drawing.Point(1092, 12);
+            this.Close.Location = new System.Drawing.Point(1106, 12);
             this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(78, 56);
+            this.Close.Size = new System.Drawing.Size(64, 56);
             this.Close.TabIndex = 6;
             this.Close.Text = "X";
             this.Close.UseVisualStyleBackColor = true;
@@ -126,11 +127,12 @@
             // Minimize
             // 
             this.Minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Minimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Minimize.FlatAppearance.BorderSize = 0;
             this.Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Minimize.Font = new System.Drawing.Font("Imprint MT Shadow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Minimize.ForeColor = System.Drawing.Color.Black;
-            this.Minimize.Location = new System.Drawing.Point(956, 12);
+            this.Minimize.Location = new System.Drawing.Point(963, 12);
             this.Minimize.Name = "Minimize";
             this.Minimize.Size = new System.Drawing.Size(51, 40);
             this.Minimize.TabIndex = 9;
@@ -140,8 +142,9 @@
             // 
             // Restore_down
             // 
+            this.Restore_down.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Restore_down.Image = ((System.Drawing.Image)(resources.GetObject("Restore_down.Image")));
-            this.Restore_down.Location = new System.Drawing.Point(1027, 12);
+            this.Restore_down.Location = new System.Drawing.Point(1041, 12);
             this.Restore_down.Name = "Restore_down";
             this.Restore_down.Size = new System.Drawing.Size(59, 50);
             this.Restore_down.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
