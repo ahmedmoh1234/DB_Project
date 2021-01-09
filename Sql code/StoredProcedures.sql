@@ -100,3 +100,13 @@ INSERT INTO REQUEST (Request_ID, E_SSN, Part_Number, Quantity, [Status] )
 VALUES (@RequestID,@SSN,  @Part_No, @Amount, 'Pending Approval')
 END
 GO
+
+CREATE PROCEDURE INSERT_EMPLOYEE @Fname VARCHAR(50), @Minit VARCHAR(50), @Lname VARCHAR(50), @SSN BIGINT,
+								@Sex VARCHAR(50),@DOB VARCHAR(50), @Phone_Number BIGINT, @Salary INT,
+								@Manager_SSN BIGINT, @Position VARCHAR(50)
+AS
+BEGIN
+INSERT INTO EMPLOYEE (Fname,Minit,Lname,E_SSN,Sex,DOB,Phone_Number,Salary,Manager_SSN,Position)
+VALUES(@Fname,@Minit,@Lname,@SSN,@Sex,@DOB,@Phone_Number,@Salary,@Manager_SSN,@Position)
+END
+GO
