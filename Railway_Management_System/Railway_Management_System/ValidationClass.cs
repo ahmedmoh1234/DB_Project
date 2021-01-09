@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace Railway_Management_System
 {
@@ -33,6 +34,13 @@ namespace Railway_Management_System
                 err.Append("Input " + input + " is not a valid integer");
             }
             return returnData;
+        }
+
+        public static bool isTextboxEmpty (TextBox tb)
+        {
+            if (tb.TextLength == 0)
+                return true;
+            return false;
         }
 
     }

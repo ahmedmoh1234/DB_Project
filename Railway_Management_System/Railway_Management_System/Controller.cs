@@ -68,10 +68,23 @@ namespace Railway_Management_System
 
         }
 
-        public int InsertEmployee(string Fname, string Minit, string Lname, string SSN, string Sex, string DOB, string PhoneNumber, string Position, string ManagersSSn, string Station, string Salary, string Username, string Password)
+        public int OrderSparePart(int Part_No, int amount, int SSN, int requestID)
         {
+            string StoredProcedureName = StoredProcedures.OrderSpareParts;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@RequestID", requestID);
+            Parameters.Add("@SSN", SSN);
+            Parameters.Add("@Part_No", Part_No);
+            Parameters.Add("@Amount", amount);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
 
-            return 0;
+        public DataTable GetSparePartsInStation(int stationNo)
+        {
+            string StoredProcedureName = StoredProcedures.SelectSparePartsInStation;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Station_No", stationNo);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
     }
 }

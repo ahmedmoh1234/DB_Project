@@ -15,15 +15,17 @@ namespace Railway_Management_System
         Controller controller;
         private int _partNo;
         private int _empStationNo;
+        private int _empSSN;
         public Employee_Form()
         {
             InitializeComponent();
             controller = new Controller();
         }
 
-        public void SetEmployeeStation(int empSatationNo)
+        public void SetEmployeeData(int empSatationNo, int empSSN)
         {
             _empStationNo = empSatationNo;
+            _empSSN = empSSN;
         }
 
         private void sparePartsButton_Click(object sender, EventArgs e)
@@ -76,7 +78,48 @@ namespace Railway_Management_System
 
         private void orderButton_Click(object sender, EventArgs e)
         {
+            //get requestID from the INVENTORY Table
+            int requestID;
+            DataTable dt = controller.GetSparePartsInStation(_empStationNo);
+            if (dt.Rows.Count == 0)
+            {
+                requestID = 1;
+            }
+            else
+            {
+                requestID = dt.Rows[dt.Rows.Count - 1].Field<int>("Request_ID");
+                requestID++;
+            }
 
+
+            //check if part number is not selected
+            if (sparePartDataGridView.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a spare part from the order");
+                return;
+            }
+
+
+
+            if (ValidationClass.isTextboxEmpty(orderAmountTextBox))
+            {
+                //if true, then textbox is empty
+                MessageBox.Show("Please enter a number in the textbox");
+                return;
+            }
+            int orderAmount;
+            if (Int32.TryParse(orderAmountTextBox.Text, out orderAmount))
+            {
+                if (controller.OrderSparePart(_partNo, orderAmount, _empSSN, requestID) == 0)
+                    MessageBox.Show("Order failed");
+                else
+                    MessageBox.Show("Spare Part has been ordered");
+            }
+            else
+            {
+                MessageBox.Show("Please enter a valid positive number in the textbox");
+                return;
+            }
         }
     }
 }
