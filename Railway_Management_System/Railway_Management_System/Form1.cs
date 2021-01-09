@@ -41,7 +41,10 @@ namespace Railway_Management_System
 
         private void Restore_down_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Normal;
+            if (this.WindowState == FormWindowState.Maximized)
+                this.WindowState = FormWindowState.Normal;
+            else if (this.WindowState == FormWindowState.Normal)
+                this.WindowState = FormWindowState.Maximized;
         }
 
         private void Minimize_click(object sender, EventArgs e)
