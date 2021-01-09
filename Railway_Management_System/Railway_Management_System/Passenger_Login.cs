@@ -247,7 +247,7 @@ namespace Railway_Management_System
                 return;
             }
             Username = Username_Signup_Text.Text;
-            SSN = Convert.ToInt32(SSN_Text.Text);
+            SSN = Convert.ToInt64(SSN_Text.Text);
             // redirect to passenger
             //Temporary
             MessageBox.Show("You signed up");

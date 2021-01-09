@@ -86,7 +86,7 @@ END
 GO
 
 CREATE PROCEDURE SIGNUP_PASSENGER @Fname varchar(20), @Minit char , @Lname varchar(20), @Phone_Number bigint,
-@SSN bigint ,@gender char,@DOB Date,@Username bigint, @Password Varchar(20)
+@SSN bigint ,@gender char,@DOB Date,@Username VARCHAR(50), @Password Varchar(20)
 AS
 BEGIN
 INSERT INTO PASSENGER 
