@@ -86,5 +86,44 @@ namespace Railway_Management_System
             Parameters.Add("@Station_No", stationNo);
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
+
+        public int InsertEmployee(string Fname, string Minit, string Lname, string SSN, string Sex, string DOB, string PhoneNumber, string ManagersSSn, string Station, string Salary, string Username, string Password)
+        {
+            string StoredProcedureName = StoredProcedures.InsertEmployee;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Fname", Fname);
+            Parameters.Add("@Minit", Minit);
+            Parameters.Add("@Lname", Lname);
+            Parameters.Add("@SSN", SSN);
+            Parameters.Add("@Sex", Sex);
+            Parameters.Add("@DOB", DOB);
+            Parameters.Add("@Phone_Number", PhoneNumber);
+            Parameters.Add("@Manager_SSN", ManagersSSn);
+            Parameters.Add("@Salary", Salary);
+
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+
+        public int UpdateEmployee(string Fname, string Minit, string Lname, string SSN, string Sex, string DOB, string PhoneNumber, string ManagersSSn, string Station, string Salary, string Username, string Password)
+        {
+            return 0;
+        }
+
+        public int GetEmployeeBySSN(int SSN)
+        {
+            string StoredProcedureName = StoredProcedures.CheckEmployeeBySSN;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@SSN", SSN);
+            return (int)dbMan.ExecuteScalar(StoredProcedureName, Parameters);
+        }
+
+        public int RemoveEmployee(int SSN)
+        {
+            string StoredProcedureName = StoredProcedures.RemoveEployee;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@SSN", SSN);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+
+        }
     }
 }

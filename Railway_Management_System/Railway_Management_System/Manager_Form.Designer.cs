@@ -58,14 +58,12 @@
             this.employeesDG = new System.Windows.Forms.DataGridView();
             this.HireGroupBox = new System.Windows.Forms.GroupBox();
             this.StationComboBox = new System.Windows.Forms.ComboBox();
-            this.PositioComboBox = new System.Windows.Forms.ComboBox();
             this.SexComboBox = new System.Windows.Forms.ComboBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.PasswordTextBox = new System.Windows.Forms.TextBox();
+            this.UsernameTextBox = new System.Windows.Forms.TextBox();
             this.SalaryTextBox = new System.Windows.Forms.TextBox();
             this.ManagersSSNTextBox = new System.Windows.Forms.TextBox();
             this.PhoneNumberTextBox = new System.Windows.Forms.TextBox();
-            this.DOBTextBox = new System.Windows.Forms.TextBox();
             this.SSNTextBox = new System.Windows.Forms.TextBox();
             this.LnameTextBox = new System.Windows.Forms.TextBox();
             this.FireButton = new System.Windows.Forms.Button();
@@ -83,7 +81,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.HireButton = new System.Windows.Forms.Button();
             this.TrainsGroupBox = new System.Windows.Forms.GroupBox();
@@ -145,6 +142,7 @@
             this.PassengersSSNTextBox = new System.Windows.Forms.TextBox();
             this.No_of_trips_passenger_made_Label = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
+            this.DOB = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.TripsDG)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -507,15 +505,14 @@
             // 
             // HireGroupBox
             // 
+            this.HireGroupBox.Controls.Add(this.DOB);
             this.HireGroupBox.Controls.Add(this.StationComboBox);
-            this.HireGroupBox.Controls.Add(this.PositioComboBox);
             this.HireGroupBox.Controls.Add(this.SexComboBox);
-            this.HireGroupBox.Controls.Add(this.textBox8);
-            this.HireGroupBox.Controls.Add(this.textBox7);
+            this.HireGroupBox.Controls.Add(this.PasswordTextBox);
+            this.HireGroupBox.Controls.Add(this.UsernameTextBox);
             this.HireGroupBox.Controls.Add(this.SalaryTextBox);
             this.HireGroupBox.Controls.Add(this.ManagersSSNTextBox);
             this.HireGroupBox.Controls.Add(this.PhoneNumberTextBox);
-            this.HireGroupBox.Controls.Add(this.DOBTextBox);
             this.HireGroupBox.Controls.Add(this.SSNTextBox);
             this.HireGroupBox.Controls.Add(this.LnameTextBox);
             this.HireGroupBox.Controls.Add(this.FireButton);
@@ -533,7 +530,6 @@
             this.HireGroupBox.Controls.Add(this.label11);
             this.HireGroupBox.Controls.Add(this.label10);
             this.HireGroupBox.Controls.Add(this.label9);
-            this.HireGroupBox.Controls.Add(this.label8);
             this.HireGroupBox.Controls.Add(this.label7);
             this.HireGroupBox.Controls.Add(this.HireButton);
             this.HireGroupBox.Location = new System.Drawing.Point(8, 252);
@@ -551,23 +547,11 @@
             this.StationComboBox.Items.AddRange(new object[] {
             "Mainteance",
             "Manager"});
-            this.StationComboBox.Location = new System.Drawing.Point(691, 36);
+            this.StationComboBox.Location = new System.Drawing.Point(451, 112);
             this.StationComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.StationComboBox.Name = "StationComboBox";
             this.StationComboBox.Size = new System.Drawing.Size(121, 24);
             this.StationComboBox.TabIndex = 37;
-            // 
-            // PositioComboBox
-            // 
-            this.PositioComboBox.FormattingEnabled = true;
-            this.PositioComboBox.Items.AddRange(new object[] {
-            "Mainteance",
-            "Manager"});
-            this.PositioComboBox.Location = new System.Drawing.Point(451, 100);
-            this.PositioComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.PositioComboBox.Name = "PositioComboBox";
-            this.PositioComboBox.Size = new System.Drawing.Size(121, 24);
-            this.PositioComboBox.TabIndex = 36;
             // 
             // SexComboBox
             // 
@@ -581,25 +565,25 @@
             this.SexComboBox.Size = new System.Drawing.Size(121, 24);
             this.SexComboBox.TabIndex = 35;
             // 
-            // textBox8
+            // PasswordTextBox
             // 
-            this.textBox8.Location = new System.Drawing.Point(691, 137);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 22);
-            this.textBox8.TabIndex = 34;
+            this.PasswordTextBox.Location = new System.Drawing.Point(691, 137);
+            this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.Size = new System.Drawing.Size(100, 22);
+            this.PasswordTextBox.TabIndex = 34;
             // 
-            // textBox7
+            // UsernameTextBox
             // 
-            this.textBox7.Location = new System.Drawing.Point(691, 102);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 22);
-            this.textBox7.TabIndex = 33;
+            this.UsernameTextBox.Location = new System.Drawing.Point(691, 91);
+            this.UsernameTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.UsernameTextBox.Name = "UsernameTextBox";
+            this.UsernameTextBox.Size = new System.Drawing.Size(100, 22);
+            this.UsernameTextBox.TabIndex = 33;
             // 
             // SalaryTextBox
             // 
-            this.SalaryTextBox.Location = new System.Drawing.Point(691, 71);
+            this.SalaryTextBox.Location = new System.Drawing.Point(697, 48);
             this.SalaryTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SalaryTextBox.Name = "SalaryTextBox";
             this.SalaryTextBox.Size = new System.Drawing.Size(100, 22);
@@ -607,7 +591,7 @@
             // 
             // ManagersSSNTextBox
             // 
-            this.ManagersSSNTextBox.Location = new System.Drawing.Point(451, 130);
+            this.ManagersSSNTextBox.Location = new System.Drawing.Point(451, 158);
             this.ManagersSSNTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ManagersSSNTextBox.Name = "ManagersSSNTextBox";
             this.ManagersSSNTextBox.Size = new System.Drawing.Size(100, 22);
@@ -620,14 +604,6 @@
             this.PhoneNumberTextBox.Name = "PhoneNumberTextBox";
             this.PhoneNumberTextBox.Size = new System.Drawing.Size(100, 22);
             this.PhoneNumberTextBox.TabIndex = 28;
-            // 
-            // DOBTextBox
-            // 
-            this.DOBTextBox.Location = new System.Drawing.Point(451, 41);
-            this.DOBTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.DOBTextBox.Name = "DOBTextBox";
-            this.DOBTextBox.Size = new System.Drawing.Size(100, 22);
-            this.DOBTextBox.TabIndex = 27;
             // 
             // SSNTextBox
             // 
@@ -694,7 +670,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(604, 68);
+            this.label19.Location = new System.Drawing.Point(604, 46);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(48, 17);
             this.label19.TabIndex = 19;
@@ -703,7 +679,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(604, 126);
+            this.label18.Location = new System.Drawing.Point(600, 142);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(69, 17);
             this.label18.TabIndex = 18;
@@ -712,7 +688,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(604, 95);
+            this.label17.Location = new System.Drawing.Point(604, 89);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(73, 17);
             this.label17.TabIndex = 17;
@@ -721,7 +697,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(600, 41);
+            this.label16.Location = new System.Drawing.Point(337, 112);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(52, 17);
             this.label16.TabIndex = 16;
@@ -730,7 +706,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(337, 133);
+            this.label15.Location = new System.Drawing.Point(337, 165);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(106, 17);
             this.label15.TabIndex = 15;
@@ -789,15 +765,6 @@
             this.label9.Size = new System.Drawing.Size(103, 17);
             this.label9.TabIndex = 9;
             this.label9.Text = "Phone Number";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(337, 102);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(58, 17);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "Position";
             // 
             // label7
             // 
@@ -1497,6 +1464,13 @@
             this.label23.TabIndex = 0;
             this.label23.Text = "Passenger\'s SSN";
             // 
+            // DOB
+            // 
+            this.DOB.Location = new System.Drawing.Point(452, 42);
+            this.DOB.Name = "DOB";
+            this.DOB.Size = new System.Drawing.Size(97, 22);
+            this.DOB.TabIndex = 38;
+            // 
             // Manager_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1508,12 +1482,12 @@
             this.Controls.Add(this.trainsButton);
             this.Controls.Add(this.employeesButton);
             this.Controls.Add(this.tripsButton);
+            this.Controls.Add(this.EmployeesGroupBox);
+            this.Controls.Add(this.TripsGroupBox);
             this.Controls.Add(this.TrainsGroupBox);
             this.Controls.Add(this.Statistical_Models_GroupBox);
             this.Controls.Add(this.Spare_Parts_GroupBox);
             this.Controls.Add(this.SuppliersGroupBox);
-            this.Controls.Add(this.EmployeesGroupBox);
-            this.Controls.Add(this.TripsGroupBox);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Manager_Form";
             this.Text = "Manager_Form";
@@ -1595,7 +1569,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox SSNTextBox;
         private System.Windows.Forms.TextBox LnameTextBox;
@@ -1604,13 +1577,11 @@
         private System.Windows.Forms.Button UpdateButton;
         private System.Windows.Forms.TextBox FirstNameTextBox;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox PasswordTextBox;
+        private System.Windows.Forms.TextBox UsernameTextBox;
         private System.Windows.Forms.TextBox SalaryTextBox;
         private System.Windows.Forms.TextBox ManagersSSNTextBox;
         private System.Windows.Forms.TextBox PhoneNumberTextBox;
-        private System.Windows.Forms.TextBox DOBTextBox;
-        private System.Windows.Forms.ComboBox PositioComboBox;
         private System.Windows.Forms.ComboBox SexComboBox;
         private System.Windows.Forms.ComboBox StationComboBox;
         private System.Windows.Forms.Button AddButton;
@@ -1675,5 +1646,6 @@
         private System.Windows.Forms.Button Reject_Request_Button;
         private System.Windows.Forms.TextBox TrainNumberTextBox;
         private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.DateTimePicker DOB;
     }
 }

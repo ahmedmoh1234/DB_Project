@@ -17,6 +17,9 @@ namespace Railway_Management_System
         public static string ChangeMaintenanceDay = "CHANGE_TRAIN_MAINTENANCE_DATE";
         public static string OrderSpareParts = "ORDER_SPARE_PARTS";
         public static string SelectSparePartsInStation = "VIEW_SPARE_PARTS_IN_STATION";
+        public static string InsertEmployee = "INSERT_EMPLOYEE";
+        public static string CheckEmployeeBySSN = "CHECK_EMPLOYEE_BY_SSN";
+        public static string RemoveEployee = "REMOVE_EMPLOYEE";
 
 
     }
