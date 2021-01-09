@@ -71,11 +71,32 @@ WHERE Trip_Number = @Trip_Num
 END
 GO
 
+
+
 CREATE PROCEDURE VIEW_SPARE_PARTS_IN_STATION @Station_No INT
 AS
 BEGIN
 SELECT Part_Number,Quantity
 FROM INVENTORY
 WHERE Station_Number = @Station_No
+END
+GO
+
+
+CREATE PROCEDURE DEC_SPARE_PARTS @Station_No INT, @Part_No INT, @Amount INT
+AS
+BEGIN
+UPDATE INVENTORY
+SET Quantity = Quantity - @Amount
+WHERE Station_Number = @Station_No AND Part_Number = @Part_No
+END
+GO
+
+
+CREATE PROCEDURE ORDER_SPARE_PARTS @Part_No INT, @Amount INT, @SSN BIGINT ,@RequestID INT
+AS
+BEGIN
+INSERT INTO REQUEST (Request_ID, E_SSN, Part_Number, Quantity, [Status] )
+VALUES (@RequestID,@SSN,  @Part_No, @Amount, 'Pending Approval')
 END
 GO
