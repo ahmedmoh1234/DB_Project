@@ -16,7 +16,7 @@ namespace Railway_Management_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Welcome());
             //Application.Run(new Employee_Form());
             //Application.Run(new Manager_Form());
         }

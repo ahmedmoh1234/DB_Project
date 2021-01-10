@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Railway_Management_System
 {
-    public partial class Form1 : Form
+    public partial class Welcome : Form
     {
-        public Form1()
+        public Welcome()
         {
             InitializeComponent();
         }
@@ -48,5 +48,7 @@ namespace Railway_Management_System
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+  
     }
 }
