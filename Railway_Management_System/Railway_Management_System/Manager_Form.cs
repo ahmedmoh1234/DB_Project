@@ -171,9 +171,13 @@ namespace Railway_Management_System
 
             }
 
-
-            int result = controllerObj.InsertEmployee(FirstNameTextBox.Text, MinitTextBox.Text, LnameTextBox.Text, SSNTextBox.Text, SexComboBox.Text, DOB.Text, PhoneNumberTextBox.Text, ManagersSSNTextBox.Text, StationComboBox.Text, SalaryTextBox.Text, UsernameTextBox.Text, PasswordTextBox.Text);
-
+            string DOBString = DOB.Value.ToString("yyyy/MM/dd");
+            int result = controllerObj.InsertEmployee(FirstNameTextBox.Text, MinitTextBox.Text,
+                                        LnameTextBox.Text, Int32.Parse(SSNTextBox.Text), SexComboBox.Text, DOBString,
+                                        Int32.Parse(PhoneNumberTextBox.Text), Int32.Parse(ManagersSSNTextBox.Text),
+                                        StationComboBox.Text,            //Change station
+                                        Int32.Parse(SalaryTextBox.Text),
+                                        UsernameTextBox.Text, PasswordTextBox.Text);
 
             if (result == 0)
             {
@@ -182,6 +186,8 @@ namespace Railway_Management_System
             else
             {
                 MessageBox.Show("The row is inserted successfully!");
+                employeesDG.DataSource = controllerObj.GetAllEmployees();
+                employeesDG.Refresh();
             }
 
         }

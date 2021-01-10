@@ -87,7 +87,9 @@ namespace Railway_Management_System
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
 
-        public int InsertEmployee(string Fname, string Minit, string Lname, string SSN, string Sex, string DOB, string PhoneNumber, string ManagersSSn, string Station, string Salary, string Username, string Password)
+        public int InsertEmployee(string Fname, string Minit, string Lname, int SSN, string Sex,
+                        string DOB, int PhoneNumber, int ManagersSSn, string Station,
+                        int Salary, string Username, string Password)
         {
             string StoredProcedureName = StoredProcedures.InsertEmployee;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
