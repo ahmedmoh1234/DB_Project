@@ -21,10 +21,6 @@ namespace Railway_Management_System
         public static string CheckEmployeeBySSN = "CHECK_EMPLOYEE_BY_SSN";
         public static string RemoveEployee = "REMOVE_EMPLOYEE";
 
-        public static string SelectAllRequest = "VIEW_REQUEST";
-        public static string DecSparePart = "DEC_SPARE_PARTS";
-        public static string RemoveTrip = "REMOVE_TRIP";
-        public static string AddTrip = "ADD_TRIP";
 
     }
 }

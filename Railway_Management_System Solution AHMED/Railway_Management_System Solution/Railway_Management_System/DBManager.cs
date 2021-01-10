@@ -116,6 +116,61 @@ namespace Railway_Management_System
             }
         }
 
+        public int ExecuteNonQuery(string query)
+        {
+            try
+            {
+                SqlCommand myCommand = new SqlCommand(query, myConnection);
+                return myCommand.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return 0;
+            }
+        }
+
+        public DataTable ExecuteReader(string query)
+        {
+            try
+            {
+                SqlCommand myCommand = new SqlCommand(query, myConnection);
+                SqlDataReader reader = myCommand.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    DataTable dt = new DataTable();
+                    dt.Load(reader);
+                    reader.Close();
+                    return dt;
+                }
+                else
+                {
+                    if (!reader.IsClosed)
+                        reader.Close();
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return null;
+            }
+        }
+
+        public object ExecuteScalar(string query)
+        {
+            try
+            {
+                SqlCommand myCommand = new SqlCommand(query, myConnection);
+                return myCommand.ExecuteScalar();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return 0;
+            }
+        }
+
         public void CloseConnection()
         {
             try
