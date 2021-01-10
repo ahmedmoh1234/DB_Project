@@ -13,6 +13,7 @@ namespace Railway_Management_System
     public partial class Manager_Form : Form
     {
         Controller controllerObj;
+        int _tripNoRemove;
         public Manager_Form()
         {
             InitializeComponent();
@@ -35,11 +36,94 @@ namespace Railway_Management_System
             Spare_Parts_GroupBox.Visible = false;
             Statistical_Models_GroupBox.Visible = false;
 
-            DataTable DT = controllerObj.GetAllTrips();
-            TripsDG.DataSource = DT;
+            fillTable_Trips();
 
 
         }
+        private void addTripButton_Click(object sender, EventArgs e)
+        {
+            if ( !inputValidation(trip_number_to_add__TextBox) ||
+                !inputValidation(EconomicTicketPriceTextBox) ||
+                !inputValidation(BusinessTicketPriceTextBox) ||
+                !inputValidation(TrainNumberAddTripTextBox)  ||
+                !inputValidation(ecoNoTextBox) ||
+                !inputValidation(busNoTextBox) )
+            {
+                MessageBox.Show("Please do not leave a field empty");
+                return;
+            }
+
+            int tripNo;
+            
+            TimeSpan depDate = new TimeSpan(depDateTimePicker.Value.Hour,
+                depDateTimePicker.Value.Minute, 0);
+            string depTime =   depDate.ToString(@"hh\:mm") ;
+
+
+            TimeSpan arrDate = new TimeSpan(arrDateTimePicker.Value.Hour,
+                arrDateTimePicker.Value.Minute, 0);
+            string arrTime =  arrDate.ToString(@"hh\:mm") ;
+
+            int ecoPrice;
+            int busPrice;
+            int trainNo;
+            int ecoNo;
+            int busNo;
+
+            if ( !Int32.TryParse(trip_number_to_add__TextBox.Text,out tripNo) )
+            {
+                MessageBox.Show("Please enter a valid trip number");
+                return;
+            }
+
+
+            if( !Int32.TryParse(EconomicTicketPriceTextBox.Text, out ecoPrice) )
+            {
+                MessageBox.Show("Please enter a valid economic ticket price");
+                return;
+            }
+
+            if (!Int32.TryParse(BusinessTicketPriceTextBox.Text, out busPrice))
+            {
+                MessageBox.Show("Please enter a valid business ticket price");
+                return;
+            }
+
+            if (!Int32.TryParse(TrainNumberAddTripTextBox.Text, out trainNo))
+            {
+                MessageBox.Show("Please enter a valid train number");
+                return;
+            }
+
+            if (!Int32.TryParse(ecoNoTextBox.Text, out ecoNo))
+            {
+                MessageBox.Show("Please enter a valid economic seats number");
+                return;
+            }
+
+            if (!Int32.TryParse(busNoTextBox.Text, out busNo))
+            {
+                MessageBox.Show("Please enter a valid business seats number");
+                return;
+            }
+
+            if (tripNo < 0 || ecoPrice < 0 || busPrice < 0 || trainNo < 0 || ecoNo < 0 || busNo < 0)
+            {
+                MessageBox.Show("Please enter positive numbers");
+                return;
+            }
+
+            if (controllerObj.InsertTrip(tripNo, depTime, arrTime, ecoPrice, busPrice, busNo, ecoNo, trainNo) == 0)
+            {
+                MessageBox.Show("Insertion of trip failed");
+                return;
+            }
+
+            MessageBox.Show("Insertion was successful");
+            fillTable_Trips();
+            return;
+        }
+
 
         private void employeesButton_Click(object sender, EventArgs e)
         {
@@ -121,16 +205,7 @@ namespace Railway_Management_System
 
         }
 
-        private void AddButton_Click(object sender, EventArgs e)
-        {
-            //depDateTimePicker.Value.
-
-            DateTime dt = new DateTime(2020, 0, 0, 0, 0, 0);
-            dt = dt.AddHours(5d);
-            dt.AddMinutes(30d);
-            //label35.Text = dt.Hour.ToString();
-
-        }
+      
 
         private void HireButton_Click(object sender, EventArgs e)
         {
@@ -282,6 +357,86 @@ namespace Railway_Management_System
 
 
             }
+
+        }
+
+        private void remove_tripButton_Click(object sender, EventArgs e)
+        {
+            if (TripsDG.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a row first");
+                return;
+            }
+
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this trip", "Delete", MessageBoxButtons.YesNo);
+            if ( dialogResult == DialogResult.Yes )
+            {
+                if (controllerObj.RemoveTrip(_tripNoRemove) == 0)
+                {
+                    MessageBox.Show("Remove failed");
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Remove was successful");
+                    fillTable_Trips();
+                    return;
+                }
+            }
+            else if ( dialogResult == DialogResult.No )
+            {
+                return;
+            }
+
+            
+        }
+
+
+
+
+
+
+
+
+
+
+        private bool inputValidation(TextBox tb)
+        {
+            //if (dg.SelectedRows.Count == 0)
+            //{
+            //    MessageBox.Show("Please select a spare part row from the table");
+            //    return false;
+            //}
+
+
+            if (ValidationClass.isTextboxEmpty(tb))
+            {
+                //if true, then textbox is empty
+                //MessageBox.Show("Please enter a number in the amount textbox");
+                return false;
+            }
+            return true;
+        }
+
+        private void fillTable_Trips()
+        {
+            TripsDG.DataSource = controllerObj.GetAllTrips();
+            TripsDG.Refresh();
+        }
+
+        private void TripsDG_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            instructionsLabel.Visible = false;
+            tripNoRemoveLabel.Text = "Trip number : ";
+
+
+            _tripNoRemove = Int32.Parse(TripsDG.SelectedRows[0].Cells[0].Value.ToString());
+
+            tripNoRemoveLabel.Text += _tripNoRemove.ToString();
+
+            //Adjusting label position
+            tripNoRemoveLabel.Left = ((removeTripGroupBox.Width / 2) - (tripNoRemoveLabel.Width / 2));
+            
 
         }
     }

@@ -68,7 +68,7 @@ namespace Railway_Management_System
 
         }
 
-        public int OrderSparePart(int Part_No, int amount, int SSN, int requestID)
+        public int OrderSparePart(int Part_No, int amount, long SSN, int requestID)
         {
             string StoredProcedureName = StoredProcedures.OrderSpareParts;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
@@ -126,6 +126,46 @@ namespace Railway_Management_System
             Parameters.Add("@SSN", SSN);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
 
+        }
+
+        public DataTable GetAllRequests()
+        {
+            string StoredProcedureName = StoredProcedures.SelectAllRequest;
+            return dbMan.ExecuteReader(StoredProcedureName, null);
+        }
+
+        public int DecSparePart(int stationNo, int partNo, int amount)
+        {
+            string StoredProcedureName = StoredProcedures.DecSparePart;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Station_No", stationNo);
+            Parameters.Add("@Part_No", partNo);
+            Parameters.Add("@Amount", amount);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+
+        public int RemoveTrip(int tripNo)
+        {
+            string StoredProcedureName = StoredProcedures.RemoveTrip;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Trip_Num", tripNo);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+
+        public int InsertTrip (int tripNo, string depTime, string arrTime, int ecoPrice, int busPrice,
+            int busNo, int ecoNo, int trainNo)
+        {
+            string StoredProcedureName = StoredProcedures.AddTrip;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Trip_Num", tripNo);
+            Parameters.Add("@Deprt_Time", depTime);
+            Parameters.Add("@Arr_Time", arrTime);
+            Parameters.Add("@Eco_Ticket_Price", ecoPrice);
+            Parameters.Add("@Buss_Ticket_Price", busPrice);
+            Parameters.Add("@Buss_No", busNo);
+            Parameters.Add("@Eco_No", ecoNo);
+            Parameters.Add("@Train_No", trainNo);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
     }
 }

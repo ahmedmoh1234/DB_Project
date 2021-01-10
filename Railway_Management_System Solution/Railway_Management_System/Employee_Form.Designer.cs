@@ -47,6 +47,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.changeDateButton = new System.Windows.Forms.Button();
             this.scheduleGroupBox = new System.Windows.Forms.GroupBox();
+            this.decLabel = new System.Windows.Forms.Label();
             this.sparePartsGroupBox.SuspendLayout();
             this.orderGroupBox.SuspendLayout();
             this.decGroupBox.SuspendLayout();
@@ -154,6 +155,7 @@
             // 
             // decGroupBox
             // 
+            this.decGroupBox.Controls.Add(this.decLabel);
             this.decGroupBox.Controls.Add(this.decAmountLabel);
             this.decGroupBox.Controls.Add(this.decAmountTextBox);
             this.decGroupBox.Controls.Add(this.decrementButton);
@@ -268,6 +270,15 @@
             this.scheduleGroupBox.Text = "Schedule";
             this.scheduleGroupBox.Visible = false;
             // 
+            // decLabel
+            // 
+            this.decLabel.AutoSize = true;
+            this.decLabel.Location = new System.Drawing.Point(59, 25);
+            this.decLabel.Name = "decLabel";
+            this.decLabel.Size = new System.Drawing.Size(129, 13);
+            this.decLabel.TabIndex = 14;
+            this.decLabel.Text = "Please select a spare part";
+            // 
             // Employee_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -314,5 +325,6 @@
         private System.Windows.Forms.Button changeDateButton;
         private System.Windows.Forms.GroupBox scheduleGroupBox;
         private System.Windows.Forms.Label orderPartNoLabel;
+        private System.Windows.Forms.Label decLabel;
     }
 }
