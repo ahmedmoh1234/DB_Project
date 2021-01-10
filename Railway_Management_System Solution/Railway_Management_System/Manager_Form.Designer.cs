@@ -1587,12 +1587,12 @@
             this.Controls.Add(this.trainsButton);
             this.Controls.Add(this.employeesButton);
             this.Controls.Add(this.tripsButton);
+            this.Controls.Add(this.TrainsGroupBox);
             this.Controls.Add(this.Statistical_Models_GroupBox);
             this.Controls.Add(this.Spare_Parts_GroupBox);
             this.Controls.Add(this.SuppliersGroupBox);
             this.Controls.Add(this.EmployeesGroupBox);
             this.Controls.Add(this.TripsGroupBox);
-            this.Controls.Add(this.TrainsGroupBox);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Manager_Form";
             this.Text = "Manager_Form";

@@ -60,6 +60,9 @@ namespace Railway_Management_System
 
             if (scheduleGroupBox.Visible == false)
                 scheduleGroupBox.Visible = true;
+
+            scheduleDataGridView.DataSource = controller.GetAllTrains();
+            scheduleDataGridView.Refresh();
         }
 
         
@@ -192,6 +195,16 @@ namespace Railway_Management_System
         {
             sparePartDataGridView.DataSource = controller.GetSparePartsInStation(_empStationNo);
             sparePartDataGridView.Refresh();
+        }
+
+        private void changeDateButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void scheduleDataGridView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            //TrainNumberTextBox.Text = TrainsDG.SelectedRows[0].Cells[2].Value.ToString();
         }
     }
 }
