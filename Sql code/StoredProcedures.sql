@@ -102,13 +102,13 @@ END
 GO
 
 
-CREATE PROCEDURE INSERT_EMPLOYEE @Fname VARCHAR(50), @Minit VARCHAR(50), @Lname VARCHAR(50), @SSN BIGINT,
-								@Sex VARCHAR(50),@DOB DATE, @Phone_Number BIGINT, @Salary INT,
-								@Manager_SSN BIGINT, @Station VARCHAR
+CREATE PROCEDURE INSERT_EMPLOYEE @Fname VARCHAR(50), @Minit CHAR(1), @Lname VARCHAR(50), @SSN BIGINT,
+								@Sex CHAR(1),@DOB DATE, @Phone_Number BIGINT, 
+								@Manager_SSN BIGINT, @Salary INT
 AS
 BEGIN
-INSERT INTO EMPLOYEE (Fname,Minit,Lname,E_SSN,Sex,DOB,Phone_Number,Salary,Manager_SSN)
-VALUES(@Fname,@Minit,@Lname,@SSN,@Sex,@DOB,@Phone_Number,@Salary,@Manager_SSN)
+INSERT INTO EMPLOYEE 
+VALUES (@Fname,@Minit,@Lname,@SSN,@Sex,@Phone_Number,@Salary,@DOB,@Manager_SSN,NULL)
 END
 GO
 
