@@ -171,9 +171,9 @@ namespace Railway_Management_System
 
             }
 
-
+            string DOBString = DOB.Value.ToString("yyyy/mm/dd");
             int result = controllerObj.InsertEmployee(FirstNameTextBox.Text, MinitTextBox.Text, 
-                                        LnameTextBox.Text, Int32.Parse(SSNTextBox.Text), SexComboBox.Text, DOB.Text,
+                                        LnameTextBox.Text, Int32.Parse(SSNTextBox.Text), SexComboBox.Text, DOBString,
                                         Int32.Parse(PhoneNumberTextBox.Text), Int32.Parse(ManagersSSNTextBox.Text), 
                                         StationComboBox.Text,            //Change station
                                         Int32.Parse(SalaryTextBox.Text),
