@@ -61,8 +61,8 @@ FOREIGN KEY (Station_Number) REFERENCES STATION (Station_Number);
 CREATE TABLE TRIP
 (
   Trip_Number INT NOT NULL,
-  Departure_Time DATETIME NOT NULL,
-  Arrival_Time DATETIME NOT NULL,
+  Departure_Time TIME NOT NULL,
+  Arrival_Time TIME NOT NULL,
   Economic_Ticket_Price INT NOT NULL,
   Business_Ticket_Price INT NOT NULL,
   Business INT NOT NULL,
@@ -500,3 +500,9 @@ VALUES
 (20,31,30),
 (20,32,35),
 (20,33,20);
+
+INSERT INTO TRIP(Trip_Number, Departure_Time,Arrival_Time,Economic_Ticket_Price,
+Business_Ticket_Price, Business, Economic, Train_Number)
+VALUES
+(5,'10:00','12:00',20,30,30,30,10),
+(10,'6:00','8:00',20,30,30,30,5);
