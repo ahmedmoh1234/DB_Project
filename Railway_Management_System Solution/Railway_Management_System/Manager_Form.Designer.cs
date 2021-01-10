@@ -148,11 +148,9 @@
             this.TrainNumberTextBox2 = new System.Windows.Forms.TextBox();
             this.Number_of_trips_Train_made_label = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.PassengerMostTripsGroupBox = new System.Windows.Forms.GroupBox();
             this.GetPassCountButton = new System.Windows.Forms.Button();
-            this.PassengersSSNTextBox = new System.Windows.Forms.TextBox();
-            this.No_of_trips_passenger_made_Label = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
+            this.PassengerWithMostTripsLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.TripsDG)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.removeTripGroupBox.SuspendLayout();
@@ -175,7 +173,7 @@
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.groupBox4.SuspendLayout();
+            this.PassengerMostTripsGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // tripsButton
@@ -893,7 +891,7 @@
             // 
             // TrainNumberTextBox
             // 
-            this.TrainNumberTextBox.Location = new System.Drawing.Point(224, 47);
+            this.TrainNumberTextBox.Location = new System.Drawing.Point(224, 46);
             this.TrainNumberTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TrainNumberTextBox.Name = "TrainNumberTextBox";
             this.TrainNumberTextBox.Size = new System.Drawing.Size(100, 22);
@@ -902,7 +900,7 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(101, 55);
+            this.label33.Location = new System.Drawing.Point(101, 49);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(95, 17);
             this.label33.TabIndex = 8;
@@ -910,7 +908,7 @@
             // 
             // New_Maintenance_Date
             // 
-            this.New_Maintenance_Date.Location = new System.Drawing.Point(224, 87);
+            this.New_Maintenance_Date.Location = new System.Drawing.Point(224, 81);
             this.New_Maintenance_Date.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.New_Maintenance_Date.Name = "New_Maintenance_Date";
             this.New_Maintenance_Date.Size = new System.Drawing.Size(200, 22);
@@ -1192,7 +1190,7 @@
             this.Statistical_Models_GroupBox.Controls.Add(this.groupBox7);
             this.Statistical_Models_GroupBox.Controls.Add(this.groupBox6);
             this.Statistical_Models_GroupBox.Controls.Add(this.groupBox5);
-            this.Statistical_Models_GroupBox.Controls.Add(this.groupBox4);
+            this.Statistical_Models_GroupBox.Controls.Add(this.PassengerMostTripsGroupBox);
             this.Statistical_Models_GroupBox.Location = new System.Drawing.Point(164, 12);
             this.Statistical_Models_GroupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Statistical_Models_GroupBox.Name = "Statistical_Models_GroupBox";
@@ -1541,20 +1539,18 @@
             this.label25.TabIndex = 0;
             this.label25.Text = "Train Number";
             // 
-            // groupBox4
+            // PassengerMostTripsGroupBox
             // 
-            this.groupBox4.Controls.Add(this.GetPassCountButton);
-            this.groupBox4.Controls.Add(this.PassengersSSNTextBox);
-            this.groupBox4.Controls.Add(this.No_of_trips_passenger_made_Label);
-            this.groupBox4.Controls.Add(this.label23);
-            this.groupBox4.Location = new System.Drawing.Point(32, 48);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox4.Size = new System.Drawing.Size(309, 126);
-            this.groupBox4.TabIndex = 1;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Number of Trips a Passenger has made";
+            this.PassengerMostTripsGroupBox.Controls.Add(this.GetPassCountButton);
+            this.PassengerMostTripsGroupBox.Controls.Add(this.PassengerWithMostTripsLabel);
+            this.PassengerMostTripsGroupBox.Location = new System.Drawing.Point(32, 48);
+            this.PassengerMostTripsGroupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PassengerMostTripsGroupBox.Name = "PassengerMostTripsGroupBox";
+            this.PassengerMostTripsGroupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PassengerMostTripsGroupBox.Size = new System.Drawing.Size(309, 126);
+            this.PassengerMostTripsGroupBox.TabIndex = 1;
+            this.PassengerMostTripsGroupBox.TabStop = false;
+            this.PassengerMostTripsGroupBox.Text = "Passenger with most Tips";
             // 
             // GetPassCountButton
             // 
@@ -1571,31 +1567,14 @@
             this.GetPassCountButton.Text = "Get Count";
             this.GetPassCountButton.UseVisualStyleBackColor = false;
             // 
-            // PassengersSSNTextBox
+            // PassengerWithMostTripsLabel
             // 
-            this.PassengersSSNTextBox.Location = new System.Drawing.Point(155, 36);
-            this.PassengersSSNTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.PassengersSSNTextBox.Name = "PassengersSSNTextBox";
-            this.PassengersSSNTextBox.Size = new System.Drawing.Size(100, 22);
-            this.PassengersSSNTextBox.TabIndex = 2;
-            // 
-            // No_of_trips_passenger_made_Label
-            // 
-            this.No_of_trips_passenger_made_Label.AutoSize = true;
-            this.No_of_trips_passenger_made_Label.Location = new System.Drawing.Point(267, 87);
-            this.No_of_trips_passenger_made_Label.Name = "No_of_trips_passenger_made_Label";
-            this.No_of_trips_passenger_made_Label.Size = new System.Drawing.Size(16, 17);
-            this.No_of_trips_passenger_made_Label.TabIndex = 1;
-            this.No_of_trips_passenger_made_Label.Text = "0";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(17, 36);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(118, 17);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "Passenger\'s SSN";
+            this.PassengerWithMostTripsLabel.AutoSize = true;
+            this.PassengerWithMostTripsLabel.Location = new System.Drawing.Point(121, 41);
+            this.PassengerWithMostTripsLabel.Name = "PassengerWithMostTripsLabel";
+            this.PassengerWithMostTripsLabel.Size = new System.Drawing.Size(16, 17);
+            this.PassengerWithMostTripsLabel.TabIndex = 0;
+            this.PassengerWithMostTripsLabel.Text = "0";
             // 
             // Manager_Form
             // 
@@ -1608,12 +1587,12 @@
             this.Controls.Add(this.trainsButton);
             this.Controls.Add(this.employeesButton);
             this.Controls.Add(this.tripsButton);
-            this.Controls.Add(this.TrainsGroupBox);
             this.Controls.Add(this.Statistical_Models_GroupBox);
             this.Controls.Add(this.Spare_Parts_GroupBox);
             this.Controls.Add(this.SuppliersGroupBox);
             this.Controls.Add(this.EmployeesGroupBox);
             this.Controls.Add(this.TripsGroupBox);
+            this.Controls.Add(this.TrainsGroupBox);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Manager_Form";
             this.Text = "Manager_Form";
@@ -1650,8 +1629,8 @@
             this.groupBox6.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
+            this.PassengerMostTripsGroupBox.ResumeLayout(false);
+            this.PassengerMostTripsGroupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1721,11 +1700,9 @@
         private System.Windows.Forms.DataGridView SuppliersDG;
         private System.Windows.Forms.GroupBox Spare_Parts_GroupBox;
         private System.Windows.Forms.GroupBox Statistical_Models_GroupBox;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label No_of_trips_passenger_made_Label;
-        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.GroupBox PassengerMostTripsGroupBox;
+        private System.Windows.Forms.Label PassengerWithMostTripsLabel;
         private System.Windows.Forms.Button GetPassCountButton;
-        private System.Windows.Forms.TextBox PassengersSSNTextBox;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button GeetTrainsCountButton;
         private System.Windows.Forms.TextBox TrainNumberTextBox2;
