@@ -97,7 +97,7 @@ CREATE PROCEDURE ORDER_SPARE_PARTS @Part_No INT, @Amount INT, @SSN BIGINT ,@Requ
 AS
 BEGIN
 INSERT INTO REQUEST (Request_ID, E_SSN, Part_Number, Quantity, [Status] )
-VALUES (@RequestID,@SSN,  @Part_No, @Amount, 'Pending Approval')
+VALUES (@RequestID,@SSN,  @Part_No, @Amount, 'Pending')
 END
 GO
 
@@ -126,5 +126,12 @@ AS
 BEGIN
 DELETE FROM EMPLOYEE
 WHERE E_SSN = @SSN
+END
+GO
+
+CREATE PROCEDURE VIEW_REQUEST
+AS
+BEGIN
+SELECT * FROM REQUEST
 END
 GO
