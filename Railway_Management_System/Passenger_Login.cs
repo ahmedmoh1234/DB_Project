@@ -209,6 +209,12 @@ namespace Railway_Management_System
             // redirect to passenger
             //Temporary
             MessageBox.Show("You signed up");
+            //Passenger_Form PF = new Passenger_Form(SSN,Username)
+            //PF.Location = this.Location;
+            //PF.WindowState = this.WindowState;
+            //PF.Size = this.Size;
+            //this.Hide();
+            //PF.Show();
         }
 
 
@@ -237,6 +243,12 @@ namespace Railway_Management_System
                 //redirect to passenger
                 //Temporary
                 MessageBox.Show("You signed in");
+                //Passenger_Form PF = new Passenger_Form(SSN,Username)
+                //PF.Location = this.Location;
+                //PF.WindowState = this.WindowState;
+                //PF.Size = this.Size;
+                //this.Hide();
+                //PF.Show();
             }
 
         }

@@ -13,6 +13,7 @@ namespace Railway_Management_System
     public partial class Employee_Login : Form
     {
         Form Myparent;
+   
         Controller ControllerObj;
         string Username;
         int Station_Number;
@@ -44,9 +45,11 @@ namespace Railway_Management_System
 
         private void Sign_In_Click(object sender, EventArgs e)
         {
+
             if (Username_Text.Text == "")
             {
-                MessageBox.Show("You must enter a Username");
+                Message Msg = new Message(this, "You must enter a Username");
+                Msg.Show();
                 return;
             }
             if (Password_Text.Text == "")
@@ -69,11 +72,19 @@ namespace Railway_Management_System
                 if (string.IsNullOrEmpty(dt.Rows[0].ItemArray[1].ToString()) == true) // is A Manager
                 {
                     Manager_Form MF = new Manager_Form(this, Station_Number, SSN, Username);
+                    MF.Location = this.Location;
+                    MF.WindowState = this.WindowState;
+                    MF.Size = this.Size;
+                    this.Hide();
                     MF.Show();
                 }
                 else // is A Maintenance
                 {
                     Employee_Form EF = new Employee_Form(this, Station_Number, SSN, Username);
+                    EF.Location = this.Location;
+                    EF.WindowState = this.WindowState;
+                    EF.Size = this.Size;
+                    this.Hide();
                     EF.Show();
                 }
 
@@ -85,6 +96,7 @@ namespace Railway_Management_System
         {
             Myparent.Location = this.Location;
             Myparent.WindowState = this.WindowState;
+            Myparent.Size = this.Size;
             this.Close();
             Myparent.Show();
         }

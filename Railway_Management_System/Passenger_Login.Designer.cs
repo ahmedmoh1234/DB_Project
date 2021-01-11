@@ -72,6 +72,7 @@
             this.Username_Signup_Text = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.Back)).BeginInit();
             this.GroupBox_Login.SuspendLayout();
             this.GroupBox_SignUp.SuspendLayout();
@@ -82,12 +83,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.X_SSN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.X_UserName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.X_Fname)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Back
             // 
+            this.Back.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Back.Image = ((System.Drawing.Image)(resources.GetObject("Back.Image")));
-            this.Back.Location = new System.Drawing.Point(12, 12);
+            this.Back.Location = new System.Drawing.Point(12, 7);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(63, 50);
             this.Back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -116,6 +119,7 @@
             // Sign_Up_label
             // 
             this.Sign_Up_label.AutoSize = true;
+            this.Sign_Up_label.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Sign_Up_label.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sign_Up_label.Location = new System.Drawing.Point(18, 285);
             this.Sign_Up_label.Name = "Sign_Up_label";
@@ -127,6 +131,7 @@
             // Sign_In
             // 
             this.Sign_In.BackColor = System.Drawing.Color.Navy;
+            this.Sign_In.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Sign_In.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Sign_In.ForeColor = System.Drawing.Color.White;
             this.Sign_In.Location = new System.Drawing.Point(82, 321);
@@ -143,7 +148,7 @@
             this.Password_Login.Location = new System.Drawing.Point(45, 236);
             this.Password_Login.Name = "Password_Login";
             this.Password_Login.Size = new System.Drawing.Size(262, 36);
-            this.Password_Login.TabIndex = 6;
+            this.Password_Login.TabIndex = 1;
             // 
             // Username_Login
             // 
@@ -151,7 +156,7 @@
             this.Username_Login.Location = new System.Drawing.Point(45, 118);
             this.Username_Login.Name = "Username_Login";
             this.Username_Login.Size = new System.Drawing.Size(262, 36);
-            this.Username_Login.TabIndex = 5;
+            this.Username_Login.TabIndex = 0;
             // 
             // label4
             // 
@@ -251,7 +256,7 @@
             this.Phone_Number_Text.Location = new System.Drawing.Point(197, 254);
             this.Phone_Number_Text.Name = "Phone_Number_Text";
             this.Phone_Number_Text.Size = new System.Drawing.Size(262, 32);
-            this.Phone_Number_Text.TabIndex = 34;
+            this.Phone_Number_Text.TabIndex = 7;
             this.Phone_Number_Text.TextChanged += new System.EventHandler(this.Phone_Number_Text_TextChanged);
             // 
             // label11
@@ -433,7 +438,7 @@
             this.comboBox1.Location = new System.Drawing.Point(197, 396);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(262, 31);
-            this.comboBox1.TabIndex = 18;
+            this.comboBox1.TabIndex = 10;
             // 
             // SSN_Text
             // 
@@ -441,7 +446,7 @@
             this.SSN_Text.Location = new System.Drawing.Point(197, 214);
             this.SSN_Text.Name = "SSN_Text";
             this.SSN_Text.Size = new System.Drawing.Size(262, 32);
-            this.SSN_Text.TabIndex = 17;
+            this.SSN_Text.TabIndex = 6;
             this.SSN_Text.TextChanged += new System.EventHandler(this.SSN_Text_TextChanged);
             // 
             // Lname_Text
@@ -450,7 +455,7 @@
             this.Lname_Text.Location = new System.Drawing.Point(197, 164);
             this.Lname_Text.Name = "Lname_Text";
             this.Lname_Text.Size = new System.Drawing.Size(262, 32);
-            this.Lname_Text.TabIndex = 16;
+            this.Lname_Text.TabIndex = 5;
             this.Lname_Text.TextChanged += new System.EventHandler(this.Lname_Text_TextChanged);
             // 
             // Minit_Text
@@ -459,7 +464,7 @@
             this.Minit_Text.Location = new System.Drawing.Point(197, 114);
             this.Minit_Text.Name = "Minit_Text";
             this.Minit_Text.Size = new System.Drawing.Size(262, 32);
-            this.Minit_Text.TabIndex = 15;
+            this.Minit_Text.TabIndex = 4;
             this.Minit_Text.TextChanged += new System.EventHandler(this.Minit_Text_TextChanged);
             // 
             // Fname_Text
@@ -468,7 +473,7 @@
             this.Fname_Text.Location = new System.Drawing.Point(197, 66);
             this.Fname_Text.Name = "Fname_Text";
             this.Fname_Text.Size = new System.Drawing.Size(262, 32);
-            this.Fname_Text.TabIndex = 14;
+            this.Fname_Text.TabIndex = 3;
             this.Fname_Text.TextChanged += new System.EventHandler(this.Fname_Text_TextChanged);
             // 
             // label10
@@ -540,6 +545,7 @@
             // Sign_Up
             // 
             this.Sign_Up.BackColor = System.Drawing.Color.Navy;
+            this.Sign_Up.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Sign_Up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Sign_Up.ForeColor = System.Drawing.Color.White;
             this.Sign_Up.Location = new System.Drawing.Point(197, 514);
@@ -556,7 +562,7 @@
             this.Password_SignUp_Text.Location = new System.Drawing.Point(197, 347);
             this.Password_SignUp_Text.Name = "Password_SignUp_Text";
             this.Password_SignUp_Text.Size = new System.Drawing.Size(262, 32);
-            this.Password_SignUp_Text.TabIndex = 6;
+            this.Password_SignUp_Text.TabIndex = 9;
             this.Password_SignUp_Text.TextChanged += new System.EventHandler(this.Password_SignUp_Text_TextChanged);
             // 
             // Username_Signup_Text
@@ -565,7 +571,7 @@
             this.Username_Signup_Text.Location = new System.Drawing.Point(197, 302);
             this.Username_Signup_Text.Name = "Username_Signup_Text";
             this.Username_Signup_Text.Size = new System.Drawing.Size(262, 32);
-            this.Username_Signup_Text.TabIndex = 5;
+            this.Username_Signup_Text.TabIndex = 8;
             this.Username_Signup_Text.TextChanged += new System.EventHandler(this.Username_Signup_Text_TextChanged);
             // 
             // label3
@@ -590,14 +596,24 @@
             this.label5.TabIndex = 2;
             this.label5.Text = "Username";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
+            this.panel1.Controls.Add(this.Back);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1200, 57);
+            this.panel1.TabIndex = 14;
+            // 
             // Passenger_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1200, 720);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.GroupBox_SignUp);
-            this.Controls.Add(this.Back);
             this.Controls.Add(this.GroupBox_Login);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Passenger_Login";
@@ -614,6 +630,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.X_SSN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.X_UserName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.X_Fname)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -662,5 +679,6 @@
         private System.Windows.Forms.TextBox Username_Signup_Text;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel1;
     }
 }

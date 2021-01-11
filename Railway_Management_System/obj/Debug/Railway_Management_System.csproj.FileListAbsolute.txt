@@ -11,3 +11,18 @@ C:\Users\Moust\Desktop\Railway_Management_System\Railway_Management_System\obj\D
 C:\Users\Moust\Desktop\Railway_Management_System\Railway_Management_System\obj\Debug\Railway_Management_System.exe
 C:\Users\Moust\Desktop\Railway_Management_System\Railway_Management_System\obj\Debug\Railway_Management_System.pdb
 C:\Users\Moust\Desktop\Railway_Management_System\Railway_Management_System\bin\Debug\Railway_Management_System.pdb
+C:\Users\Moust\Desktop\Railway_Management_System\Railway_Management_System\obj\Debug\Railway_Management_System.Message.resources
+D:\Work\CCE\Year 2 - Junior\Semester 1\Database\Project\DB_Project\Railway_Management_System\bin\Debug\Railway_Management_System.exe.config
+D:\Work\CCE\Year 2 - Junior\Semester 1\Database\Project\DB_Project\Railway_Management_System\bin\Debug\Railway_Management_System.exe
+D:\Work\CCE\Year 2 - Junior\Semester 1\Database\Project\DB_Project\Railway_Management_System\bin\Debug\Railway_Management_System.pdb
+D:\Work\CCE\Year 2 - Junior\Semester 1\Database\Project\DB_Project\Railway_Management_System\obj\Debug\Railway_Management_System.csprojResolveAssemblyReference.cache
+D:\Work\CCE\Year 2 - Junior\Semester 1\Database\Project\DB_Project\Railway_Management_System\obj\Debug\Railway_Management_System.Employee_Form.resources
+D:\Work\CCE\Year 2 - Junior\Semester 1\Database\Project\DB_Project\Railway_Management_System\obj\Debug\Railway_Management_System.Employee_Login.resources
+D:\Work\CCE\Year 2 - Junior\Semester 1\Database\Project\DB_Project\Railway_Management_System\obj\Debug\Railway_Management_System.Welcome.resources
+D:\Work\CCE\Year 2 - Junior\Semester 1\Database\Project\DB_Project\Railway_Management_System\obj\Debug\Railway_Management_System.Manager_Form.resources
+D:\Work\CCE\Year 2 - Junior\Semester 1\Database\Project\DB_Project\Railway_Management_System\obj\Debug\Railway_Management_System.Message.resources
+D:\Work\CCE\Year 2 - Junior\Semester 1\Database\Project\DB_Project\Railway_Management_System\obj\Debug\Railway_Management_System.Passenger_Login.resources
+D:\Work\CCE\Year 2 - Junior\Semester 1\Database\Project\DB_Project\Railway_Management_System\obj\Debug\Railway_Management_System.Properties.Resources.resources
+D:\Work\CCE\Year 2 - Junior\Semester 1\Database\Project\DB_Project\Railway_Management_System\obj\Debug\Railway_Management_System.csproj.GenerateResource.Cache
+D:\Work\CCE\Year 2 - Junior\Semester 1\Database\Project\DB_Project\Railway_Management_System\obj\Debug\Railway_Management_System.exe
+D:\Work\CCE\Year 2 - Junior\Semester 1\Database\Project\DB_Project\Railway_Management_System\obj\Debug\Railway_Management_System.pdb

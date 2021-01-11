@@ -36,8 +36,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Back = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Back)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -60,6 +62,7 @@
             // Sign_In
             // 
             this.Sign_In.BackColor = System.Drawing.Color.Navy;
+            this.Sign_In.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Sign_In.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Sign_In.ForeColor = System.Drawing.Color.White;
             this.Sign_In.Location = new System.Drawing.Point(82, 321);
@@ -110,8 +113,9 @@
             // 
             // Back
             // 
+            this.Back.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Back.Image = ((System.Drawing.Image)(resources.GetObject("Back.Image")));
-            this.Back.Location = new System.Drawing.Point(21, 12);
+            this.Back.Location = new System.Drawing.Point(12, 4);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(63, 50);
             this.Back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -119,12 +123,22 @@
             this.Back.TabStop = false;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(94)))));
+            this.panel1.Controls.Add(this.Back);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1182, 56);
+            this.panel1.TabIndex = 16;
+            // 
             // Employee_Login
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1182, 653);
-            this.Controls.Add(this.Back);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Employee_Login";
@@ -133,6 +147,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Back)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -145,5 +160,6 @@
         private System.Windows.Forms.TextBox Password_Text;
         private System.Windows.Forms.TextBox Username_Text;
         private System.Windows.Forms.PictureBox Back;
+        private System.Windows.Forms.Panel panel1;
     }
 }

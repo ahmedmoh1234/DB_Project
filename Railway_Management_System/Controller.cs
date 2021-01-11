@@ -89,6 +89,8 @@ namespace Railway_Management_System
           
         }
 
+        
+
         public int SignUp_Passenger(string Fname, string Minit, string Lname, string SSN, string Phone_Number, string Username, string Password, string gender, string DOB)
         {
             string StoredProcedureName = StoredProcedures.Check_SSN_SignUp_Passenger;
@@ -124,12 +126,12 @@ namespace Railway_Management_System
             string query = "SELECT E.E_SSN,E.Manager_SSN,E.Station_Number FROM EMPLOYEE AS E,LOGIN_EMPLOYEE AS L WHERE L.Username='" + Username + "' AND L.E_SSN=E.E_SSN";
             return dbMan.ExecuteReader(query);
         }
-        public int Get_Passenger_SSN(string Username)
+        public long Get_Passenger_SSN(string Username)
         {
             string StoredProcedureName = StoredProcedures.Get_Passenger_SSN;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             Parameters.Add("@Username", Username);
-            return (int)dbMan.ExecuteScalar(StoredProcedureName, Parameters);
+            return Convert.ToInt64 (dbMan.ExecuteScalar(StoredProcedureName, Parameters));
         }
     }
 }
