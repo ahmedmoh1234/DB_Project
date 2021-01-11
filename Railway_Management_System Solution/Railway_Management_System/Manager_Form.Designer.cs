@@ -130,13 +130,13 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.StationNameComboBox2 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.GetCountAndSalary = new System.Windows.Forms.Button();
             this.Number_of_emps_working_station_label = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.AvgNoPass_Trip_Number_TextBox = new System.Windows.Forms.TextBox();
-            this.Avg_Number_Pass_Label = new System.Windows.Forms.Label();
+            this.CountForCertainTrip = new System.Windows.Forms.Button();
+            this.CountBooksTrip = new System.Windows.Forms.TextBox();
+            this.CountBooksTripLabel = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.GetIncomefromTripButton = new System.Windows.Forms.Button();
@@ -151,6 +151,7 @@
             this.PassengerMostTripsGroupBox = new System.Windows.Forms.GroupBox();
             this.GetPassCountButton = new System.Windows.Forms.Button();
             this.PassengerWithMostTripsLabel = new System.Windows.Forms.Label();
+            this.HelloMessageLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.TripsDG)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.removeTripGroupBox.SuspendLayout();
@@ -1147,6 +1148,7 @@
             this.Reject_Request_Button.TabIndex = 6;
             this.Reject_Request_Button.Text = "Reject";
             this.Reject_Request_Button.UseVisualStyleBackColor = false;
+            this.Reject_Request_Button.Click += new System.EventHandler(this.Reject_Request_Button_Click);
             // 
             // Accept_Request_Button
             // 
@@ -1162,6 +1164,7 @@
             this.Accept_Request_Button.TabIndex = 5;
             this.Accept_Request_Button.Text = "Accept";
             this.Accept_Request_Button.UseVisualStyleBackColor = false;
+            this.Accept_Request_Button.Click += new System.EventHandler(this.Accept_Request_Button_Click);
             // 
             // label31
             // 
@@ -1216,12 +1219,12 @@
             this.groupBox9.Size = new System.Drawing.Size(448, 126);
             this.groupBox9.TabIndex = 6;
             this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Total Income in a Time Period";
+            this.groupBox9.Text = "Average Income in a Time Period";
             // 
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(235, 37);
+            this.label30.Location = new System.Drawing.Point(235, 36);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(67, 17);
             this.label30.TabIndex = 9;
@@ -1229,7 +1232,7 @@
             // 
             // EndDatePicker
             // 
-            this.EndDatePicker.Location = new System.Drawing.Point(316, 36);
+            this.EndDatePicker.Location = new System.Drawing.Point(316, 33);
             this.EndDatePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.EndDatePicker.Name = "EndDatePicker";
             this.EndDatePicker.Size = new System.Drawing.Size(108, 22);
@@ -1237,7 +1240,7 @@
             // 
             // StartDatePicker
             // 
-            this.StartDatePicker.Location = new System.Drawing.Point(95, 36);
+            this.StartDatePicker.Location = new System.Drawing.Point(95, 33);
             this.StartDatePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.StartDatePicker.Name = "StartDatePicker";
             this.StartDatePicker.Size = new System.Drawing.Size(115, 22);
@@ -1274,6 +1277,7 @@
             this.GetIncomeTimePeriodButton.TabIndex = 3;
             this.GetIncomeTimePeriodButton.Text = "Get Income";
             this.GetIncomeTimePeriodButton.UseVisualStyleBackColor = false;
+            this.GetIncomeTimePeriodButton.Click += new System.EventHandler(this.GetIncomeTimePeriodButton_Click);
             // 
             // label34
             // 
@@ -1290,7 +1294,7 @@
             this.groupBox8.Controls.Add(this.label24);
             this.groupBox8.Controls.Add(this.label29);
             this.groupBox8.Controls.Add(this.StationNameComboBox2);
-            this.groupBox8.Controls.Add(this.button2);
+            this.groupBox8.Controls.Add(this.GetCountAndSalary);
             this.groupBox8.Controls.Add(this.Number_of_emps_working_station_label);
             this.groupBox8.Controls.Add(this.label28);
             this.groupBox8.Location = new System.Drawing.Point(375, 197);
@@ -1305,7 +1309,7 @@
             // Salary_Label
             // 
             this.Salary_Label.AutoSize = true;
-            this.Salary_Label.Location = new System.Drawing.Point(407, 91);
+            this.Salary_Label.Location = new System.Drawing.Point(373, 91);
             this.Salary_Label.Name = "Salary_Label";
             this.Salary_Label.Size = new System.Drawing.Size(16, 17);
             this.Salary_Label.TabIndex = 7;
@@ -1314,7 +1318,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(327, 91);
+            this.label24.Location = new System.Drawing.Point(311, 91);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(56, 17);
             this.label24.TabIndex = 6;
@@ -1332,26 +1336,27 @@
             // StationNameComboBox2
             // 
             this.StationNameComboBox2.FormattingEnabled = true;
-            this.StationNameComboBox2.Location = new System.Drawing.Point(131, 36);
+            this.StationNameComboBox2.Location = new System.Drawing.Point(131, 32);
             this.StationNameComboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.StationNameComboBox2.Name = "StationNameComboBox2";
             this.StationNameComboBox2.Size = new System.Drawing.Size(121, 24);
             this.StationNameComboBox2.TabIndex = 4;
             // 
-            // button2
+            // GetCountAndSalary
             // 
-            this.button2.BackColor = System.Drawing.Color.Navy;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(64, 78);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(147, 46);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Get Count and Salary";
-            this.button2.UseVisualStyleBackColor = false;
+            this.GetCountAndSalary.BackColor = System.Drawing.Color.Navy;
+            this.GetCountAndSalary.FlatAppearance.BorderSize = 0;
+            this.GetCountAndSalary.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.GetCountAndSalary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GetCountAndSalary.ForeColor = System.Drawing.Color.White;
+            this.GetCountAndSalary.Location = new System.Drawing.Point(64, 78);
+            this.GetCountAndSalary.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.GetCountAndSalary.Name = "GetCountAndSalary";
+            this.GetCountAndSalary.Size = new System.Drawing.Size(147, 46);
+            this.GetCountAndSalary.TabIndex = 3;
+            this.GetCountAndSalary.Text = "Get Count and Salary";
+            this.GetCountAndSalary.UseVisualStyleBackColor = false;
+            this.GetCountAndSalary.Click += new System.EventHandler(this.GetCountAndSalary_Click);
             // 
             // Number_of_emps_working_station_label
             // 
@@ -1373,9 +1378,9 @@
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.button1);
-            this.groupBox7.Controls.Add(this.AvgNoPass_Trip_Number_TextBox);
-            this.groupBox7.Controls.Add(this.Avg_Number_Pass_Label);
+            this.groupBox7.Controls.Add(this.CountForCertainTrip);
+            this.groupBox7.Controls.Add(this.CountBooksTrip);
+            this.groupBox7.Controls.Add(this.CountBooksTripLabel);
             this.groupBox7.Controls.Add(this.label27);
             this.groupBox7.Location = new System.Drawing.Point(371, 48);
             this.groupBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -1384,44 +1389,45 @@
             this.groupBox7.Size = new System.Drawing.Size(448, 126);
             this.groupBox7.TabIndex = 4;
             this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Average Number of Passenger in a certain Trip";
+            this.groupBox7.Text = "Total Bookings in a certain Trip";
             // 
-            // button1
+            // CountForCertainTrip
             // 
-            this.button1.BackColor = System.Drawing.Color.Navy;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(64, 75);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(147, 34);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Get Count";
-            this.button1.UseVisualStyleBackColor = false;
+            this.CountForCertainTrip.BackColor = System.Drawing.Color.Navy;
+            this.CountForCertainTrip.FlatAppearance.BorderSize = 0;
+            this.CountForCertainTrip.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.CountForCertainTrip.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CountForCertainTrip.ForeColor = System.Drawing.Color.White;
+            this.CountForCertainTrip.Location = new System.Drawing.Point(64, 75);
+            this.CountForCertainTrip.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CountForCertainTrip.Name = "CountForCertainTrip";
+            this.CountForCertainTrip.Size = new System.Drawing.Size(147, 34);
+            this.CountForCertainTrip.TabIndex = 3;
+            this.CountForCertainTrip.Text = "Get Count";
+            this.CountForCertainTrip.UseVisualStyleBackColor = false;
+            this.CountForCertainTrip.Click += new System.EventHandler(this.CountForCertainTrip_Click);
             // 
-            // AvgNoPass_Trip_Number_TextBox
+            // CountBooksTrip
             // 
-            this.AvgNoPass_Trip_Number_TextBox.Location = new System.Drawing.Point(155, 36);
-            this.AvgNoPass_Trip_Number_TextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.AvgNoPass_Trip_Number_TextBox.Name = "AvgNoPass_Trip_Number_TextBox";
-            this.AvgNoPass_Trip_Number_TextBox.Size = new System.Drawing.Size(100, 22);
-            this.AvgNoPass_Trip_Number_TextBox.TabIndex = 2;
+            this.CountBooksTrip.Location = new System.Drawing.Point(155, 36);
+            this.CountBooksTrip.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CountBooksTrip.Name = "CountBooksTrip";
+            this.CountBooksTrip.Size = new System.Drawing.Size(100, 22);
+            this.CountBooksTrip.TabIndex = 2;
             // 
-            // Avg_Number_Pass_Label
+            // CountBooksTripLabel
             // 
-            this.Avg_Number_Pass_Label.AutoSize = true;
-            this.Avg_Number_Pass_Label.Location = new System.Drawing.Point(267, 87);
-            this.Avg_Number_Pass_Label.Name = "Avg_Number_Pass_Label";
-            this.Avg_Number_Pass_Label.Size = new System.Drawing.Size(16, 17);
-            this.Avg_Number_Pass_Label.TabIndex = 1;
-            this.Avg_Number_Pass_Label.Text = "0";
+            this.CountBooksTripLabel.AutoSize = true;
+            this.CountBooksTripLabel.Location = new System.Drawing.Point(267, 87);
+            this.CountBooksTripLabel.Name = "CountBooksTripLabel";
+            this.CountBooksTripLabel.Size = new System.Drawing.Size(16, 17);
+            this.CountBooksTripLabel.TabIndex = 1;
+            this.CountBooksTripLabel.Text = "0";
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(17, 36);
+            this.label27.Location = new System.Drawing.Point(17, 39);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(87, 17);
             this.label27.TabIndex = 0;
@@ -1456,10 +1462,11 @@
             this.GetIncomefromTripButton.TabIndex = 3;
             this.GetIncomefromTripButton.Text = "Get Income";
             this.GetIncomefromTripButton.UseVisualStyleBackColor = false;
+            this.GetIncomefromTripButton.Click += new System.EventHandler(this.GetIncomefromTripButton_Click);
             // 
             // GetIncomeFromTripTextBox
             // 
-            this.GetIncomeFromTripTextBox.Location = new System.Drawing.Point(155, 36);
+            this.GetIncomeFromTripTextBox.Location = new System.Drawing.Point(155, 33);
             this.GetIncomeFromTripTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.GetIncomeFromTripTextBox.Name = "GetIncomeFromTripTextBox";
             this.GetIncomeFromTripTextBox.Size = new System.Drawing.Size(100, 22);
@@ -1512,10 +1519,11 @@
             this.GeetTrainsCountButton.TabIndex = 3;
             this.GeetTrainsCountButton.Text = "Get Count";
             this.GeetTrainsCountButton.UseVisualStyleBackColor = false;
+            this.GeetTrainsCountButton.Click += new System.EventHandler(this.GeetTrainsCountButton_Click);
             // 
             // TrainNumberTextBox2
             // 
-            this.TrainNumberTextBox2.Location = new System.Drawing.Point(155, 36);
+            this.TrainNumberTextBox2.Location = new System.Drawing.Point(155, 33);
             this.TrainNumberTextBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TrainNumberTextBox2.Name = "TrainNumberTextBox2";
             this.TrainNumberTextBox2.Size = new System.Drawing.Size(100, 22);
@@ -1550,7 +1558,7 @@
             this.PassengerMostTripsGroupBox.Size = new System.Drawing.Size(309, 126);
             this.PassengerMostTripsGroupBox.TabIndex = 1;
             this.PassengerMostTripsGroupBox.TabStop = false;
-            this.PassengerMostTripsGroupBox.Text = "Passenger with most Tips";
+            this.PassengerMostTripsGroupBox.Text = "Passenger with most Trips";
             // 
             // GetPassCountButton
             // 
@@ -1566,6 +1574,7 @@
             this.GetPassCountButton.TabIndex = 3;
             this.GetPassCountButton.Text = "Get Count";
             this.GetPassCountButton.UseVisualStyleBackColor = false;
+            this.GetPassCountButton.Click += new System.EventHandler(this.GetPassCountButton_Click);
             // 
             // PassengerWithMostTripsLabel
             // 
@@ -1576,23 +1585,34 @@
             this.PassengerWithMostTripsLabel.TabIndex = 0;
             this.PassengerWithMostTripsLabel.Text = "0";
             // 
+            // HelloMessageLabel
+            // 
+            this.HelloMessageLabel.AutoSize = true;
+            this.HelloMessageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HelloMessageLabel.Location = new System.Drawing.Point(509, 0);
+            this.HelloMessageLabel.Name = "HelloMessageLabel";
+            this.HelloMessageLabel.Size = new System.Drawing.Size(116, 32);
+            this.HelloMessageLabel.TabIndex = 3;
+            this.HelloMessageLabel.Text = "label22";
+            // 
             // Manager_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1040, 555);
+            this.Controls.Add(this.HelloMessageLabel);
             this.Controls.Add(this.statistical_modelsButton);
             this.Controls.Add(this.spare_partsButton);
             this.Controls.Add(this.suppliersButton);
             this.Controls.Add(this.trainsButton);
             this.Controls.Add(this.employeesButton);
             this.Controls.Add(this.tripsButton);
+            this.Controls.Add(this.TripsGroupBox);
             this.Controls.Add(this.TrainsGroupBox);
             this.Controls.Add(this.Statistical_Models_GroupBox);
             this.Controls.Add(this.Spare_Parts_GroupBox);
             this.Controls.Add(this.SuppliersGroupBox);
             this.Controls.Add(this.EmployeesGroupBox);
-            this.Controls.Add(this.TripsGroupBox);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Manager_Form";
             this.Text = "Manager_Form";
@@ -1632,6 +1652,7 @@
             this.PassengerMostTripsGroupBox.ResumeLayout(false);
             this.PassengerMostTripsGroupBox.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1715,13 +1736,13 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.ComboBox StationNameComboBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button GetCountAndSalary;
         private System.Windows.Forms.Label Number_of_emps_working_station_label;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox AvgNoPass_Trip_Number_TextBox;
-        private System.Windows.Forms.Label Avg_Number_Pass_Label;
+        private System.Windows.Forms.Button CountForCertainTrip;
+        private System.Windows.Forms.TextBox CountBooksTrip;
+        private System.Windows.Forms.Label CountBooksTripLabel;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label Salary_Label;
@@ -1760,5 +1781,6 @@
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Button Remove_Supplier_Button;
         private System.Windows.Forms.Button Add_Supplier_Button;
+        private System.Windows.Forms.Label HelloMessageLabel;
     }
 }

@@ -25,7 +25,7 @@ namespace Railway_Management_System
         {
             string StoredProcedureName = StoredProcedures.SelectAllEmployees;
             return dbMan.ExecuteReader(StoredProcedureName, null);
-          
+
         }
 
         public DataTable GetAllTrips()
@@ -64,7 +64,7 @@ namespace Railway_Management_System
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             Parameters.Add("@Train_Number", Train_Number);
             Parameters.Add("@New_Date", Date);
-            dbMan.ExecuteNonQuery(StoredProcedureName,Parameters);
+            dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
 
         }
 
@@ -191,7 +191,7 @@ namespace Railway_Management_System
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
 
-        public int InsertTrip (int tripNo, string depTime, string arrTime, int ecoPrice, int busPrice,
+        public int InsertTrip(int tripNo, string depTime, string arrTime, int ecoPrice, int busPrice,
             int busNo, int ecoNo, int trainNo)
         {
             string StoredProcedureName = StoredProcedures.AddTrip;
@@ -269,6 +269,121 @@ namespace Railway_Management_System
             string query = "DELETE FROM SUPPLIER " +
                 "WHERE Supplier_ID = " + SupplierNumber.ToString() + ";";
             return dbMan.ExecuteNonQuery(query);
+        }
+
+        public int AcceptRequest(int Request_ID)
+        {
+            string query = "UPDATE REQUEST SET Status = 'Accepted' " +
+                "WHERE Request_ID = " + Request_ID.ToString() + ";";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public int RejectRequest(int Request_ID)
+        {
+            string query = "UPDATE REQUEST SET STATUS = 'Rejected' " +
+                "WHERE Request_ID = " + Request_ID.ToString() + ";";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public int GetEmployeesCount(string Station_Name)
+        {
+            int Station_Number = GetStationNumberFromName(Station_Name);
+            string query = "SELECT COUNT(*) " +
+                "FROM EMPLOYEE AS E, STATION AS S " +
+                "WHERE E.Station_Number = S.Station_Number " +
+                "AND S.Station_Number = " + Station_Number.ToString() + ";";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+        public int GetAvgSalaryByStation(string Station_Name)
+        {
+            if (GetEmployeesCount(Station_Name) != 0)
+            {
+                int Station_Number = GetStationNumberFromName(Station_Name);
+                string query = "SELECT AVG(E.Salary) " +
+                    "FROM EMPLOYEE AS E, STATION AS S " +
+                    "WHERE E.Station_Number = S.Station_Number " +
+                    "AND S.Station_Number = " + Station_Number.ToString() + ";";
+                return (int)dbMan.ExecuteScalar(query);
+            }
+            else
+                return 0;
+        }
+
+        public int GetPassWithMostTrips()
+        {
+            string query = "SELECT MAX(RESULT.COUNTS) " +
+                "FROM ( SELECT COUNTS = COUNT(*) " +
+                "FROM BOOKINGS " +
+                "GROUP BY P_SSN )" +
+                "RESULT;";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+
+        public int GetNumberTripsOfTrain(int Train_Number)
+        {
+            string StoredProcedureName = StoredProcedures.GetNumberTripsOfTrain;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@TrainNo", Train_Number);
+            return (int)dbMan.ExecuteScalar(StoredProcedureName, Parameters);
+        }
+
+        public int GetIncomeTrip(int TripNumber)
+        {
+            string query1 = "SELECT COUNT(*) " +
+                "FROM BOOKINGS " +
+                "WHERE Trip_Number = " + TripNumber.ToString() + " " +
+                "AND Type = 'Economic';";
+            int a = (int)dbMan.ExecuteScalar(query1);
+            string query2 = "SELECT Economic_Ticket_Price " +
+                "FROM TRIP " +
+                "WHERE Trip_Number = " + TripNumber.ToString() + ";";
+            int b = (int)dbMan.ExecuteScalar(query2);
+            string query3 = "SELECT COUNT(*) " +
+                "FROM BOOKINGS " +
+                "WHERE Trip_Number = " + TripNumber.ToString() + " " +
+                "AND Type = 'Business';";
+            int c = (int)dbMan.ExecuteScalar(query3);
+            string query4 = "SELECT Business_TicketPrice " +
+                "FROM TRIP " +
+                "WHERE Trip_Number = " + TripNumber.ToString() + ";";
+            int d = (int)dbMan.ExecuteScalar(query4);
+            return ((a * b) + (c * d));
+        }
+
+        public int CountBooingsByTrip(int Trip_Number)
+        {
+            string query = "SELECT COUNT(P_SSN) " +
+                "FROM BOOKINGS " +
+                "WHERE Trip_Number = " + Trip_Number.ToString() + ";";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+        public int GetIncomeTimePeriod(DateTime StartDate, DateTime EndDate)
+        {
+            string Start = "'" + StartDate.ToString("yyyy/MM/dd") + "'";
+            string End = "'" + EndDate.ToString("yyyy/MM/dd") + "'";
+
+            string query1 = "SELECT COUNT(*) " +
+                "FROM BOOKINGS " +
+                "WHERE Trip_Date <= " + End + "AND Trip_Date >= " + Start + " " +
+                "AND Type = 'Economic';";
+            int a = (int)dbMan.ExecuteScalar(query1);
+            string query2 = "SELECT AVG(Economic_Ticket_Price) " +
+                "FROM TRIP " +
+                "WHERE Trip_Date <= " + End + "AND Trip_Date >= " + Start + " " +
+                "AND Type = 'Economic';";
+            int b = (int)dbMan.ExecuteScalar(query2);
+            string query3 = "SELECT COUNT(*) " +
+                "SELECT COUNT(*) " +
+                "FROM BOOKINGS " +
+                "WHERE Trip_Date <= " + End + "AND Trip_Date >= " + Start + " " +
+                "AND Type = 'Business';";
+            int c = (int)dbMan.ExecuteScalar(query3);
+            string query4 = "SELECT AVG(Business_TicketPrice) " +
+                 "FROM TRIP " +
+                "WHERE Trip_Date <= " + End + "AND Trip_Date >= " + Start + " " +
+                "AND Type = 'Business';";
+            int d = (int)dbMan.ExecuteScalar(query4);
+            return ((a * b) + (c * d));
         }
     }
 }

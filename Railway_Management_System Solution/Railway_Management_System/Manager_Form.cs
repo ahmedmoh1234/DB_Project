@@ -14,7 +14,7 @@ namespace Railway_Management_System
     {
         Controller controllerObj;
         int _tripNoRemove;
-        public Manager_Form()
+        public Manager_Form(string Username)
         {
             InitializeComponent();
             controllerObj = new Controller();
@@ -26,7 +26,14 @@ namespace Railway_Management_System
             Spare_Parts_GroupBox.Visible = false;
             Statistical_Models_GroupBox.Visible = false;
             _tripNoRemove = -1;
+            HelloMessageLabel.Text = "Hello " + Username;
+            HelloMessageLabel.BringToFront();
+            //HelloMessageLabel.Top = this.Height / 2 - HelloMessageLabel.Height / 2;
+            //HelloMessageLabel.Left = (this.Width - tripsButton.Width) / 2 - HelloMessageLabel.Width+tripsButton.Width;
+            HelloMessageLabel.Left = 380;
+            HelloMessageLabel.Top = 200;
         }
+
 
         private void tripsButton_Click(object sender, EventArgs e)
         {
@@ -38,6 +45,7 @@ namespace Railway_Management_System
             Statistical_Models_GroupBox.Visible = false;
 
             fillTable_Trips();
+            HelloMessageLabel.Hide();
 
 
         }
@@ -180,7 +188,7 @@ namespace Railway_Management_System
             Spare_Parts_GroupBox.Visible = true;
             Statistical_Models_GroupBox.Visible = false;
 
-            //ADD REQUESTS IN DATA GRID VIEW            
+            RequestsDG.DataSource = controllerObj.GetAllRequests();
         }
 
         private void statistical_modelsButton_Click(object sender, EventArgs e)
@@ -665,6 +673,114 @@ namespace Railway_Management_System
                     return;
                 }
             }
+        }
+
+        private void Accept_Request_Button_Click(object sender, EventArgs e)
+        {
+            int Request_ID;
+            if (!Int32.TryParse(Request_ID_TextBox.Text, out Request_ID))
+            {
+                MessageBox.Show("Invalid Request ID");
+                return;
+            }
+            else
+            {
+                int result = controllerObj.AcceptRequest(Request_ID);
+                if (result == 1)
+                {
+                    MessageBox.Show("Request Accepted Succesfully");
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Request couldn't be Accepted");
+                    return;
+                }
+            }
+        }
+
+        private void Reject_Request_Button_Click(object sender, EventArgs e)
+        {
+            int Request_ID;
+            if (!Int32.TryParse(Request_ID_TextBox.Text, out Request_ID))
+            {
+                MessageBox.Show("Invalid Request ID");
+                return;
+            }
+            else
+            {
+                int result = controllerObj.RejectRequest(Request_ID);
+                if (result == 1)
+                {
+                    MessageBox.Show("Request Rejected Succesfully");
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Request couldn't be Rejected");
+                    return;
+                }
+            }
+        }
+
+        private void GetCountAndSalary_Click(object sender, EventArgs e)
+        {
+            Number_of_emps_working_station_label.Text = controllerObj.GetEmployeesCount(StationNameComboBox2.Text).ToString();
+            Salary_Label.Text = controllerObj.GetAvgSalaryByStation(StationNameComboBox2.Text).ToString();
+        }
+
+        private void GetPassCountButton_Click(object sender, EventArgs e)
+        {
+            PassengerWithMostTripsLabel.Text = controllerObj.GetPassWithMostTrips().ToString();
+        }
+
+        private void GetIncomefromTripButton_Click(object sender, EventArgs e)
+        {
+            int Trip_Number;
+            if (!Int32.TryParse(GetIncomeFromTripTextBox.Text, out Trip_Number) || Trip_Number <= 0)
+            {
+                MessageBox.Show("Invalid Trip Number");
+                return;
+            }
+            IncomeFromTripLabel.Text = controllerObj.GetIncomeTrip(Trip_Number).ToString();
+            return;
+        }
+
+        private void GeetTrainsCountButton_Click(object sender, EventArgs e)
+        {
+            int Train_Number;
+            if (!Int32.TryParse(TrainNumberTextBox2.Text, out Train_Number) || Train_Number <= 0)
+            {
+                MessageBox.Show("Invalid Train Number");
+                return;
+            }
+            Number_of_trips_Train_made_label.Text = controllerObj.GetNumberTripsOfTrain(Train_Number).ToString();
+        }
+
+        private void CountForCertainTrip_Click(object sender, EventArgs e)
+        {
+            int Trip_Number;
+            if (!Int32.TryParse(CountBooksTrip.Text, out Trip_Number) || Trip_Number <= 0)
+            {
+                MessageBox.Show("Invalid Trip Number");
+                return;
+            }
+            CountBooksTripLabel.Text = controllerObj.CountBooingsByTrip(Trip_Number).ToString();
+        }
+
+        private void GetIncomeTimePeriodButton_Click(object sender, EventArgs e)
+        {
+
+            DateTime StartDate, EndDate;
+            StartDate = StartDatePicker.Value;
+            EndDate = EndDatePicker.Value;
+            if (EndDate.CompareTo(StartDate) <= 0)
+            {
+                MessageBox.Show("End Date cannot be earlier than Start Date");
+                return;
+            }
+            IncomeTimePeriodLabel.Text = controllerObj.GetIncomeTimePeriod(StartDate, EndDate).ToString();
+
         }
     }
 }

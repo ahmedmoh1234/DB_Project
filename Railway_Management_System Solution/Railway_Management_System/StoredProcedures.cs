@@ -26,5 +26,7 @@ namespace Railway_Management_System
         public static string RemoveTrip = "REMOVE_TRIP";
         public static string AddTrip = "ADD_TRIP";
 
+        public static string GetNumberTripsOfTrain = "NO_TRAIN_TRIPS";
+
     }
 }
