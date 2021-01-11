@@ -23,6 +23,7 @@ namespace Railway_Management_System
             PreviousgroupBox.Visible = false;
             CancelBookgroupBox.Visible = false;
             Upcoming_groupBox.Visible = false;
+            Book_TripsGroupBox.Cursor = Cursors.Arrow;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

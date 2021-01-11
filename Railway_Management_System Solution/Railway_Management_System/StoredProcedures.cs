@@ -26,18 +26,9 @@ namespace Railway_Management_System
         public static string RemoveTrip = "REMOVE_TRIP";
         public static string AddTrip = "ADD_TRIP";
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
         public static string GetNumberTripsOfTrain = "NO_TRAIN_TRIPS";
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+
 
         public static string InsertTrip = "INSERT_TRIP";
         public static string CancelTRIP = "DELETE_TRIP";
@@ -51,16 +42,7 @@ namespace Railway_Management_System
         public static string ViewTrainInfo = "ViewTrainInfo";
         public static string CHANGETRIPDATE = "CHANGETRIPDATE";
         public static string changeTripType = "CHANGETRIPCLASS";
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+
 
     }
 }

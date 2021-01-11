@@ -271,10 +271,7 @@ namespace Railway_Management_System
             return dbMan.ExecuteNonQuery(query);
         }
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
         public int AcceptRequest(int Request_ID)
         {
             string query = "UPDATE REQUEST SET Status = 'Accepted' " +
@@ -388,13 +385,7 @@ namespace Railway_Management_System
                 "AND Type = 'Business';";
             int d = (int)dbMan.ExecuteScalar(query4);
             return ((a * b) + (c * d));
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+        }
 
         public int InsertTrip(string trip_date, int PSSN, int tripNo, string status, string type) //payment method?
         {
@@ -409,7 +400,7 @@ namespace Railway_Management_System
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
 
-        // update trip bete3mel ehh?
+
 
         public int Deletetrip(string trip_date, int PSSN, int tripNo)
         {
@@ -552,16 +543,8 @@ namespace Railway_Management_System
             Parameters.Add("@TRIPClassNew", type);
 
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+
         }
     }
 }
+
