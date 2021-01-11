@@ -273,6 +273,7 @@ namespace Railway_Management_System
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         public int AcceptRequest(int Request_ID)
         {
             string query = "UPDATE REQUEST SET Status = 'Accepted' " +
@@ -387,6 +388,8 @@ namespace Railway_Management_System
             int d = (int)dbMan.ExecuteScalar(query4);
             return ((a * b) + (c * d));
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 
@@ -547,6 +550,9 @@ namespace Railway_Management_System
 
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

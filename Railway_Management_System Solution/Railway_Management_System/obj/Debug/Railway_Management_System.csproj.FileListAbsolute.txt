@@ -69,6 +69,7 @@ C:\Users\EGYPT\Desktop\Railway_Management_System Solution AHMED\Railway_Manageme
 C:\Users\EGYPT\Desktop\Railway_Management_System Solution AHMED\Railway_Management_System\bin\Debug\Railway_Management_System.pdb
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 D:\Junior\Database\Project\DB_Project\Railway_Management_System Solution\Railway_Management_System\obj\Debug\Railway_Management_System.csprojAssemblyReference.cache
 D:\Junior\Database\Project\DB_Project\Railway_Management_System Solution\Railway_Management_System\obj\Debug\Railway_Management_System.Employee_Form.resources
 D:\Junior\Database\Project\DB_Project\Railway_Management_System Solution\Railway_Management_System\obj\Debug\Railway_Management_System.Employee_Login.resources
@@ -84,6 +85,8 @@ D:\Junior\Database\Project\DB_Project\Railway_Management_System Solution\Railway
 D:\Junior\Database\Project\DB_Project\Railway_Management_System Solution\Railway_Management_System\bin\Debug\Railway_Management_System.exe
 D:\Junior\Database\Project\DB_Project\Railway_Management_System Solution\Railway_Management_System\bin\Debug\Railway_Management_System.pdb
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 C:\Users\mody7\OneDrive\Desktop\Microprocessor\Project\DB_Project\Railway_Management_System Solution\Railway_Management_System\obj\Debug\Railway_Management_System.csprojAssemblyReference.cache
@@ -102,6 +105,9 @@ C:\Users\mody7\OneDrive\Desktop\Microprocessor\Project\DB_Project\Railway_Manage
 C:\Users\mody7\OneDrive\Desktop\Microprocessor\Project\DB_Project\Railway_Management_System Solution\Railway_Management_System\bin\Debug\Railway_Management_System.exe
 C:\Users\mody7\OneDrive\Desktop\Microprocessor\Project\DB_Project\Railway_Management_System Solution\Railway_Management_System\bin\Debug\Railway_Management_System.pdb
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
