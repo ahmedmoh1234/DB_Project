@@ -151,6 +151,7 @@
             this.PassengerMostTripsGroupBox = new System.Windows.Forms.GroupBox();
             this.GetPassCountButton = new System.Windows.Forms.Button();
             this.PassengerWithMostTripsLabel = new System.Windows.Forms.Label();
+            this.HelloMessageLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.TripsDG)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.removeTripGroupBox.SuspendLayout();
@@ -1584,23 +1585,34 @@
             this.PassengerWithMostTripsLabel.TabIndex = 0;
             this.PassengerWithMostTripsLabel.Text = "0";
             // 
+            // HelloMessageLabel
+            // 
+            this.HelloMessageLabel.AutoSize = true;
+            this.HelloMessageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HelloMessageLabel.Location = new System.Drawing.Point(509, 0);
+            this.HelloMessageLabel.Name = "HelloMessageLabel";
+            this.HelloMessageLabel.Size = new System.Drawing.Size(116, 32);
+            this.HelloMessageLabel.TabIndex = 3;
+            this.HelloMessageLabel.Text = "label22";
+            // 
             // Manager_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1040, 555);
+            this.Controls.Add(this.HelloMessageLabel);
             this.Controls.Add(this.statistical_modelsButton);
             this.Controls.Add(this.spare_partsButton);
             this.Controls.Add(this.suppliersButton);
             this.Controls.Add(this.trainsButton);
             this.Controls.Add(this.employeesButton);
             this.Controls.Add(this.tripsButton);
+            this.Controls.Add(this.TripsGroupBox);
+            this.Controls.Add(this.TrainsGroupBox);
             this.Controls.Add(this.Statistical_Models_GroupBox);
             this.Controls.Add(this.Spare_Parts_GroupBox);
             this.Controls.Add(this.SuppliersGroupBox);
             this.Controls.Add(this.EmployeesGroupBox);
-            this.Controls.Add(this.TripsGroupBox);
-            this.Controls.Add(this.TrainsGroupBox);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Manager_Form";
             this.Text = "Manager_Form";
@@ -1640,6 +1652,7 @@
             this.PassengerMostTripsGroupBox.ResumeLayout(false);
             this.PassengerMostTripsGroupBox.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1768,5 +1781,6 @@
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Button Remove_Supplier_Button;
         private System.Windows.Forms.Button Add_Supplier_Button;
+        private System.Windows.Forms.Label HelloMessageLabel;
     }
 }

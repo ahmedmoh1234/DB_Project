@@ -14,7 +14,7 @@ namespace Railway_Management_System
     {
         Controller controllerObj;
         int _tripNoRemove;
-        public Manager_Form()
+        public Manager_Form(string Username)
         {
             InitializeComponent();
             controllerObj = new Controller();
@@ -26,7 +26,14 @@ namespace Railway_Management_System
             Spare_Parts_GroupBox.Visible = false;
             Statistical_Models_GroupBox.Visible = false;
             _tripNoRemove = -1;
+            HelloMessageLabel.Text = "Hello " + Username;
+            HelloMessageLabel.BringToFront();
+            //HelloMessageLabel.Top = this.Height / 2 - HelloMessageLabel.Height / 2;
+            //HelloMessageLabel.Left = (this.Width - tripsButton.Width) / 2 - HelloMessageLabel.Width+tripsButton.Width;
+            HelloMessageLabel.Left = 380;
+            HelloMessageLabel.Top = 200;
         }
+
 
         private void tripsButton_Click(object sender, EventArgs e)
         {
@@ -38,6 +45,7 @@ namespace Railway_Management_System
             Statistical_Models_GroupBox.Visible = false;
 
             fillTable_Trips();
+            HelloMessageLabel.Hide();
 
 
         }

@@ -16,20 +16,24 @@ namespace Railway_Management_System
         private int _partNo;
         private int _empStationNo;
         private long _empSSN;
-        public Employee_Form()
-        {
-            InitializeComponent();
-            controller = new Controller();
-            _empStationNo = 5;
-            _empSSN = 12345678;
-        }
+        private string _Username;
+        //public Employee_Form(string Username)
+        //{
+        //    InitializeComponent();
+        //    controller = new Controller();
+        //    _empStationNo = 5;
+        //    _empSSN = 12345678;
+        //    _Username = Username;
+        //}
 
-        public Employee_Form(int empSatationNo, long empSSN)
+        public Employee_Form(int empSatationNo, long empSSN, string Username)
         {
             InitializeComponent();
             controller = new Controller();
             _empStationNo = empSatationNo;
             _empSSN = empSSN;
+            _Username = Username;
+
         }
 
         private void Employee_Form_Load(object sender, EventArgs e)
@@ -38,7 +42,7 @@ namespace Railway_Management_System
             fillTable();
         }
 
-      
+
 
         private void sparePartsButton_Click(object sender, EventArgs e)
         {
@@ -50,8 +54,8 @@ namespace Railway_Management_System
 
             sparePartDataGridView.DataSource = controller.GetSparePartsInStation(_empStationNo);
             sparePartDataGridView.Refresh();
-            
-        }        
+
+        }
 
         private void scheduleButton_Click(object sender, EventArgs e)
         {
@@ -65,7 +69,7 @@ namespace Railway_Management_System
             scheduleDataGridView.Refresh();
         }
 
-        
+
 
         private void orderButton_Click(object sender, EventArgs e)
         {
@@ -121,7 +125,7 @@ namespace Railway_Management_System
             {
                 return;
             }
-            
+
             //Getting the decrement amount from the textbox
             int decAmount;
             if (!Int32.TryParse(decAmountTextBox.Text, out decAmount))
@@ -140,11 +144,11 @@ namespace Railway_Management_System
             int currentAmount = (int)sparePartDataGridView.SelectedRows[0].Cells[1].Value;
             if (currentAmount - decAmount < 0)
             {
-                MessageBox.Show("Decrement amount is bigger than current amount","Error");
+                MessageBox.Show("Decrement amount is bigger than current amount", "Error");
                 return;
             }
 
-            if (controller.DecSparePart(_empStationNo,_partNo,decAmount) == 0)
+            if (controller.DecSparePart(_empStationNo, _partNo, decAmount) == 0)
             {
                 MessageBox.Show("Spare part decrement failed");
             }
