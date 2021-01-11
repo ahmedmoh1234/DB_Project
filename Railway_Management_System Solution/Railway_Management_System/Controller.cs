@@ -272,6 +272,7 @@ namespace Railway_Management_System
         }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         public int AcceptRequest(int Request_ID)
         {
             string query = "UPDATE REQUEST SET Status = 'Accepted' " +
@@ -386,6 +387,8 @@ namespace Railway_Management_System
             int d = (int)dbMan.ExecuteScalar(query4);
             return ((a * b) + (c * d));
 =======
+=======
+>>>>>>> Stashed changes
 
         public int InsertTrip(string trip_date, int PSSN, int tripNo, string status, string type) //payment method?
         {
@@ -543,6 +546,9 @@ namespace Railway_Management_System
             Parameters.Add("@TRIPClassNew", type);
 
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         }
     }
