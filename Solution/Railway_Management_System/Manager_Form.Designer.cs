@@ -554,12 +554,31 @@
             this.StationComboBox.Items.AddRange(new object[] {
             "Mainteance",
             "Manager"});
+<<<<<<< Updated upstream:Solution/Railway_Management_System/Manager_Form.Designer.cs
             this.StationComboBox.Location = new System.Drawing.Point(451, 112);
+=======
+            this.StationComboBox.Location = new System.Drawing.Point(691, 36);
+>>>>>>> Stashed changes:Railway_Management_System/Railway_Management_System/Manager_Form.Designer.cs
             this.StationComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.StationComboBox.Name = "StationComboBox";
             this.StationComboBox.Size = new System.Drawing.Size(121, 24);
             this.StationComboBox.TabIndex = 37;
             // 
+<<<<<<< Updated upstream:Solution/Railway_Management_System/Manager_Form.Designer.cs
+=======
+            // PositioComboBox
+            // 
+            this.PositioComboBox.FormattingEnabled = true;
+            this.PositioComboBox.Items.AddRange(new object[] {
+            "Mainteance",
+            "Manager"});
+            this.PositioComboBox.Location = new System.Drawing.Point(451, 100);
+            this.PositioComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PositioComboBox.Name = "PositioComboBox";
+            this.PositioComboBox.Size = new System.Drawing.Size(121, 24);
+            this.PositioComboBox.TabIndex = 36;
+            // 
+>>>>>>> Stashed changes:Railway_Management_System/Railway_Management_System/Manager_Form.Designer.cs
             // SexComboBox
             // 
             this.SexComboBox.FormattingEnabled = true;
@@ -574,14 +593,23 @@
             // 
             // PasswordTextBox
             // 
+<<<<<<< Updated upstream:Solution/Railway_Management_System/Manager_Form.Designer.cs
             this.PasswordTextBox.Location = new System.Drawing.Point(691, 137);
             this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.Size = new System.Drawing.Size(100, 22);
             this.PasswordTextBox.TabIndex = 34;
+=======
+            this.textBox8.Location = new System.Drawing.Point(691, 137);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(100, 22);
+            this.textBox8.TabIndex = 34;
+>>>>>>> Stashed changes:Railway_Management_System/Railway_Management_System/Manager_Form.Designer.cs
             // 
             // UsernameTextBox
             // 
+<<<<<<< Updated upstream:Solution/Railway_Management_System/Manager_Form.Designer.cs
             this.UsernameTextBox.Location = new System.Drawing.Point(691, 91);
             this.UsernameTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.UsernameTextBox.Name = "UsernameTextBox";
@@ -591,6 +619,17 @@
             // SalaryTextBox
             // 
             this.SalaryTextBox.Location = new System.Drawing.Point(697, 48);
+=======
+            this.textBox7.Location = new System.Drawing.Point(691, 102);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(100, 22);
+            this.textBox7.TabIndex = 33;
+            // 
+            // SalaryTextBox
+            // 
+            this.SalaryTextBox.Location = new System.Drawing.Point(691, 71);
+>>>>>>> Stashed changes:Railway_Management_System/Railway_Management_System/Manager_Form.Designer.cs
             this.SalaryTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SalaryTextBox.Name = "SalaryTextBox";
             this.SalaryTextBox.Size = new System.Drawing.Size(100, 22);
@@ -598,7 +637,11 @@
             // 
             // ManagersSSNTextBox
             // 
+<<<<<<< Updated upstream:Solution/Railway_Management_System/Manager_Form.Designer.cs
             this.ManagersSSNTextBox.Location = new System.Drawing.Point(451, 158);
+=======
+            this.ManagersSSNTextBox.Location = new System.Drawing.Point(451, 130);
+>>>>>>> Stashed changes:Railway_Management_System/Railway_Management_System/Manager_Form.Designer.cs
             this.ManagersSSNTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ManagersSSNTextBox.Name = "ManagersSSNTextBox";
             this.ManagersSSNTextBox.Size = new System.Drawing.Size(100, 22);
@@ -612,6 +655,17 @@
             this.PhoneNumberTextBox.Size = new System.Drawing.Size(100, 22);
             this.PhoneNumberTextBox.TabIndex = 28;
             // 
+<<<<<<< Updated upstream:Solution/Railway_Management_System/Manager_Form.Designer.cs
+=======
+            // DOBTextBox
+            // 
+            this.DOBTextBox.Location = new System.Drawing.Point(451, 41);
+            this.DOBTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DOBTextBox.Name = "DOBTextBox";
+            this.DOBTextBox.Size = new System.Drawing.Size(100, 22);
+            this.DOBTextBox.TabIndex = 27;
+            // 
+>>>>>>> Stashed changes:Railway_Management_System/Railway_Management_System/Manager_Form.Designer.cs
             // SSNTextBox
             // 
             this.SSNTextBox.Location = new System.Drawing.Point(143, 128);
@@ -679,7 +733,11 @@
             // label19
             // 
             this.label19.AutoSize = true;
+<<<<<<< Updated upstream:Solution/Railway_Management_System/Manager_Form.Designer.cs
             this.label19.Location = new System.Drawing.Point(604, 46);
+=======
+            this.label19.Location = new System.Drawing.Point(604, 68);
+>>>>>>> Stashed changes:Railway_Management_System/Railway_Management_System/Manager_Form.Designer.cs
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(48, 17);
             this.label19.TabIndex = 19;
@@ -688,7 +746,11 @@
             // label18
             // 
             this.label18.AutoSize = true;
+<<<<<<< Updated upstream:Solution/Railway_Management_System/Manager_Form.Designer.cs
             this.label18.Location = new System.Drawing.Point(600, 142);
+=======
+            this.label18.Location = new System.Drawing.Point(604, 126);
+>>>>>>> Stashed changes:Railway_Management_System/Railway_Management_System/Manager_Form.Designer.cs
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(69, 17);
             this.label18.TabIndex = 18;
@@ -697,7 +759,11 @@
             // label17
             // 
             this.label17.AutoSize = true;
+<<<<<<< Updated upstream:Solution/Railway_Management_System/Manager_Form.Designer.cs
             this.label17.Location = new System.Drawing.Point(604, 89);
+=======
+            this.label17.Location = new System.Drawing.Point(604, 95);
+>>>>>>> Stashed changes:Railway_Management_System/Railway_Management_System/Manager_Form.Designer.cs
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(73, 17);
             this.label17.TabIndex = 17;
@@ -706,7 +772,11 @@
             // label16
             // 
             this.label16.AutoSize = true;
+<<<<<<< Updated upstream:Solution/Railway_Management_System/Manager_Form.Designer.cs
             this.label16.Location = new System.Drawing.Point(337, 112);
+=======
+            this.label16.Location = new System.Drawing.Point(600, 41);
+>>>>>>> Stashed changes:Railway_Management_System/Railway_Management_System/Manager_Form.Designer.cs
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(52, 17);
             this.label16.TabIndex = 16;
@@ -715,7 +785,11 @@
             // label15
             // 
             this.label15.AutoSize = true;
+<<<<<<< Updated upstream:Solution/Railway_Management_System/Manager_Form.Designer.cs
             this.label15.Location = new System.Drawing.Point(337, 165);
+=======
+            this.label15.Location = new System.Drawing.Point(337, 133);
+>>>>>>> Stashed changes:Railway_Management_System/Railway_Management_System/Manager_Form.Designer.cs
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(106, 17);
             this.label15.TabIndex = 15;
@@ -775,6 +849,18 @@
             this.label9.TabIndex = 9;
             this.label9.Text = "Phone Number";
             // 
+<<<<<<< Updated upstream:Solution/Railway_Management_System/Manager_Form.Designer.cs
+=======
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(337, 102);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(58, 17);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Position";
+            // 
+>>>>>>> Stashed changes:Railway_Management_System/Railway_Management_System/Manager_Form.Designer.cs
             // label7
             // 
             this.label7.AutoSize = true;
@@ -1491,6 +1577,10 @@
             this.Controls.Add(this.Statistical_Models_GroupBox);
             this.Controls.Add(this.Spare_Parts_GroupBox);
             this.Controls.Add(this.SuppliersGroupBox);
+<<<<<<< Updated upstream:Solution/Railway_Management_System/Manager_Form.Designer.cs
+=======
+            this.Controls.Add(this.EmployeesGroupBox);
+>>>>>>> Stashed changes:Railway_Management_System/Railway_Management_System/Manager_Form.Designer.cs
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Manager_Form";
             this.Text = "Manager_Form";
