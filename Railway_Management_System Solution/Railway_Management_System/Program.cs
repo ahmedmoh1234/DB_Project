@@ -20,7 +20,12 @@ namespace Railway_Management_System
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             Application.Run(new Employee_Form());
+=======
+
+            //Application.Run(new Employee_Form());
+>>>>>>> Stashed changes
 =======
 
             //Application.Run(new Employee_Form());
@@ -45,6 +50,9 @@ namespace Railway_Management_System
             Application.Run(new Passenger_Form());
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

@@ -29,8 +29,11 @@ namespace Railway_Management_System
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         public static string GetNumberTripsOfTrain = "NO_TRAIN_TRIPS";
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -50,6 +53,9 @@ namespace Railway_Management_System
         public static string changeTripType = "CHANGETRIPCLASS";
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
