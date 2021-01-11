@@ -67,6 +67,7 @@ C:\Users\EGYPT\Desktop\Railway_Management_System Solution AHMED\Railway_Manageme
 C:\Users\EGYPT\Desktop\Railway_Management_System Solution AHMED\Railway_Management_System\bin\Debug\Railway_Management_System.exe.config
 C:\Users\EGYPT\Desktop\Railway_Management_System Solution AHMED\Railway_Management_System\bin\Debug\Railway_Management_System.exe
 C:\Users\EGYPT\Desktop\Railway_Management_System Solution AHMED\Railway_Management_System\bin\Debug\Railway_Management_System.pdb
+<<<<<<< Updated upstream
 D:\Junior\Database\Project\DB_Project\Railway_Management_System Solution\Railway_Management_System\obj\Debug\Railway_Management_System.csprojAssemblyReference.cache
 D:\Junior\Database\Project\DB_Project\Railway_Management_System Solution\Railway_Management_System\obj\Debug\Railway_Management_System.Employee_Form.resources
 D:\Junior\Database\Project\DB_Project\Railway_Management_System Solution\Railway_Management_System\obj\Debug\Railway_Management_System.Employee_Login.resources
@@ -81,3 +82,20 @@ D:\Junior\Database\Project\DB_Project\Railway_Management_System Solution\Railway
 D:\Junior\Database\Project\DB_Project\Railway_Management_System Solution\Railway_Management_System\bin\Debug\Railway_Management_System.exe.config
 D:\Junior\Database\Project\DB_Project\Railway_Management_System Solution\Railway_Management_System\bin\Debug\Railway_Management_System.exe
 D:\Junior\Database\Project\DB_Project\Railway_Management_System Solution\Railway_Management_System\bin\Debug\Railway_Management_System.pdb
+=======
+C:\Users\mody7\OneDrive\Desktop\Microprocessor\Project\DB_Project\Railway_Management_System Solution\Railway_Management_System\obj\Debug\Railway_Management_System.csprojAssemblyReference.cache
+C:\Users\mody7\OneDrive\Desktop\Microprocessor\Project\DB_Project\Railway_Management_System Solution\Railway_Management_System\obj\Debug\Railway_Management_System.Employee_Form.resources
+C:\Users\mody7\OneDrive\Desktop\Microprocessor\Project\DB_Project\Railway_Management_System Solution\Railway_Management_System\obj\Debug\Railway_Management_System.Employee_Login.resources
+C:\Users\mody7\OneDrive\Desktop\Microprocessor\Project\DB_Project\Railway_Management_System Solution\Railway_Management_System\obj\Debug\Railway_Management_System.Form1.resources
+C:\Users\mody7\OneDrive\Desktop\Microprocessor\Project\DB_Project\Railway_Management_System Solution\Railway_Management_System\obj\Debug\Railway_Management_System.Manager_Form.resources
+C:\Users\mody7\OneDrive\Desktop\Microprocessor\Project\DB_Project\Railway_Management_System Solution\Railway_Management_System\obj\Debug\Railway_Management_System.Passenger_Form.resources
+C:\Users\mody7\OneDrive\Desktop\Microprocessor\Project\DB_Project\Railway_Management_System Solution\Railway_Management_System\obj\Debug\Railway_Management_System.Passenger_Login.resources
+C:\Users\mody7\OneDrive\Desktop\Microprocessor\Project\DB_Project\Railway_Management_System Solution\Railway_Management_System\obj\Debug\Railway_Management_System.Properties.Resources.resources
+C:\Users\mody7\OneDrive\Desktop\Microprocessor\Project\DB_Project\Railway_Management_System Solution\Railway_Management_System\obj\Debug\Railway_Management_System.csproj.GenerateResource.cache
+C:\Users\mody7\OneDrive\Desktop\Microprocessor\Project\DB_Project\Railway_Management_System Solution\Railway_Management_System\obj\Debug\Railway_Management_System.csproj.CoreCompileInputs.cache
+C:\Users\mody7\OneDrive\Desktop\Microprocessor\Project\DB_Project\Railway_Management_System Solution\Railway_Management_System\obj\Debug\Railway_Management_System.exe
+C:\Users\mody7\OneDrive\Desktop\Microprocessor\Project\DB_Project\Railway_Management_System Solution\Railway_Management_System\obj\Debug\Railway_Management_System.pdb
+C:\Users\mody7\OneDrive\Desktop\Microprocessor\Project\DB_Project\Railway_Management_System Solution\Railway_Management_System\bin\Debug\Railway_Management_System.exe.config
+C:\Users\mody7\OneDrive\Desktop\Microprocessor\Project\DB_Project\Railway_Management_System Solution\Railway_Management_System\bin\Debug\Railway_Management_System.exe
+C:\Users\mody7\OneDrive\Desktop\Microprocessor\Project\DB_Project\Railway_Management_System Solution\Railway_Management_System\bin\Debug\Railway_Management_System.pdb
+>>>>>>> Stashed changes

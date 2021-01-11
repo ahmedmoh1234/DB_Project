@@ -158,29 +158,41 @@ namespace Railway_Management_System
             Upcoming_groupBox.Visible = true;
 
             DataTable Upcoming = controllerObj.ViewBookedTripInfo(2);
-            Upcoming_Train_No_TextBox.Text = Convert.ToString(Upcoming.Rows[0].ItemArray[14]);
-            Upcoming_Arrival.Text = Convert.ToString(Upcoming.Rows[0].ItemArray[9]);
-            Upcoming_Departure.Text = Convert.ToString(Upcoming.Rows[0].ItemArray[8]);
-            Upcoming_From.Text = Convert.ToString(Upcoming.Rows[0].ItemArray[18]);
-            Upcoming_To.Text = Convert.ToString(Upcoming.Rows[0].ItemArray[23]);
-            string Tripdate = Convert.ToString(Upcoming.Rows[0].ItemArray[2]);
-            Upcoming_Tripdate.Value = Convert.ToDateTime(Tripdate);
-            Upcoming_TripNo.Text = Convert.ToString(Upcoming.Rows[0].ItemArray[1]);
-            Upcoming_Type.Text = Convert.ToString(Upcoming.Rows[0].ItemArray[3]);
-           
-            Upcoming_BusinessPrice.Text = Convert.ToString(Upcoming.Rows[0].ItemArray[11]);
-            Upcoming_businessSeatsLeft.Text = Convert.ToString(Upcoming.Rows[0].ItemArray[12]);
-            Upcoming_EconomicPrice.Text = Convert.ToString(Upcoming.Rows[0].ItemArray[10]);
-            Upcoming_EconomicSeatsLeft.Text = Convert.ToString(Upcoming.Rows[0].ItemArray[13]);
-            if (Upcoming_Type.Text == "Business")
+            if (Upcoming != null)
             {
-                Upcoming_price.Text = Upcoming_BusinessPrice.Text;
+                Upcoming_Train_No_TextBox.Text = Convert.ToString(Upcoming.Rows[0].ItemArray[14]);
+                Upcoming_Arrival.Text = Convert.ToString(Upcoming.Rows[0].ItemArray[9]);
+                Upcoming_Departure.Text = Convert.ToString(Upcoming.Rows[0].ItemArray[8]);
+                Upcoming_From.Text = Convert.ToString(Upcoming.Rows[0].ItemArray[18]);
+                Upcoming_To.Text = Convert.ToString(Upcoming.Rows[0].ItemArray[23]);
+                string Tripdate = Convert.ToString(Upcoming.Rows[0].ItemArray[2]);
+                Upcoming_Tripdate.Value = Convert.ToDateTime(Tripdate);
+                Upcoming_TripNo.Text = Convert.ToString(Upcoming.Rows[0].ItemArray[1]);
+                Upcoming_Type.Text = Convert.ToString(Upcoming.Rows[0].ItemArray[3]);
+
+                Upcoming_BusinessPrice.Text = Convert.ToString(Upcoming.Rows[0].ItemArray[11]);
+                Upcoming_businessSeatsLeft.Text = Convert.ToString(Upcoming.Rows[0].ItemArray[12]);
+                Upcoming_EconomicPrice.Text = Convert.ToString(Upcoming.Rows[0].ItemArray[10]);
+                Upcoming_EconomicSeatsLeft.Text = Convert.ToString(Upcoming.Rows[0].ItemArray[13]);
+                if (Upcoming_Type.Text == "Business")
+                {
+                    Upcoming_price.Text = Upcoming_BusinessPrice.Text;
+                }
+                else
+                {
+                    Upcoming_price.Text = Upcoming_EconomicPrice.Text;
+                }
             }
             else
             {
-                Upcoming_price.Text = Upcoming_EconomicPrice.Text;
+                Book_TripsGroupBox.Visible = false;
+                PreviousgroupBox.Visible = false;
+                CancelBookgroupBox.Visible = false;
+                Upcoming_groupBox.Visible = false;
+                UpdateTripGroupBox.Visible = false;
+                UPdate_Date.Enabled = false;
+                MessageBox.Show("no upcoming trip");
             }
-
             //string date = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
             //Previous_tripDate.Value = Convert.ToDateTime(date);
 
@@ -450,7 +462,7 @@ namespace Railway_Management_System
 
         private void UpdateTrainInfoButton_Click(object sender, EventArgs e)
         {
-            DataTable Upcoming = controllerObj.ViewBookedTripInfo(1);
+            DataTable Upcoming = controllerObj.ViewBookedTripInfo(2);
             Upcoming_BusinessPrice.Text = Convert.ToString(Upcoming.Rows[0].ItemArray[11]);
             Upcoming_businessSeatsLeft.Text = Convert.ToString(Upcoming.Rows[0].ItemArray[12]);
             Upcoming_EconomicPrice.Text = Convert.ToString(Upcoming.Rows[0].ItemArray[10]);
