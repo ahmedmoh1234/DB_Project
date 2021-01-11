@@ -199,12 +199,35 @@ namespace Railway_Management_System
 
         private void changeDateButton_Click(object sender, EventArgs e)
         {
+            string New_Date = maintenanceDateTimePicker.Value.ToString("yyyy/MM/dd");
+            int Train_Number;
+            if (!Int32.TryParse(TrainNumberTextBox.Text, out Train_Number))
+            {
+                MessageBox.Show("Invalid Train Number");
+                return;
+            }
+            else
+            {
 
+                int result = controller.ChangeMaintenanceDate(Train_Number, New_Date);
+                if (result == 0)
+                {
+                    MessageBox.Show("Failed to update Maintenance Date");
+                    return;
+                }
+                else
+                {
+                    scheduleDataGridView.DataSource = controller.GetAllTrains();
+                    scheduleDataGridView.Refresh();
+                    MessageBox.Show("Updated Maintenance Date");
+                    return;
+                }
+            }
         }
 
         private void scheduleDataGridView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            //TrainNumberTextBox.Text = TrainsDG.SelectedRows[0].Cells[2].Value.ToString();
+            TrainNumberTextBox.Text = scheduleDataGridView.SelectedRows[0].Cells[2].Value.ToString();
         }
     }
 }
